@@ -648,6 +648,455 @@ function modio_comments_delete() {}
 */
 function modio_comments_karma() {}
 
+/** 
+ * @function modio_media_game_add
+ * @description function
+ * 
+ * 
+ * @param {struct} optionals
+ * @param {string} logo
+ * @param {string} icon
+ * @param {string} header
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_media_game_add() {}
+
+/** 
+ * @function modio_media_mod_add
+ * @description function
+ * 
+ * 
+ * @param {struct} optionals_files
+ * @param {string} logo
+ * @param {string} images
+ * @param {struct} optionals
+ * @param {string} youtube
+ * @param {string} sketchfab
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_media_mod_add() {}
+
+/** 
+ * @function modio_media_mod_delete
+ * @description function
+ * 
+ * @param {struct} optionals
+ * @param {string} youtube
+ * @param {string} sketchfab
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_media_mod_delete() {}
+
+/** 
+ * @function modio_media_mod_reorder
+ * @description function
+ * 
+ * @param {struct} optionals
+ * @param {string} images
+ * @param {string} youtube
+ * @param {string} sketchfab
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_media_mod_reorder() {}
+
+/** 
+ * @function modio_events_get_list
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_events_get_list() {}
+
+/** 
+ * @function modio_events_get
+ * @description function
+ * 
+ * @param {real} mod_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_events_get() {}
+
+/** 
+ * @function modio_tags_game_get
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_tags_game_get() {}
+
+/** 
+ * @function modio_tags_game_add
+ * @description function
+ * 
+ * @param {string} name
+ * @param {string} type
+ * @param {string} tags
+ * @param {struct} optionals
+ * @param {boolean} hidden
+ * @param {boolean} locked
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_tags_game_add() {}
+
+/** 
+ * @function modio_tags_game_delete
+ * @description function
+ * 
+ * @param {string} name
+ * @param {string} tags
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_tags_game_delete() {}
+
+/** 
+ * @function modio_tags_mod_get
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_tags_mod_get() {}
+
+/** 
+ * @function modio_tags_mod_add
+ * @description function
+ * 
+ * @param {string} tags
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_tags_mod_add() {}
+
+/** 
+ * @function modio_tags_mod_delete
+ * @description function
+ * 
+ * @param {string} tags
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_tags_mod_delete() {}
+
+/** 
+ * @function modio_ratings
+ * @description function
+ * 
+ * @param {real} mod_id
+ * @param {real} rating
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_ratings() {}
+
+/** 
+ * @function modio_stats_game
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_stats_game() {}
+
+/** 
+ * @function modio_stats_mods_get_list
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_stats_mods_get_list() {}
+
+/** 
+ * @function modio_dependencies_get
+ * @description function
+ * 
+ * @param {string} mod_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_dependencies_get() {}
+
+/** 
+ * @function modio_dependencies_add
+ * @description function
+ * 
+ * @param {real} mod_id
+ * @param {string} dependencies
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_dependencies_add() {}
+
+/** 
+ * @function modio_dependencies_delete
+ * @description function
+ * 
+ * @param {real} mod_id
+ * @param {string} dependencies
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_dependencies_delete() {}
+
+/** 
+ * @function modio_teams_get_mod_members
+ * @description function
+ * 
+ * @param {real} mod_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_teams_get_mod_members() {}
+
+/** 
+ * @function modio_general_get_resource_owner
+ * @description function
+ * 
+ * @param {string} resource_type
+ * @param {integer} resource_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_general_get_resource_owner() {}
+
+/** 
+ * @function modio_report
+ * @description function
+ * 
+ * @param {string} resource
+ * @param {real} id
+ * @param {real} type
+ * @param {string} summary
+ * @param {struct} optionals
+ * @param {string} name
+ * @param {string} contact
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_report() {}
+
+/** 
+ * @function modio_agreements_get
+ * @description function
+ * 
+ * @param {real} agreement_type_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_agreements_get() {}
+
+/** 
+ * @function modio_agreements_version
+ * @description function
+ * 
+ * @param {real} version
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_agreements_version() {}
+
+/** 
+ * @function modio_user_mute
+ * @description function
+ * 
+ * @param {real} user_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_user_mute() {}
+
+/** 
+ * @function modio_user_unmute
+ * @description function
+ * 
+ * @param {real} user_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_user_unmute() {}
+
+/** 
+ * @function modio_me
+ * @description function
+ * 
+ * @param {real} user_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_me() {}
+
+/** 
+ * @function modio_me_events
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_me_events() {}
+
+/** 
+ * @function modio_me_files
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_me_files() {}
+
+/** 
+ * @function modio_me_games
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_me_games() {}
+
+/** 
+ * @function modio_me_subscriptions
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_me_subscriptions() {}
+
+/** 
+ * @function modio_me_mods
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_me_mods() {}
+
+/** 
+ * @function modio_me_user_muted
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_me_user_muted() {}
+
+/** 
+ * @function modio_me_ratings
+ * @description function
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_me_ratings() {}
+
+/** 
+ * @function modio_price
+ * @description function
+ * 
+ * @param {real} mod_id
+ * 
+ * @param {function|method} callback_success The function to trigger when the request is successful.
+ * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @function_end
+*/
+function modio_price() {}
+
 // Modules
 
 /**
