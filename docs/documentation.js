@@ -69,6 +69,8 @@
  * callback_success {function|method} The function that is triggered when the request is successful.
  * callback_failed {function|method} The function that is triggered when the request failed.
  * 
+ * @function_end
+ * 
  */
 function modio_auth_steam() {}
 
@@ -89,6 +91,7 @@ function modio_auth_steam() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_xboxlive() {}
 
@@ -112,6 +115,7 @@ function modio_auth_xboxlive() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_playstation() {}
 
@@ -132,6 +136,7 @@ function modio_auth_playstation() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_nintendo_switch() {}
 
@@ -156,6 +161,7 @@ function modio_auth_nintendo_switch() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_metaquest() {}
 
@@ -175,6 +181,7 @@ function modio_auth_metaquest() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_gog() {}
 
@@ -196,6 +203,7 @@ function modio_auth_gog() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_epicgames() {}
 
@@ -217,6 +225,7 @@ function modio_auth_epicgames() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_itchio() {}
 
@@ -240,6 +249,7 @@ function modio_auth_itchio() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_google() {}
 
@@ -263,6 +273,7 @@ function modio_auth_google() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_discord() {}
 
@@ -284,6 +295,7 @@ function modio_auth_discord() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_openid() {}
 
@@ -296,6 +308,7 @@ function modio_auth_openid() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_email() {}
 
@@ -310,6 +323,7 @@ function modio_auth_email() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_email_exchange() {}
 
@@ -320,6 +334,7 @@ function modio_auth_email_exchange() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @function_end
  */
 function modio_auth_logout() {}
 
@@ -393,7 +408,6 @@ function modio_mods_add() {}
  * @param {string} name
  * @param {string} name_id
  * @param {string} summary
- * @param {real} visible
  * @param {string} description
  * @param {string} homepage_url
  * @param {real} stock
@@ -1103,8 +1117,6 @@ function modio_price() {}
  * 
  * @param {real} value The maximum number of results to return. The default value is 100. 
  * 
- * @
- * 
  * @function_end
 */
 function limit() {}
@@ -1294,6 +1306,12 @@ function bitwiseand() {}
  */
 
 /**
+ * @module mods
+ * 
+ * @module_end
+ */
+
+/**
  * @module modfiles
  * 
  * @module_end
@@ -1394,37 +1412,37 @@ function bitwiseand() {}
  * @title Pagination, Filtering and Sorting
  * @desc pagination
  * 
- * @section pagination
+ * @section_func pagination
  * 
  * @desc When requesting data from endpoints that contain more than one object, you can supply an _offset and _limit to paginate through the results. Think of it as a page 1, 2, 3... system but you control the number of results per page, and the page to start from. Appended to each response will be the pagination metadata:
  * 
- * @ref {function.limit}
- * @ref {function.offset}
+ * @ref limit
+ * @ref offset
  * @section_end
  * 
- * @section sorting
+ * @section_func sorting
  * @desc All endpoints are sorted by the id column in ascending order by default (oldest first). You can override this by including a _sort with the column you want to sort by in the request. You can sort on all columns in the parent object only. You cannot sort on columns in nested objects, so if a game contains a tags object you cannot sort on the tag name column, but you can sort by the games name since the games name resides in the parent object.
  *
  * [[NOTE: Some endpoints like Get Mods have special sort columns like popular, downloads, rating and subscribers which are documented alongside the filters.]]
  *
- * @ref {function.ascending}
- * @ref {function.descending}
+ * @ref ascending
+ * @ref descending
  * @section_end
  * 
- * @section filtering
+ * @section_func filtering
  * 
  * @desc mod.io has powerful filtering available to assist you when making requests to the API. You can filter on all columns in the parent object only. You cannot apply filters to columns in nested objects, so if a game contains a tags object you cannot filter by the tag name column, but you can filter by the games name since the games name resides in the parent object.
  * 
- * @ref {function.fulltextsearch}
- * @ref {function.equals}
- * @ref {function.notequalto}
- * @ref {function.likewildcards}
- * @ref {function.notlikewildcards}
- * @ref {function.in}
- * @ref {function.notin}
- * @ref {function.smallerthanorequalto}
- * @ref {function.greaterthanorequalto}
- * @ref {function.bitwiseand}
+ * @ref fulltextsearch
+ * @ref equals
+ * @ref notequalto
+ * @ref likewildcards
+ * @ref notlikewildcards
+ * @ref in
+ * @ref notin
+ * @ref smallerthanorequalto
+ * @ref greaterthanorequalto
+ * @ref bitwiseand
  * @section_end
  * 
  * @module_end
@@ -1433,7 +1451,31 @@ function bitwiseand() {}
 /**
  * @module home
  * 
+ * @section Modules
+ * @desc The following are the available modules for the mod.io extension:
+ * @reference module.auth
+ * @reference module.games
+ * @reference module.mods
+ * @reference module.modfiles
+ * @reference module.subscribe
+ * @reference module.comments
+ * @reference module.media
+ * @reference module.events
+ * @reference module.tags
+ * @reference module.ratings
+ * @reference module.stats
+ * @reference module.dependencies
+ * @reference module.teams
+ * @reference module.general
+ * @reference module.reports
+ * @reference module.agreements
+ * @reference module.reports
+ * @reference module.users
+ * @reference module.me
+ * @reference module.price
+ * @reference module.pagination
  * 
+ * @section_end
  * 
  * @module_end
  */
