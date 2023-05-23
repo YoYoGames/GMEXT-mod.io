@@ -51,7 +51,7 @@ function modio_auth_steam() {}
  * @param {string} xbox_token 
  * @param {struct} optionals
  * @param {string} email The user's email address (optional but recommended to help users recover lost accounts). If supplied, and when the respective user does not have an email registered for their account we will send a confirmation email to confirm they have ownership of the specified email. This functionality is also available at a later time via the [Link an Email](https://docs.mod.io/#link-an-email) endpoint. NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default, value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default, value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the user's agreement prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to false and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error 403 Forbidden (error_ref 11074) will be returned and you will need to collect the users agreement and retry with this value set to true to authenticate the user.]]
@@ -75,7 +75,7 @@ function modio_auth_xboxlive() {}
  * @param {string} auth_code The auth code returned from the PlayStation Network API.
  * @param {struct} optionals
  * @param {string} email The users email address. If supplied, and the respective user does not have an email registered for their account we will send a confirmation email to confirm they have ownership of the specified email.
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error 403 Forbidden (error_ref 11074) will be returned and you will need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -96,7 +96,7 @@ function modio_auth_playstation() {}
  * @param {string} id_token The NSA ID supplied by the Nintendo Switch SDK.
  * @param {struct} optionals
  * @param {string} email The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -114,14 +114,14 @@ function modio_auth_nintendo_switch() {}
  * 
  * @param {string} device The Meta Quest device being used for authentication.
  * @param {string} nonce The nonce provided by calling [ovr_User_GetUserProof()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK.
- * @param {user_id} real The user's Meta Quest ID providing by calling [ovr_GetLoggedInUserID()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK.
+ * @param {real} user_id The user's Meta Quest ID providing by calling [ovr_GetLoggedInUserID()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK.
  * @param {string} access_token The user's access token, providing by calling [ovr_User_GetAccessToken()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK. mod.io uses this access token on the first login only to obtain the user's alias and is not saved on our servers.
  * @param {struct} optionals
  * @param {string} email The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -141,7 +141,7 @@ function modio_auth_metaquest() {}
  * @param {struct} optionals
  * @param {string} email The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -163,7 +163,7 @@ function modio_auth_gog() {}
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -185,7 +185,7 @@ function modio_auth_epicgames() {}
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -209,7 +209,7 @@ function modio_auth_itchio() {}
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -233,7 +233,7 @@ function modio_auth_google() {}
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -255,7 +255,7 @@ function modio_auth_discord() {}
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * @param {boolean} terms_agreed This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
@@ -286,7 +286,7 @@ function modio_auth_email() {}
  * 
  * @param {string} security_code The alphanumeric security code.
  * @param {struct} optionals
- * @param {integer} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * @param {int64} date_expires The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.

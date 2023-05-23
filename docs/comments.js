@@ -21,7 +21,7 @@ function modio_comments_get_list() {}
  * 
  * @param {real} mod_id
  * @param {string} content
- * @param {integer} reply_id
+ * @param {real} reply_id
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.

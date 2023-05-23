@@ -1,3 +1,5 @@
+@title Users
+
 /** 
  * @function modio_user_mute
  * @description function

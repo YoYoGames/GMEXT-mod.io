@@ -46,7 +46,7 @@ function modio_modfiles_get() {}
  * @param {boolean} active
  * @param {string} filehash
  * @param {string} metadata_blob
- * @param {array[string]} platforms
+ * @param {array<string>} platforms
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.

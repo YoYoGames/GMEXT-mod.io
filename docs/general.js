@@ -7,7 +7,7 @@
  * @description function
  * 
  * @param {string} resource_type
- * @param {integer} resource_id
+ * @param {real} resource_id
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
