@@ -42,6 +42,8 @@
  * @param {function|method} callback_success The function that is triggered when the request is successful.
  * @param {function|method} callback_failed The function that is triggered when the request failed.
  * 
+ * @returns {struct.AccessToken}
+ * 
  * @function_end
  * 
  */
@@ -60,14 +62,16 @@ function modio_auth_steam() {}
  * @param {string} xbox_token 
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and when the respective user does not have an email registered for their account we will send a confirmation email to confirm they have ownership of the specified email. This functionality is also available at a later time via the [Link an Email](https://docs.mod.io/#link-an-email) endpoint. NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default, value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
- * * terms_agreed(${boolean}) This *must* be set to `false` unless you have collected the users agreement prior to calling this endpoint in which case it can be set to `true` and will be recorded.
+ * * email (${type.string}) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and when the respective user does not have an email registered for their account we will send a confirmation email to confirm they have ownership of the specified email. This functionality is also available at a later time via the [Link an Email](https://docs.mod.io/#link-an-email) endpoint. NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default, value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * terms_agreed(${type.boolean}) This *must* be set to `false` unless you have collected the users agreement prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to false and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error 403 Forbidden (error_ref 11074) will be returned and you will need to collect the users agreement and retry with this value set to true to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -89,14 +93,16 @@ function modio_auth_xboxlive() {}
  * @param {string} auth_code The auth code returned from the PlayStation Network API.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The users email address. If supplied, and the respective user does not have an email registered for their account we will send a confirmation email to confirm they have ownership of the specified email.
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
+ * * email (${type.string}) The users email address. If supplied, and the respective user does not have an email registered for their account we will send a confirmation email to confirm they have ownership of the specified email.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error 403 Forbidden (error_ref 11074) will be returned and you will need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -115,14 +121,16 @@ function modio_auth_playstation() {}
  * @param {string} id_token The NSA ID supplied by the Nintendo Switch SDK.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -142,17 +150,19 @@ function modio_auth_nintendo_switch() {}
  * @param {string} access_token The user's access token, providing by calling [ovr_User_GetAccessToken()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK. mod.io uses this access token on the first login only to obtain the user's alias and is not saved on our servers.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -169,10 +179,10 @@ function modio_auth_metaquest() {}
  * @param {string} appdata The GOG Galaxy user's [Encrypted App Ticket](https://cdn.gog.com/open/galaxy/sdk/1.133.3/Documentation/classgalaxy_1_1api_1_1IUser.html#a352802aab7a6e71b1cd1b9b1adfd53d8) provided by the GOG Galaxy SDK.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
@@ -193,17 +203,19 @@ function modio_auth_gog() {}
  * @param {string} access_token The access token [returned from the EOS SDK](https://dev.epicgames.com/docs/services/en-US/API/EOS/EOS/_tagEOS_Auth_Token/index.html) when you authenticate a user to use mod.io.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -220,17 +232,19 @@ function modio_auth_epicgames() {}
  * @param {string} itchio_token The [JWT Token](https://itch.io/docs/itch/integrating/manifest-actions.html) provided by the itch.io desktop application to your game as the environment variable `ITCHIO_API_KEY`. You must set up your itch.io app manifest to include the [API scope](https://itch.io/docs/itch/integrating/manifest-actions.html) to force itch.io to set this variable.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -249,17 +263,19 @@ function modio_auth_itchio() {}
  * @param {string} id_token The id_token value returned from Google after you have authenticated a user via the Google OAuth2 flow.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -278,17 +294,19 @@ function modio_auth_google() {}
  * @param {string} discord_token The access token of the user provided by Discord.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -305,17 +323,19 @@ function modio_auth_discord() {}
  * @param {string} id_token The ID token issued by the configured identity provider.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, we will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
- * * terms_agreed (${boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you'll need to collect the [users agreement](https://docs.mod.io/#terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -334,6 +354,8 @@ function modio_auth_openid() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.AccessToken}
+ * 
  * @function_end
  */
 function modio_auth_email() {}
@@ -349,10 +371,12 @@ function modio_auth_email() {}
  * @param {string} security_code The alphanumeric security code.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * date_expires (${int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
+ * * date_expires (${type.int64}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AccessToken}
  * 
  * @function_end
  */
@@ -369,6 +393,8 @@ function modio_auth_email_exchange() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.WebMessage}
+ * 
  * @function_end
  */
 function modio_auth_logout() {}
@@ -377,7 +403,7 @@ function modio_auth_logout() {}
 
 /**
  * @struct Terms
- * @desc https://docs.mod.io/#terms-object
+ * @desc > **mod.io Response Schema:** [Terms Object](https://docs.mod.io/#terms-object)
  * 
  * @member {string} plaintext The terms text in plaintext formatting.
  * @member {string} html The terms text in HTML formatting.
@@ -392,6 +418,37 @@ function modio_auth_logout() {}
  * * terms (${type.struct}) Terms of Use link.
  * * privacy (${type.struct}) Privacy Policy link. link.
  * * manage (${type.struct}) Manage User Account link.
+ * 
+ * @struct_end
+ */
+
+/**
+ * @struct EmailRequestResponse
+ * @desc > **mod.io Response Schema:** [Email Request Response Object](https://docs.mod.io/#schemaemail_request_response)
+ * 
+ * 
+ * 
+ * @struct_end
+ */
+
+/**
+ * @struct AccessToken
+ * @desc https://docs.mod.io/#schemaaccess_token_object
+ * 
+ * @member {real} code HTTP Response Code.
+ * @member {string} access_token The user's access token.
+ * @member {int64} date_expires Unix timestamp of the date this token will expire. Default is one year from issue date. See [Access Token Lifetime & Expiry](https://docs.mod.io/#making-requests).
+ * 
+ * @struct_end
+ */
+
+/**
+ * @struct WebMessage
+ * @desc > **mod.io Response Schema:** [Web Message Object](https://docs.mod.io/#schemaweb_message_object)
+ * 
+ * @member {real} code HTTP response code.
+ * @member {boolean} success Was the request completed successfully?
+ * @member {string} message Optional message to display to the user.
  * 
  * @struct_end
  */
@@ -423,6 +480,8 @@ function modio_auth_logout() {}
  * 
  * @section_struct
  * @ref Terms
+ * @ref AccessToken
+ * @ref WebMessage
  * @section_end
  * 
  * @module_end
