@@ -24,7 +24,7 @@
  * **karma**:(${type.real}) Karma received for the comment (can be positive or negative).
  * **content**:(${type.string}) Contents of the comment.
  * 
- * @param {real} mod_id
+ * @param {real} mod_id Unique id of the mod.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -139,9 +139,7 @@ function modio_comments_karma() {}
  * @member {struct.User} The user who published the comment.
  * @member {int64} date_added Unix timestamp of date the comment was posted.
  * @member {real} reply_id Id of the parent comment this comment is replying to (can be 0 if the comment is not a reply).
- * @member {string} thread_position 
- * 
- * Levels of nesting in a comment thread. How it works:
+ * @member {string} thread_position Levels of nesting in a comment thread. How it works:
  *
  * - The first comment will have the position '01'.
  * - The second comment will have the position '02'.
@@ -151,6 +149,7 @@ function modio_comments_karma() {}
  * @member {real} karma Karma received for the comment (can be postive or negative).
  * @member {string} content Contents of the comment.
  * 
+ * @struct_end
  */
 
 /**
@@ -164,6 +163,11 @@ function modio_comments_karma() {}
  * @ref modio_comments_update
  * @ref modio_comments_delete
  * @ref modio_comments_karma
+ * @section_end
+ * 
+ * @section_struct
+ * @desc Comments
+ * @ref Comment
  * @section_end
  * 
  * @module_end

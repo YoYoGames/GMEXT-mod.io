@@ -26,6 +26,18 @@ function modio_user_mute() {}
 */
 function modio_user_unmute() {}
 
+// Structs
+
+/**
+ * @struct User
+ * @description > **mod.io Response Schema:** [User Object](https://docs.mod.io/#user-object)
+ * 
+ * <br />
+ * 
+ * @struct_end
+*/
+
+// Modules
 
 /**
  * @module users
@@ -34,6 +46,11 @@ function modio_user_unmute() {}
  * @desc Users
  * @ref modio_user_mute
  * @ref modio_user_unmute
+ * @section_end
+ * 
+ * @section_struct users
+ * @desc Users
+ * @ref User
  * @section_end
  * 
  * @module_end

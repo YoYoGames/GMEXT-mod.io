@@ -16,6 +16,14 @@
 */
 function modio_general_get_resource_owner() {}
 
+/**
+ * @struct Message
+ * @description
+ * 
+ * 
+ * @struct_end
+ */
+
 // Modules
 
 /**
@@ -24,6 +32,11 @@ function modio_general_get_resource_owner() {}
  * @section_func
  * @desc General
  * @ref modio_general_get_resource_owner
+ * @section_end
+ * 
+ * @section_struct
+ * @desc Structs
+ * @ref Message
  * @section_end
  * 
  * @module_end
