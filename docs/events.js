@@ -44,6 +44,7 @@ function modio_events_get_list() {}
  * @description > **mod.io Endpoint:** [Get Mod Events](https://docs.mod.io/#get-mod-events) (`GET /games/{game-id}/mods/{mod-id}/events`)
  * 
  * <br />
+ * 
  * Get the event log for a mod, showing changes made sorted by latest event first. A successful request will return an array of {struct.Event} structs. We recommended reading the filtering documentation to return only the records you want.
  * 
  * @param {real} mod_id
