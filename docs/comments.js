@@ -1,5 +1,3 @@
-@title Comments
-
 /** 
  * @function modio_comments_get_list
  * @description > **mod.io Endpoint:** [Get Mod Comments](https://docs.mod.io/#get-mod-comments) (`GET /games/{game-id}/mods/{mod-id}/comments`)
@@ -154,6 +152,7 @@ function modio_comments_karma() {}
 
 /**
  * @module comments
+ * @title Comments
  * 
  * @section_func
  * @desc Comments

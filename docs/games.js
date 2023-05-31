@@ -1,5 +1,3 @@
-@title Games
-
 // Functions
 
 /** 
@@ -103,6 +101,16 @@ function modio_games_get() {}
  * @struct_end
  * 
  */
+
+/**
+ * @struct GamePlatforms
+ * @description GamePlatforms struct
+ * 
+ * @member {string} platform A [target platform](https://docs.mod.io/#targeting-a-platform).
+ * @member {string} label A presentable label of the platform.
+ * @member {boolean} moderated Is this platform moderated by game admins? If false, then user submissions for the platform will be available immediately providing the game has mod curation disabled.
+ * 
+ * @struct_end
 
 // Modules
 

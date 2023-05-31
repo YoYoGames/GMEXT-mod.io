@@ -1,5 +1,3 @@
-@title Authentication
-
 /**
  * @function modio_auth_terms
  * @description > **mod.io Endpoint:** [Terms](https://docs.mod.io/#terms) (`GET /authenticate/terms`)
@@ -455,7 +453,6 @@ function modio_auth_logout() {}
 
 /**
  * @module auth
- * 
  * @title Authentication
  *
  * @section_func

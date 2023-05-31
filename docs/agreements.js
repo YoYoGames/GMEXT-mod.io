@@ -67,6 +67,7 @@ function modio_agreements_version() {}
 
 /**
  * @module agreements
+ * @title Agreements
  * 
  * @section_func agreements
  * @desc Agreements

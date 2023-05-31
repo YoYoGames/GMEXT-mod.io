@@ -1,5 +1,3 @@
-@title Media
-
 // Functions
 
 /** 
@@ -105,6 +103,7 @@ function modio_media_mod_reorder() {}
 
 /**
  * @module media
+ * @title Media
  * 
  * @section_func 
  * @desc Media

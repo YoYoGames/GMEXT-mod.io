@@ -1,5 +1,3 @@
-@title Reports
-
 // Functions
 
 /** 
@@ -44,6 +42,7 @@ function modio_report() {}
 
 /**
  * @module reports
+ * @title Reports
  * 
  * @section_func
  * @ref modio_report

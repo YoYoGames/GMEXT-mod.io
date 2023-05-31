@@ -1,5 +1,3 @@
-@title Mods
-
 // Functions
 
 /**
@@ -239,6 +237,7 @@ function modio_mods_delete() {}
 
 /**
  * @module mods
+ * @title Mods
  * 
  * @section_func
  * @desc Mods

@@ -1,5 +1,3 @@
-@title Subscribe
-
 // Functions
 
 /** 
@@ -38,6 +36,7 @@ function modio_unsubscribe() {}
 
 /**
  * @module subscribe
+ * @title Subscribe
  * 
  * @section_func
  * @desc Subscribe

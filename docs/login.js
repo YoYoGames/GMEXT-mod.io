@@ -34,6 +34,8 @@
 
 /**
  * @module login
+ * @title Login
+ * 
  * @desc This module contains functions to check the login status of the user.
  * 
  * @section_func

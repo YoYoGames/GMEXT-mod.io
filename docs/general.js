@@ -1,5 +1,3 @@
-@title General
-
 // Functions
 
 /** 
@@ -36,6 +34,7 @@ function modio_general_get_resource_owner() {}
 
 /**
  * @module general
+ * @title General
  * 
  * @section_func
  * @desc General

@@ -11,8 +11,20 @@
 */
 function modio_price() {}
 
+// Structs
+
+/**
+ * @struct Price
+ * @description https://docs.mod.io/#mod-price-object
+ * 
+ * @struct_end
+ */
+
+// Mdules
+
 /**
  * @module price
+ * @title Price
  * 
  * @section_func price
  * @desc Price

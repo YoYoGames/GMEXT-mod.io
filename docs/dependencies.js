@@ -1,5 +1,3 @@
-@title Dependencies
-
 /** 
  * @function modio_dependencies_get
  * @description > **mod.io Endpoint:** [Get Mod Dependencies](https://docs.mod.io/#get-mod-dependencies) (`GET /games/{game-id}/mods/{mod-id}/dependencies`)
@@ -74,6 +72,7 @@ function modio_dependencies_delete() {}
 
 /**
  * @module dependencies
+ * @title Dependencies
  * 
  * @section_func dependencies
  * @desc Dependencies

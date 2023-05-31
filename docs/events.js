@@ -1,5 +1,3 @@
-@title Events
-
 // Functions
 
 /** 
@@ -64,7 +62,7 @@ function modio_events_get() {}
  * @struct ModEvents
  * @description > **mod.io Response Schema:** [Get Mod Events](https://docs.mod.io/#get-mod-events-2)
  * 
- * @member {struct.ModEvent>} data Array containing mod event objects.
+ * @member {struct.ModEvent} data Array containing mod event objects.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by `_offset` filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by `_limit filter`.
@@ -97,6 +95,7 @@ function modio_events_get() {}
 
 /**
  * @module events
+ * @title Events
  * 
  * @section_func
  * @desc Functions

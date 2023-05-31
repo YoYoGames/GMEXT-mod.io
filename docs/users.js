@@ -1,5 +1,3 @@
-@title Users
-
 /** 
  * @function modio_user_mute
  * @description > **mod.io Endpoint:** [Mute a user](https://docs.mod.io/#mute-a-user) (`POST /users/{user-id}/mute`)
@@ -58,6 +56,7 @@ function modio_user_unmute() {}
 
 /**
  * @module users
+ * @title Users
  * 
  * @section_func users
  * @desc Users

@@ -1,5 +1,3 @@
-@title Teams
-
 // Functions
 
 /** 
@@ -45,6 +43,7 @@ function modio_teams_get_mod_members() {}
 
 /**
  * @module teams
+ * @title Teams
  * 
  * @section_func
  * @desc Teams

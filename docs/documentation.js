@@ -7,6 +7,7 @@
 
 /**
  * @module home
+ * @title Home
  * 
  * @section Guides
  * @desc Guides for the mod.io extension.

@@ -1,5 +1,3 @@
-@title Ratings
-
 // Functions
 
 /** 
@@ -30,6 +28,7 @@ function modio_ratings() {}
 
 /**
  * @module ratings
+ * @title Ratings
  * 
  * @section_func
  * @desc Ratings

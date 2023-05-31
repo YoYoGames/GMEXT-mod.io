@@ -99,6 +99,7 @@ function modio_stats_mods_get() {}
 
 /**
  * @module stats
+ * @title Stats
  * 
  * @section stats
  * @desc Stats
