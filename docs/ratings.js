@@ -36,7 +36,7 @@ function modio_ratings() {}
  * - 1 = Positive Rating
  * - -1 = Negative Rating
  * 
- * @member {int64} date_added Unix timestamp of date rating was submitted.
+ * @member {real} date_added Unix timestamp of date rating was submitted.
  * 
  * @struct_end
  */

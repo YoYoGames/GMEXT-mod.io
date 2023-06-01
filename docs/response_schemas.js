@@ -2,11 +2,11 @@
 
 /**
  * @struct AccessToken
- * @desc https://docs.mod.io/#schemaaccess_token_object
+ * @desc > **mod.io Response Schema:** [Access Token Object](https://docs.mod.io/#schemaaccess_token_object)
  * 
  * @member {real} code HTTP Response Code.
  * @member {string} access_token The user's access token.
- * @member {int64} date_expires Unix timestamp of the date this token will expire. Default is one year from issue date. See [Access Token Lifetime & Expiry](https://docs.mod.io/#making-requests).
+ * @member {real} date_expires The Unix timestamp of the date this token will expire. Default is one year from issue date. See [Access Token Lifetime & Expiry](https://docs.mod.io/#making-requests).
  * 
  * @struct_end
  */
@@ -15,7 +15,7 @@
  * @struct AgreementVersion
  * @desc > **mod.io Response Schema:** [Agreement Version Object](https://docs.mod.io/#agreement-version-object)
  * 
- * @member {real} id https://docs.mod.io/#agreement-version-object
+ * @member {real} id Unique id of the agreement.
  * @member {boolean} is_active Is the agreement currently active? (This can also be determined if date_live > 0).
  * @member {real} type The type of agreement. Can be one of the following:
  * 
@@ -27,9 +27,9 @@
  * 6 = AUP
  * 
  * @member {struct.User} user No description
- * @member {int64} date_added Unix timestamp of the date the agreement was added.
- * @member {int64} date_updated Unix timestamp of the date the agreement was updated.
- * @member {int64} date_live Unix timestamp of the date the agreement was set live.
+ * @member {real} date_added Unix timestamp of the date the agreement was added.
+ * @member {real} date_updated Unix timestamp of the date the agreement was updated.
+ * @member {real} date_live Unix timestamp of the date the agreement was set live.
  * @member {string} name Name of the agreement.
  * @member {string} changelog Changelog for version of this agreement.
  * @member {string} description The contents of the agreement
@@ -57,7 +57,7 @@
  * @member {real} game_id Unique game id (if applicable).
  * @member {real} resource_id Unique id of the parent resource.
  * @member {struct.User} The user who published the comment.
- * @member {int64} date_added Unix timestamp of date the comment was posted.
+ * @member {real} date_added Unix timestamp of date the comment was posted.
  * @member {real} reply_id Id of the parent comment this comment is replying to (can be 0 if the comment is not a reply).
  * @member {string} thread_position Levels of nesting in a comment thread. How it works:
  *
@@ -66,7 +66,7 @@
  * - If someone responds to the second comment the position will be '02.01'.
  * - A maximum of 3 levels is supported.
  * 
- * @member {real} karma Karma received for the comment (can be postive or negative).
+ * @member {real} karma Karma received for the comment (can be positive or negative).
  * @member {string} content Contents of the comment.
  * 
  * @struct_end
@@ -76,20 +76,11 @@
  * @struct Download
  * @description > **mod.io Response Schema:** [Download Object](https://docs.mod.io/#download-object)
  * 
- * @member {string} binary_url URL to download the file from the mod.io CDN.
+ * @member {string} binary_url The URL to download the file from the mod.io CDN.
  * 
  * [[NOTE: If the [game](https://docs.mod.io/#edit-game) requires mod downloads to be initiated via the API, the `binary_url` returned will contain a verification hash. This hash must be supplied to get the modfile, and will expire after a certain period of time. Saving and reusing the `binary_url` won't work in this situation given its dynamic nature.]]
  * 
- * @member {int64} date_expires Unix timestamp of when the `binary_url` will expire.
- * 
- * @struct_end
- */
-
-/**
- * @struct EmailRequestResponse
- * @desc > **mod.io Response Schema:** [Email Request Response Object](https://docs.mod.io/#schemaemail_request_response)
- * 
- * 
+ * @member {real} date_expires Unix timestamp of when the `binary_url` will expire.
  * 
  * @struct_end
  */
@@ -105,18 +96,18 @@
 
 /**
  * @struct Game
- * @desc https://docs.mod.io/#game-object
+ * @desc > **mod.io Response Schema:** [Game Object](https://docs.mod.io/#game-object)
  * 
  * @member {real} id Unique game id.
- * @member {real} status Status of the game (see status and visibility for details):
+ * @member {real} status Status of the game (see [status and visibility](https://docs.mod.io/#status-amp-visibility) for details):
  * 
  * 0 = Not Accepted
  * 1 = Accepted
  * 3 = Deleted
  * 
- * @member {int64} date_added Unix timestamp of date game was registered.
- * @member {int64} date_updated Unix timestamp of date game was updated.
- * @member {int64} date_live Unix timestamp of date game was set live.
+ * @member {real} date_added Unix timestamp of date game was registered.
+ * @member {real} date_updated Unix timestamp of date game was updated.
+ * @member {real} date_live Unix timestamp of date game was set live.
  * @member {real} presentation_option Presentation style used on the mod.io website:
  * 
  * 0 = Grid View: Displays mods in a grid
@@ -142,6 +133,16 @@
  * 16 = Show more on homepage
  * 32 = Allow change status
  * ? = Add the options you want together, to enable multiple features (see [BITWISE fields](https://docs.mod.io/#bitwise-and-bitwise-and))
+ * 
+ * @member {real} monetisation_options Monetisation features mods can enable:
+ * 
+ * 0 = All of the options below are disabled
+ * 1 = Enabled
+ * 2 = Enable recognition
+ * 4 = Enable marketplace
+ * ? = Add the options you want together, to enable multiple features (see [BITWISE fields](https://docs.mod.io/#bitwise-and-bitwise-and))
+ * 
+ * @member {real} revenue_options Deprecated: Please use monetisation_options instead, this will be removed in subsequent API version.
  * 
  * @member {real} api_access_options Level of API access allowed by this game:
  * 
@@ -199,6 +200,21 @@
  */
 
 /**
+ * @struct GameStats
+ * @description > **mod.io Response Schema:** [Game Stats Object](https://docs.mod.io/#game-stats-object)
+ * 
+ * @member {real} game_id Unique game id.
+ * @member {real} mods_count_total Available mod count for the game.
+ * @member {real} mods_downloads_today Mods downloaded today for the game.
+ * @member {real} mods_downloads_total Total Mods downloaded for the game.
+ * @member {real} mods_downloads_daily_average Average mods downloaded on a daily basis.
+ * @member {real} mods_subscribers_total Number of total users who have subscribed to the mods for the game.
+ * @member {real} date_expires Unix timestamp until this game's statistics are considered stale.
+ * 
+ * @struct_end
+ */
+
+/**
  * @struct GameTagOption
  * @desc > **mod.io Response Schema:** [Game Tag Option Object](https://docs.mod.io/#game-tag-option-object)
  * 
@@ -206,6 +222,7 @@
  * @member {string} type Can multiple tags be selected via 'checkboxes' or should only a single tag be selected via a 'dropdown'.
  * @member {struct} tag_count_map List of tag names and the count of mods with these tags.
  * @member {boolean} hidden Groups of tags flagged as 'hidden' are intended to be used for filtering (eg. game version), but should not be displayed to users. Hidden tags will only be returned if `show_hidden_tags` is set to `true`.
+ * @member {boolean} locked Groups of tags flagged as 'locked' are editable only if the authenticated user is a team member of the parent game. Useful for games to tag special functionality, which users can see and filter on (eg. competition winners).
  * @member {array<string>} tags Array of tags in this group.
  * 
  * @struct_end
@@ -240,7 +257,6 @@
  * 
  * @member {string} filename Image filename including extension.
  * @member {string} original URL to the full-sized image.
- * @member {string} thumb_64x64 URL to the small icon thumbnail.
  * @member {string} thumb_320x180 URL to the image thumbnail.
  * @member {string} thumb_1280x720 URL to the image thumbnail.
  * 
@@ -256,6 +272,26 @@
  * @member {string} thumb_320x180 URL to the small logo thumbnail.
  * @member {string} thumb_640x360 URL to the medium logo thumbnail.
  * @member {string} thumb_1280x720 URL to the large logo thumbnail.
+ * 
+ * @struct_end
+ */
+
+/**
+ * @struct Message
+ * @description > **mod.io Response Schema:** [Message Object](https://docs.mod.io/#message-object)
+ * 
+ * @member {real} code  [HTTP status code](https://docs.mod.io/#response-codes) of response.
+ * @member {string} message The server response to your request. Responses will vary depending on the endpoint, but the object structure will persist.
+ * 
+ * @struct_end
+ */
+
+/**
+ * @struct MetadataKVP
+ * @description > **mod.io Response Schema:** [Metadata KVP Object](https://docs.mod.io/#metadata-kvp-object)
+ * 
+ * @member {string} metakey The key of the key-value pair.
+ * @member {string} metavalue The value of the key-value pair.
  * 
  * @struct_end
  */
@@ -278,9 +314,9 @@
  * 1 = Public
  * 
  * @member {struct.User} submitted_by The user who published the mod.
- * @member {int64} date_added Unix timestamp of date mod was registered.
- * @member {int64} date_updated Unix timestamp of date mod was updated.
- * @member {int64} date_live Unix timestamp of date mod was set live.
+ * @member {real} date_added Unix timestamp of date mod was registered.
+ * @member {real} date_updated Unix timestamp of date mod was updated.
+ * @member {real} date_live Unix timestamp of date mod was set live.
  * @member {real} maturity_option Maturity options flagged by the mod developer, this is only relevant if the parent game allows mods to be labelled as mature:
  * 
  * 0 = None
@@ -326,13 +362,61 @@
  */
 
 /**
+ * @struct ModDependencies
+ * @description > **mod.io Response Schema:** [Mod Dependencies Object](https://docs.mod.io/#mod-dependencies-object)
+ * 
+ * @member {real} mod_id Unique ID of the mod that serves as the dependency.
+ * @member {string} name Name of the mod dependency.
+ * @member {string} name_id Path for the mod on mod.io. For example: https://mod.io/g/rogue-knight/m/**rogue-knight-hd-pack**
+ * @member {real} date_added Unix timestamp of date the dependency was added.
+ * @member {real} dependency_depth When a dependency depth is greater than zero (0), it means that the dependencies themselves rely on additional dependencies. To ensure smooth installation, it is recommended dependencies be installed in *descending* order of depth, beginning with those with the highest depth. Please note only dependencies with a depth of up to 5 will be shown.
+ * @member {struct.Logo} logo Contains media URL's to the logo for the mod.
+ * @member {struct.Modfile} modfile The primary modfile for the mod.
+ * 
+ * @struct_end
+ */
+
+/**
+ * @struct ModEvents
+ * @description > **mod.io Response Schema:** [Get Mod Events](https://docs.mod.io/#get-mod-events-2)
+ * 
+ * @member {struct.ModEvent} data Array containing mod event objects.
+ * @member {real} result_count Number of results returned in this request.
+ * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by `_offset` filter.
+ * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by `_limit filter`.
+ * @member {real} result_total Total number of results found.
+ * 
+ * @struct_end
+ */
+
+/**
+ * @struct ModEvent
+ * @description > **mod.io Response Schema:** [Get Mod Events](https://docs.mod.io/#get-mod-events-2)
+ * 
+ * @member {real} id Unique id of the event object.
+ * @member {real} mod_id Unique id of the parent mod.
+ * @member {real} user_id Unique id of the user who performed the action.
+ * @member {real} date_added Unix timestamp of date the event occurred.
+ * @member {string} event_type Type of event that was triggered. List of possible events: 
+ * 
+ * - MODFILE_CHANGED
+ * - MOD_AVAILABLE
+ * - MOD_UNAVAILABLE
+ * - MOD_EDITED
+ * - MOD_DELETED
+ * - MOD_TEAM_CHANGED
+ * 
+ * @struct_end
+ */
+
+/**
  * @struct Modfile
  * @description > **mod.io Response Schema:** [Modfile Object](https://docs.mod.io/#modfile-object)
  * 
  * @member {real} id Unique modfile id.
  * @member {real} mod_id Unique mod id.
- * @member {int64} date_added Unix timestamp of date file was added.
- * @member {int64} date_scanned Unix timestamp of date file was virus scanned.
+ * @member {real} date_added Unix timestamp of date file was added.
+ * @member {real} date_scanned Unix timestamp of date file was virus scanned.
  * @member {real} virus_status Current virus scan status of the file. For newly added files that have yet to be scanned this field will change frequently until a scan is complete:
  * 
  * 0 = Not scanned
@@ -397,82 +481,47 @@
  */
 
 /**
+ * @struct ModStats
+ * @description > **mod.io Response Schema:** [Mod Stats Object](https://docs.mod.io/#mod-stats-object)
+ * 
+ * @member {real} mod_id Unique mod id.
+ * @member {real} popularity_rank_position Current rank of the mod.
+ * @member {real} popularity_rank_total_mods Number of ranking spots the current rank is measured against.
+ * @member {real} downloads_today Number of total mod downloads. Count resets around 11:00 UTC+11 daily.
+ * @member {real} downloads_total Number of total mod downloads.
+ * @member {real} subscribers_total Number of total users who have subscribed to the mod.
+ * @member {real} ratings_total Number of times this mod has been rated.
+ * @member {real} ratings_positive Number of positive ratings.
+ * @member {real} ratings_negative Number of negative ratings.
+ * @member {real} ratings_percentage_positive Number of positive ratings, divided by the total ratings to determine its percentage score.
+ * @member {real} ratings_weighted_aggregate Overall rating of this item calculated using the [Wilson score confidence interval](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html). This column is good to sort on, as it will order items based on number of ratings and will place items with many positive ratings above those with a higher score but fewer ratings.
+ * @member {string} ratings_display_text Textual representation of the rating in format:
+ * 
+ * - Overwhelmingly Positive
+ * - Very Positive
+ * - Positive
+ * - Mostly Positive
+ * - Mixed
+ * - Negative
+ * - Mostly Negative
+ * - Very Negative
+ * - Overwhelmingly Negative
+ * - Unrated
+ * 
+ * @member {real} date_expires Unix timestamp until this mods's statistics are considered stale.
+ * 
+ * @struct_end
+ */
+
+/**
  * @struct ModTag
  * @desc > **mod.io Response Schema:** [Mod Tag Object](https://docs.mod.io/#mod-tag-object)
  * 
  * @member {string} name Tag name.
- * @member {int64} date_added Unix timestamp of date tag was applied.
+ * @member {real} date_added Unix timestamp of date tag was applied.
  * 
  * @struct_end 
 */
-
-/**
- * @struct Message
- * @description > **mod.io Response Schema:** [Message Object](https://docs.mod.io/#message-object)
- * 
- * @member {real} code  [HTTP status code](https://docs.mod.io/#response-codes) of response.
- * @member {string} message The server response to your request. Responses will vary depending on the endpoint, but the object structure will persist.
- * 
- * @struct_end
- */
-
-/**
- * @struct MetadataKVP
- * @description > **mod.io Response Schema:** [Metadata KVP Object](https://docs.mod.io/#metadata-kvp-object)
- * 
- * @member {string} metakey The key of the key-value pair.
- * @member {string} metavalue The value of the key-value pair.
- * 
- * @struct_end
- */
-
-/**
- * @struct ModDependencies
- * @description > **mod.io Response Schema:** [Mod Dependencies Object](https://docs.mod.io/#mod-dependencies-object)
- * 
- * @member {real} mod_id Unique ID of the mod that serves as the dependency.
- * @member {string} name Name of the mod dependency.
- * @member {string} name_id Path for the mod on mod.io. For example: https://mod.io/g/rogue-knight/m/**rogue-knight-hd-pack**
- * @member {int64} date_added Unix timestamp of date the dependency was added.
- * @member {real} dependency_depth When a dependency depth is greater than zero (0), it means that the dependencies themselves rely on additional dependencies. To ensure smooth installation, it is recommended dependencies be installed in *descending* order of depth, beginning with those with the highest depth. Please note only dependencies with a depth of up to 5 will be shown.
- * @member {struct.Logo} logo Contains media URL's to the logo for the mod.
- * @member {struct.Modfile} modfile The primary modfile for the mod.
- * 
- * @struct_end
- */
-
-/**
- * @struct ModEvents
- * @description > **mod.io Response Schema:** [Get Mod Events](https://docs.mod.io/#get-mod-events-2)
- * 
- * @member {struct.ModEvent} data Array containing mod event objects.
- * @member {real} result_count Number of results returned in this request.
- * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by `_offset` filter.
- * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by `_limit filter`.
- * @member {real} result_total Total number of results found.
- * 
- * @struct_end
- */
-
-/**
- * @struct ModEvent
- * @description > **mod.io Response Schema:** [Get Mod Events](https://docs.mod.io/#get-mod-events-2)
- * 
- * @member {real} id Unique id of the event object.
- * @member {real} mod_id Unique id of the parent mod.
- * @member {real} user_id Unique id of the user who performed the action.
- * @member {int64} date_added Unix timestamp of date the event occurred.
- * @member {string} event_type Type of event that was triggered. List of possible events: 
- * 
- * - MODFILE_CHANGED
- * - MOD_AVAILABLE
- * - MOD_UNAVAILABLE
- * - MOD_EDITED
- * - MOD_DELETED
- * - MOD_TEAM_CHANGED
- * 
- * @struct_end
- */
 
 /**
  * @struct TeamMember
@@ -486,7 +535,7 @@
  * 4 = Manager (moderator access, including uploading builds and editing settings except supply and team members)
  * 8 = Administrator (full access, including editing the supply and team)
  * 
- * @member {int64} date_added Unix timestamp of the date the user was added to the team.
+ * @member {real} date_added Unix timestamp of the date the user was added to the team.
  * @member {string} position Custom title given to the user in this team.
  * @member {real} invite_pending If the team member invitation is still pending:
  * 
@@ -539,8 +588,8 @@
  * @member {string} name_id Path for the user on mod.io. For example: https://mod.io/u/**name-id-here **
  * @member {string} username Username of the user.
  * @member {string} display_name_portal The users' display name for the targeted portal. Value will be `null` if no valid `X-Modio-Portal` portal header value is provided. For more information see [Targeting a Portal](https://docs.mod.io/#targeting-a-portal).
- * @member {int64} date_online Unix timestamp of date the user was last online.
- * @member {int64} date_joined Unix timestamp of date the user joined.
+ * @member {real} date_online Unix timestamp of date the user was last online.
+ * @member {real} date_joined Unix timestamp of date the user joined.
  * @member {struct.Avatar} avatar Contains media URL's to the users avatar.
  * @member {string} timezone Deprecated: No longer used and will be removed in subsequent API version.
  * @member {string} language Deprecated: No longer used and will be removed in subsequent API version. To [localize the API response](https://docs.mod.io/#localization) we recommend you set the `Accept-Language` header.
@@ -565,13 +614,14 @@
  * @module response_schemas
  * @description Response Schemas
  * 
+ * This page lists all possible data types. Data is always returned to GameMaker by mod.io as JSON, which it then parses into a struct that you can access directly.
+ * 
  * @section_struct
  * @ref AccessToken
  * @ref AgreementVersion
  * @ref Avatar
  * @ref Comment
  * @ref Download
- * @ref EmailRequestResponse
  * @ref Filehash
  * @ref Game
  * @ref GameOtherUrls

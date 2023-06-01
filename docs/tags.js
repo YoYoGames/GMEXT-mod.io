@@ -78,7 +78,7 @@ function modio_tags_game_delete() {}
  * 
  * **Filters:**
  *
- * - date_added (${type.int64}) Unix timestamp of date tag was added.
+ * - date_added (${type.real}) Unix timestamp of date tag was added.
  * - tag (${type.string}) string representation of the tag. You can check the eligible tags on the parent game object to determine all possible values for this field.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.

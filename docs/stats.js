@@ -47,54 +47,6 @@ function modio_stats_mods_get_list() {}
 */
 function modio_stats_mods_get() {}
 
-/**
- * @struct GameStats
- * @description > **mod.io Response Schema:** [Game Stats Object](https://docs.mod.io/#game-stats-object)
- * 
- * @member {real} game_id Unique game id.
- * @member {real} mods_count_total Available mod count for the game.
- * @member {real} mods_downloads_today Mods downloaded today for the game.
- * @member {real} mods_downloads_total Total Mods downloaded for the game.
- * @member {real} mods_downloads_daily_average Average mods downloaded on a daily basis.
- * @member {real} mods_subscribers_total Number of total users who have subscribed to the mods for the game.
- * @member {int64} date_expires Unix timestamp until this game's statistics are considered stale.
- * 
- * @struct_end
- */
-
-/**
- * @struct ModStats
- * @description > **mod.io Response Schema:** [Mod Stats Object](https://docs.mod.io/#mod-stats-object)
- * 
- * @member {real} mod_id Unique mod id.
- * @member {real} popularity_rank_position Current rank of the mod.
- * @member {real} popularity_rank_total_mods Number of ranking spots the current rank is measured against.
- * @member {real} downloads_today Number of total mod downloads. Count resets around 11:00 UTC+11 daily.
- * @member {real} downloads_total Number of total mod downloads.
- * @member {real} subscribers_total Number of total users who have subscribed to the mod.
- * @member {real} ratings_total Number of times this mod has been rated.
- * @member {real} ratings_positive Number of positive ratings.
- * @member {real} ratings_negative Number of negative ratings.
- * @member {real} ratings_percentage_positive Number of positive ratings, divided by the total ratings to determine its percentage score.
- * @member {real} ratings_weighted_aggregate Overall rating of this item calculated using the [Wilson score confidence interval](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html). This column is good to sort on, as it will order items based on number of ratings and will place items with many positive ratings above those with a higher score but fewer ratings.
- * @member {string} ratings_display_text Textual representation of the rating in format:
- * 
- * - Overwhelmingly Positive
- * - Very Positive
- * - Positive
- * - Mostly Positive
- * - Mixed
- * - Negative
- * - Mostly Negative
- * - Very Negative
- * - Overwhelmingly Negative
- * - Unrated
- * 
- * @member {int64} date_expires Unix timestamp until this mods's statistics are considered stale.
- * 
- * @struct_end
- */
-
 // Modules
 
 /**
