@@ -2,7 +2,9 @@
  * @function modio_comments_get_list
  * @description > **mod.io Endpoint:** [Get Mod Comments](https://docs.mod.io/#get-mod-comments) (`GET /games/{game-id}/mods/{mod-id}/comments`)
  * 
- * Get all comments posted in the mods profile. A successful request will return an array of ${struct.Comment} structs. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets all the comments posted in the mods profile. A successful request will return an array of ${struct.Comment} structs.
+ * 
+ * Read the [filtering documentation](https://docs.mod.io/#filtering) to learn about filtering your records.
  * 
  * Filters:
  *
@@ -37,7 +39,7 @@ function modio_comments_get_list() {}
  * @function modio_comments_add
  * @description > **mod.io Endpoint:** [Add Mod Comment](https://docs.mod.io/#add-mod-comment) (`POST /games/{game-id}/mods/{mod-id}/comments`)
  * 
- * Add a comment for the corresponding mod. A successful request will return the newly created ${struct.Comment} struct and fire a `MOD_COMMENT_ADDED` event.
+ * This function adds a comment for the corresponding mod. A successful request will return the newly created ${struct.Comment} struct and fire a `MOD_COMMENT_ADDED` event.
  * 
  * @param {real} mod_id The unique id of the mod.
  * @param {string} content Contents of the comment. You can include @mentions to users, which will notify them that they have been tagged in this comment.
@@ -46,7 +48,7 @@ function modio_comments_get_list() {}
  * - Format: `@<display-name>`
  * - Example: Hey @XanT, you should check out this mod!
  * 
- * @param {real} reply_id Id of the parent comment to reply to (can be 0 if the comment is not a reply and thus will not be nested). Default is 0.
+ * @param {real} reply_id ID of the parent comment to reply to (can be 0 if the comment is not a reply and thus will not be nested). Default is 0.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -59,7 +61,7 @@ function modio_comments_add() {}
  * @function modio_comments_get
  * @description > **mod.io Endpoint:** [Get Mod Comment](https://docs.mod.io/#get-mod-comment) (`GET /games/{game-id}/mods/{mod-id}/comments/{comment-id}`)
  * 
- * Get a Mod Comment. A successful request will return a single ${struct.Comment} struct.
+ * This function gets a mod comment. A successful request will return a single ${struct.Comment} struct.
  * 
  * @param {real} mod_id Unique id of the mod.
  * @param {string} comment_id Unique id of the comment.
@@ -77,10 +79,10 @@ function modio_comments_get() {}
  * @function modio_comments_update
  * @description > **mod.io Endpoint:** [Update Mod Comment](https://docs.mod.io/#update-mod-comment) (`PUT /games/{game-id}/mods/{mod-id}/comments/{comment-id}`)
  * 
- * Update a comment for the corresponding mod. A successful request will return the updated ${struct.Comment} struct.
+ * This function updates the given comment under the given mod. A successful request will return the updated ${struct.Comment} struct.
  * 
  * @param {real} mod_id Unique id of the mod.
- * @param {string} comment_id Unique id of the comment
+ * @param {string} comment_id Unique id of the comment.
  * @param {string} content Updated contents of the comment.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
@@ -96,7 +98,7 @@ function modio_comments_update() {}
  * @function modio_comments_delete
  * @description > **mod.io Endpoint:** [Delete Mod Comment](https://docs.mod.io/#delete-mod-comment) (`DELETE /games/{game-id}/mods/{mod-id}/comments/{comment-id}`)
  * 
- * Delete a comment from a mod profile. Successful request will return `204 No Content` and fire a `MOD_COMMENT_DELETED` event.
+ * This function deletes a comment from a mod profile. Successful request will return `204 No Content` and fire a `MOD_COMMENT_DELETED` event.
  * 
  * @param {real} mod_id Unique id of the mod.
  * @param {string} comment_id Unique id of the comment.
@@ -112,7 +114,7 @@ function modio_comments_delete() {}
  * @function modio_comments_karma
  * @description > **mod.io Endpoint:** [Add Mod Comment Karma](https://docs.mod.io/#add-mod-comment-karma) (`POST /games/{game-id}/mods/{mod-id}/comments/{comment-id}/karma`)
  * 
- * Update the Karma rating in single increments or decrements for a corresponding mod comment. A successful request will return the updated {struct.Comment} struct.
+ * This function updates the Karma rating in single increments or decrements for a corresponding mod comment. A successful request will return the updated {struct.Comment} struct.
  * 
  * @param {real} mod_id Unique id of the mod.
  * @param {string} comment_id Unique id of the comment.

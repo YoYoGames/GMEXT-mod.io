@@ -2,7 +2,7 @@
  * @function modio_agreements_get
  * @description > **mod.io Endpoint:** [Get Current Agreement](https://docs.mod.io/#get-current-agreement) (`GET /agreements/types/{agreement-type-id}/current`)
  * 
- * Get the current agreement (version) by type. A successful request will return a single {struct.AgreementVersion} struct.
+ * This function gets the current agreement version by type. A successful request will return a single {struct.AgreementVersion} struct.
  * 
  * @param {real} agreement_type_id Valid agreement types are:
  *
@@ -26,7 +26,7 @@ function modio_agreements_get() {}
  * @function modio_agreements_version
  * @description > **mod.io Endpoint:** [Get Agreement Version](https://docs.mod.io/#get-agreement-version) (`GET /agreements/versions/{agreement-version-id}`)
  * 
- * Get the specified agreement version. A successful request will return an ${struct.AgreementVersion} struct.
+ * This function gets the specified agreement version. A successful request will return an ${struct.AgreementVersion} struct.
  * 
  * @param {real} version The version to get
  * 
