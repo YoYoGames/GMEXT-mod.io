@@ -4,9 +4,9 @@
  * 
  * <br />
  * 
- * Get all dependencies the chosen mod has selected. This is useful if a mod requires other mods be installed for it to run. A successful request will return an array of ${struct.ModDependenciesObject}.
+ * Get all dependencies the chosen mod has selected. This is useful if a mod requires other mods be installed for it to run. A successful request will return an array of ${struct.ModDependencies}.
  *
- * [[IMPORTANT: Because of the complexity of supporting nested dependencies, we recommend you treat dependencies as a recommendation for your players, and do not process dependencies automatically when installing a mod unless absolutely required. A successful request will return an array of ${struct.ModDependenciesObject}.]]
+ * [[IMPORTANT: Because of the complexity of supporting nested dependencies, we recommend you treat dependencies as a recommendation for your players, and do not process dependencies automatically when installing a mod unless absolutely required. A successful request will return an array of ${struct.ModDependencies}.]]
  *
  * [[NOTE: Some modders might select soft dependencies to promote or credit other mods. We advise against this but it is possible to do, and is one of the reasons why we recommend against processing nested dependencies automatically.]]
  * 

@@ -140,6 +140,17 @@ function modio_modfiles_delete() {}
 */
 function modio_modfiles_platforms() {}
 
+// Structs
+
+/**
+ * @struct Filehash
+ * @description > **mod.io Response Schema:** [Filehash Object](https://docs.mod.io/#filehash-object)
+ * 
+ * @member {string} md5 MD5 hash of the file.
+ * 
+ * @struct_end
+ */
+
 /**
  * @struct Modfile
  * @description > **mod.io Response Schema:** [Modfile Object](https://docs.mod.io/#modfile-object)
@@ -190,40 +201,6 @@ function modio_modfiles_platforms() {}
  * @struct_end
  */
 
-/**
- * @struct Modfile
- * @desc Modfile
- * @member {real} id Unique modfile id.
- * @member {real} mod_id Unique mod id.
- * @member {int64} date_added Unix timestamp of date file was added.
- * @member {int64} date_scanned Unix timestamp of date file was virus scanned.
- * @member {real} virus_status Current virus scan status of the file. For newly added files that have yet to be scanned this field will change frequently until a scan is complete:
- * 
- * 0 = Not scanned
- * 1 = Scan complete
- * 2 = In progress
- * 3 = Too large to scan
- * 4 = File not found
- * 5 = Error Scanning
- * 
- * @member {real} virus_positive Was a virus detected:
- * 
- * 0 = No threats detected
- * 1 = Flagged as malicious
- * 
- * @member {string} virustotal_hash Deprecated: No longer used and will be removed in subsequent API version.
- * @member {real} filesize Size of the file in bytes.
- * @member {real} filesize_uncompressed The uncompressed filesize of the zip archive.
- * @member {struct.Filehash} filehash Contains a dictionary of filehashes for the contents of the download.
- * @member {string} filename Filename including extension.
- * @member {string} version Release version this file represents.
- * @member {string} changelog Changelog for the file.
- * @member {string} metadata_blob Metadata stored by the game developer for this file.
- * @member {struct.Download} download Contains download data for the modfile.
- * @member {struct.ModfilePlatform} platforms Contains modfile platform data.
- * @struct_end
- */
-
 // Modules
 
 /**
@@ -242,7 +219,9 @@ function modio_modfiles_platforms() {}
  * 
  * @section_struct modfiles
  * @desc Modfile Structs
- * @ref 
+ * @ref Filehash
+ * @ref Modfile
+ * @ref ModfilePlatform
  * @section_end
  * 
  * @module_end

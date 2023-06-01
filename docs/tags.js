@@ -1,5 +1,3 @@
-@title tags
-
 // Functions
 
 /** 
@@ -41,7 +39,7 @@ function modio_tags_game_get() {}
  * @param {struct} optionals
  * 
  * - hidden (${type.boolean}) This group of tags should not be shown to users. Useful for games to tag special functionality, to filter on and use behind the scenes. You can also use Metadata Key Value Pairs for more arbitrary data.
- * - locked (${boolean}) This group of tags can only be edited by game admins. Useful for games to tag special functionality, which users can see and filter on. Can be combined with hidden if you want the tags group locked and hidden.
+ * - locked (${type.boolean}) This group of tags can only be edited by game admins. Useful for games to tag special functionality, which users can see and filter on. Can be combined with hidden if you want the tags group locked and hidden.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -153,6 +151,7 @@ function modio_tags_mod_delete() {}
 
 /**
  * @module tags
+ * @title Tags
  * 
  * @section_func
  * @desc Functions

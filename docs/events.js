@@ -6,7 +6,7 @@
  * 
  * <br />
  * 
- * Get all mods events for the corresponding game sorted by latest event first. A successful request will return an array of {struct.Event} structs.
+ * Get all mods events for the corresponding game sorted by latest event first. A successful request will return an array of {struct.ModEvent} structs.
  * 
  * [[NOTE: We recommend you poll this endpoint to keep mods up-to-date. If polling this endpoint for updates you should store the `id` or `date_added` of the latest event, and on subsequent requests use that information [in the filter](https://docs.mod.io/#filtering), to return only newer events to process.]]
  * 
@@ -43,7 +43,7 @@ function modio_events_get_list() {}
  * 
  * <br />
  * 
- * Get the event log for a mod, showing changes made sorted by latest event first. A successful request will return an array of {struct.Event} structs. We recommended reading the filtering documentation to return only the records you want.
+ * Get the event log for a mod, showing changes made sorted by latest event first. A successful request will return an array of ${struct.ModEvent} structs. We recommended reading the filtering documentation to return only the records you want.
  * 
  * @param {real} mod_id
  * 

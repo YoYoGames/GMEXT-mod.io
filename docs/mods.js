@@ -67,7 +67,7 @@ function modio_mods_get() {}
  * ? = Add the options you want together, to enable multiple options (see BITWISE fields)
  * 
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties as to how the item works, or other information you need to display. Metadata can also be stored as searchable key value pairs, and to individual mod files.
- * - tags (${type.string}) Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within `tag_options` column on the parent {struct.GameObject}.
+ * - tags (${type.string}) Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within `tag_options` column on the parent ${struct.Game}.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -213,7 +213,7 @@ function modio_mods_delete() {}
  * @member {string} description_plaintext `description` field converted into plaintext.
  * @member {string} metadata_blob Metadata stored by the game developer. Metadata can also be stored as searchable [key value pairs](https://docs.mod.io/#metadata), and to individual [mod files](https://docs.mod.io/#get-modfiles).
  * @member {string} profile_url URL to the mod.
- * @member {struct.Media} media Contains YouTube & Sketchfab links, aswell as media URL's of images for the mod.
+ * @member {struct.ModMedia} media Contains YouTube & Sketchfab links, aswell as media URL's of images for the mod.
  * @member {struct.Modfile} modfile The primary modfile for the mod.
  * @member {struct.ModStats} stats Numerous aggregate stats for the mod.
  * @member {struct.ModPlatforms} platforms Contains mod platform data.

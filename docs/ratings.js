@@ -24,6 +24,23 @@
 */
 function modio_ratings() {}
 
+// Structs
+
+/**
+ * @struct Rating
+ * @description > **mod.io Response Schema:** [Rating Object](https://docs.mod.io/#rating-object)
+ * @member {real} game_id Unique game id.
+ * @member {real} mod_id Unique mod id.
+ * @member {real} rating Mod rating value:
+ * 
+ * - 1 = Positive Rating
+ * - -1 = Negative Rating
+ * 
+ * @member {int64} date_added Unix timestamp of date rating was submitted.
+ * 
+ * @struct_end
+ */
+
 // Modules
 
 /**
@@ -33,6 +50,11 @@ function modio_ratings() {}
  * @section_func
  * @desc Ratings
  * @ref modio_ratings
+ * @section_end
+ * 
+ * @section_struct
+ * @desc Structs
+ * @ref Rating
  * @section_end
  * 
  * @module_end

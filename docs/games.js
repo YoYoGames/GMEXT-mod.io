@@ -4,7 +4,7 @@
  * @function modio_games_get_list
  * @description > **mod.io Endpoint:** [Get Games](https://docs.mod.io/#get-games) (`GET /games`)
  * 
- * Get all games. A successful request will return an array of {struct.GameObject}. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * Get all games. A successful request will return an array of ${struct.Game}. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -17,7 +17,7 @@ function modio_games_get_list() {}
  * @function modio_games_get
  * @description > **mod.io Endpoint:** [Get Game](https://docs.mod.io/#get-games) (`GET /games/{game-id}`)
  * 
- * This function gets a game. Successful request will return a single {struct.GameObject}. We recommended reading the filtering documentation to return only the records you want.
+ * This function gets a game. Successful request will return a single ${struct.Game}. We recommended reading the filtering documentation to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -29,7 +29,7 @@ function modio_games_get() {}
 // Structs
 
 /**
- * @struct GameObject
+ * @struct Game
  * @desc https://docs.mod.io/#game-object
  * 
  * @member {real} id Unique game id.
@@ -94,12 +94,22 @@ function modio_games_get() {}
  * @member {string} profile_url URL to the game.
  * @member {struct.GameStats} stats Numerous aggregate stats for the game.
  * @member {struct.Theme} theme Theme color values for the game.
- * @member {struct.OtherUrls} other_urls Creator defined URLs to share.
- * @member {struct.TagOption} tag_options Groups of tags configured by the game developer, that mods can select. Hidden tags will only be returned if `show_hidden_tags` is set to `true`.
+ * @member {struct.GameOtherUrls} other_urls Creator defined URLs to share.
+ * @member {struct.GameTagOption} tag_options Groups of tags configured by the game developer, that mods can select. Hidden tags will only be returned if `show_hidden_tags` is set to `true`.
  * @member {struct.GamePlatforms} platforms Platforms that are supported by this title.
  * 
  * @struct_end
  * 
+ */
+
+/**
+ * @struct GameOtherUrls
+ * @description GameOtherUrls struct
+ * 
+ * @member {string} label Label of the link you are sharing.
+ * @member {string} url The URL to be associated with the label.
+ * 
+ * @struct_end
  */
 
 /**
@@ -111,6 +121,7 @@ function modio_games_get() {}
  * @member {boolean} moderated Is this platform moderated by game admins? If false, then user submissions for the platform will be available immediately providing the game has mod curation disabled.
  * 
  * @struct_end
+ */
 
 // Modules
 
@@ -127,7 +138,9 @@ function modio_games_get() {}
  * @section_end
  * 
  * @section_struct
- * @ref GameObject
+ * @ref Game
+ * @ref GameOtherUrls
+ * @ref GamePlatforms
  * @section_end
  * 
  * @module_end
