@@ -107,11 +107,5 @@ function modio_stats_mods_get() {}
  * @ref modio_stats_mods_get_list
  * @section_end
  * 
- * @section_struct Structs
- * @desc structs
- * @ref GameStats
- * @ref ModStats
- * @section_end
- * 
  * @module_end
  */

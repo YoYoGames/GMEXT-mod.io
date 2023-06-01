@@ -1,5 +1,3 @@
-@title Events
-
 // Functions
 
 /** 
@@ -61,54 +59,16 @@ function modio_events_get() {}
 
 // Structs
 
-/**
- * @struct ModEvents
- * @description > **mod.io Response Schema:** [Get Mod Events](https://docs.mod.io/#get-mod-events-2)
- * 
- * @member {struct.ModEvent} data Array containing mod event objects.
- * @member {real} result_count Number of results returned in this request.
- * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by `_offset` filter.
- * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by `_limit filter`.
- * @member {real} result_total Total number of results found.
- * 
- * @struct_end
- */
-
-/**
- * @struct ModEvent
- * @description > **mod.io Response Schema:** [Get Mod Events](https://docs.mod.io/#get-mod-events-2)
- * 
- * @member {real} id Unique id of the event object.
- * @member {real} mod_id Unique id of the parent mod.
- * @member {real} user_id Unique id of the user who performed the action.
- * @member {int64} date_added Unix timestamp of date the event occurred.
- * @member {string} event_type Type of event that was triggered. List of possible events: 
- * 
- * - MODFILE_CHANGED
- * - MOD_AVAILABLE
- * - MOD_UNAVAILABLE
- * - MOD_EDITED
- * - MOD_DELETED
- * - MOD_TEAM_CHANGED
- * 
- * @struct_end
- */
-
 // Modules
 
 /**
  * @module events
+ * @title Events
  * 
  * @section_func
  * @desc Functions
  * @ref modio_events_get_list
  * @ref modio_events_get
- * @section_end
- * 
- * @section_struct
- * @desc Structs
- * @ref ModEvents
- * @ref ModEvent
  * @section_end
  * 
  * @module_end

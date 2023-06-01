@@ -158,81 +158,6 @@ function modio_mods_delete() {}
 
 // Structs
 
-/**
- * @struct Mod
- * @description > **mod.io Response Schema:** [Mod Object](https://docs.mod.io/#mod-object)
- * 
- * @member {real} id Unique mod id.
- * @member {real} game_id Unique game id.
- * @member {real} status Status of the mod (see [status and visibility](https://docs.mod.io/#status-amp-visibility) for details):
- * 
- * 0 = Not Accepted
- * 1 = Accepted
- * 3 = Deleted
- * 
- * @member {real} visible Visibility of the mod (see [status and visibility](https://docs.mod.io/#status-amp-visibility) for details):
- * 
- * 0 = Hidden
- * 1 = Public
- * 
- * @member {struct.User} submitted_by The user who published the mod.
- * @member {int64} date_added Unix timestamp of date mod was registered.
- * @member {int64} date_updated Unix timestamp of date mod was updated.
- * @member {int64} date_live Unix timestamp of date mod was set live.
- * @member {real} maturity_option Maturity options flagged by the mod developer, this is only relevant if the parent game allows mods to be labelled as mature:
- * 
- * 0 = None
- * 1 = Alcohol
- * 2 = Drugs
- * 4 = Violence
- * 8 = Explicit
- * ? = Add the options you want together, to enable multiple filters (see [BITWISE fields](https://docs.mod.io/#bitwise-and-bitwise-and))
- * 
- * @member {real} community_options Community features enabled for this mod:
- * 
- * 0 = All of the options below are disabled
- * 1 = Enable comments
- * ? = Add the options you want together, to enable multiple features (see [BITWISE fields](https://docs.mod.io/#bitwise-and-bitwise-and))
- * 
- * @member {real} monetisation_options Monetisation features enabled for this mod:
- * 
- * 0 = All of the options below are disabled
- * 1 = Enabled
- * 2 = Recognition On
- * 4 = Marketplace On
- * ? = Add the options you want together, to enable multiple features (see [BITWISE fields](https://docs.mod.io/#bitwise-and-bitwise-and))
- * 
- * @member {real} price The price of the mod.
- * @member {real} tax The tax of the mod.
- * @member {struct.Logo} logo Contains media URL's to the logo for the mod.
- * @member {string} homepage_url Official homepage of the mod.
- * @member {string} name Name of the mod.
- * @member {string} name_id Path for the mod on mod.io. For example: https://mod.io/g/rogue-knight/m/**rogue-knight-hd-pack**
- * @member {string} summary Summary of the mod.
- * @member {string} description Detailed description of the mod which allows HTML.
- * @member {string} description_plaintext `description` field converted into plaintext.
- * @member {string} metadata_blob Metadata stored by the game developer. Metadata can also be stored as searchable [key value pairs](https://docs.mod.io/#metadata), and to individual [mod files](https://docs.mod.io/#get-modfiles).
- * @member {string} profile_url URL to the mod.
- * @member {struct.ModMedia} media Contains YouTube & Sketchfab links, aswell as media URL's of images for the mod.
- * @member {struct.Modfile} modfile The primary modfile for the mod.
- * @member {struct.ModStats} stats Numerous aggregate stats for the mod.
- * @member {struct.ModPlatforms} platforms Contains mod platform data.
- * @member {struct.MetadataKVP} metadata_kvp Contains key-value metadata.
- * @member {struct.ModTag} tags Contains mod tag data.
- * 
- * @struct_end
- */
-
-/**
- * @struct ModPlatforms
- * @description > **mod.io Response Schema:** [Mod Platforms Object](https://docs.mod.io/#mod-platforms-object)
- * 
- * @member {string} platform A [target platform](https://docs.mod.io/#targeting-a-platform).
- * @member {real} modfile_live The unique id of the modfile that is currently live on the platform specified in the `platform` field.
- * 
- * @struct_end
- */
-
 // Modules
 
 /**
@@ -245,12 +170,6 @@ function modio_mods_delete() {}
  * @ref modio_mods_add
  * @ref modio_mods_edit
  * @ref modio_mods_delete
- * @section_end
- * 
- * @section_struct Mod
- * @desc Structs
- * @ref Mod
- * @ref ModPlatforms
  * @section_end
  * 
  * @module_end

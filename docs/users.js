@@ -34,24 +34,6 @@ function modio_user_unmute() {}
 
 // Structs
 
-/**
- * @struct User
- * @description > **mod.io Response Schema:** [User Object](https://docs.mod.io/#user-object)
- * 
- * @member {real} id Unique id of the user.
- * @member {string} name_id Path for the user on mod.io. For example: https://mod.io/u/**name-id-here **
- * @member {string} username Username of the user.
- * @member {string} display_name_portal The users' display name for the targeted portal. Value will be `null` if no valid `X-Modio-Portal` portal header value is provided. For more information see [Targeting a Portal](https://docs.mod.io/#targeting-a-portal).
- * @member {int64} date_online Unix timestamp of date the user was last online.
- * @member {int64} date_joined Unix timestamp of date the user joined.
- * @member {struct.Avatar} avatar Contains media URL's to the users avatar.
- * @member {string} timezone Deprecated: No longer used and will be removed in subsequent API version.
- * @member {string} language Deprecated: No longer used and will be removed in subsequent API version. To [localize the API response](https://docs.mod.io/#localization) we recommend you set the `Accept-Language` header.
- * @member {string} profile_url URL to the user's profile.
- * 
- * @struct_end
-*/
-
 // Modules
 
 /**
@@ -62,11 +44,6 @@ function modio_user_unmute() {}
  * @desc Users
  * @ref modio_user_mute
  * @ref modio_user_unmute
- * @section_end
- * 
- * @section_struct users
- * @desc Users
- * @ref User
  * @section_end
  * 
  * @module_end

@@ -405,59 +405,7 @@ function modio_auth_email_exchange() {}
  */
 function modio_auth_logout() {}
 
-// Structs
-
-/**
- * @struct Terms
- * @desc > **mod.io Response Schema:** [Terms Object](https://docs.mod.io/#terms-object)
- * 
- * @member {string} plaintext The terms text in plaintext formatting.
- * @member {string} html The terms text in HTML formatting.
- * @member {struct} buttons The buttons to embed into the Terms.
- * 
- * * agree: a struct containing the "agree" text
- * * disagree: a struct containing the "disagree" text
- * 
- * @member {struct} links The links to embed into the Terms.
- * 
- * * website (${type.struct}) Website link.
- * * terms (${type.struct}) Terms of Use link.
- * * privacy (${type.struct}) Privacy Policy link.
- * * manage (${type.struct}) Manage User Account link.
- * 
- * @struct_end
- */
-
-/**
- * @struct EmailRequestResponse
- * @desc > **mod.io Response Schema:** [Email Request Response Object](https://docs.mod.io/#schemaemail_request_response)
- * 
- * 
- * 
- * @struct_end
- */
-
-/**
- * @struct AccessToken
- * @desc https://docs.mod.io/#schemaaccess_token_object
- * 
- * @member {real} code HTTP Response Code.
- * @member {string} access_token The user's access token.
- * @member {int64} date_expires Unix timestamp of the date this token will expire. Default is one year from issue date. See [Access Token Lifetime & Expiry](https://docs.mod.io/#making-requests).
- * 
- * @struct_end
- */
-
-/**
- * @struct WebMessage
- * @desc > **mod.io Response Schema:** [Web Message Object](https://docs.mod.io/#schemaweb_message_object)
- * 
- * @member {real} code HTTP response code.
- * @member {boolean} success Was the request completed successfully?
- * @member {string} message Optional message to display to the user.
- * 
- * @struct_end
- */
+// Modules
 
 /**
  * @module auth
@@ -481,12 +429,6 @@ function modio_auth_logout() {}
  * @ref modio_auth_email
  * @ref modio_auth_email_exchange
  * @ref modio_auth_logout
- * @section_end
- * 
- * @section_struct
- * @ref Terms
- * @ref AccessToken
- * @ref WebMessage
  * @section_end
  * 
  * @module_end

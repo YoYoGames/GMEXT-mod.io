@@ -130,29 +130,6 @@ function modio_comments_karma() {}
 // Structs
 
 /**
- * @struct Comment
- * @description > **mod.io Response Schema:** [Comment Object](https://docs.mod.io/#comment-object)
- * 
- * @member {real} id Unique id of the comment.
- * @member {real} game_id Unique game id (if applicable).
- * @member {real} resource_id Unique id of the parent resource.
- * @member {struct.User} The user who published the comment.
- * @member {int64} date_added Unix timestamp of date the comment was posted.
- * @member {real} reply_id Id of the parent comment this comment is replying to (can be 0 if the comment is not a reply).
- * @member {string} thread_position Levels of nesting in a comment thread. How it works:
- *
- * - The first comment will have the position '01'.
- * - The second comment will have the position '02'.
- * - If someone responds to the second comment the position will be '02.01'.
- * - A maximum of 3 levels is supported.
- * 
- * @member {real} karma Karma received for the comment (can be postive or negative).
- * @member {string} content Contents of the comment.
- * 
- * @struct_end
- */
-
-/**
  * @module comments
  * @title Comments
  * 
@@ -164,11 +141,6 @@ function modio_comments_karma() {}
  * @ref modio_comments_update
  * @ref modio_comments_delete
  * @ref modio_comments_karma
- * @section_end
- * 
- * @section_struct
- * @desc Comments
- * @ref Comment
  * @section_end
  * 
  * @module_end

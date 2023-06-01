@@ -124,29 +124,6 @@ function modio_tags_mod_delete() {}
 
 // Structs
 
-/**
- * @struct GameTagOption
- * @desc > **mod.io Response Schema:** [Game Tag Option Object](https://docs.mod.io/#game-tag-option-object)
- * 
- * @member {string} name Name of the tag group.
- * @member {string} type Can multiple tags be selected via 'checkboxes' or should only a single tag be selected via a 'dropdown'.
- * @member {struct} tag_count_map List of tag names and the count of mods with these tags.
- * @member {boolean} hidden Groups of tags flagged as 'hidden' are intended to be used for filtering (eg. game version), but should not be displayed to users. Hidden tags will only be returned if `show_hidden_tags` is set to `true`.
- * @member {array<string>} tags Array of tags in this group.
- * 
- * @struct_end
-*/
-
-/**
- * @struct ModTag
- * @desc > **mod.io Response Schema:** [Mod Tag Object](https://docs.mod.io/#mod-tag-object)
- * 
- * @member {string} name Tag name.
- * @member {int64} date_added Unix timestamp of date tag was applied.
- * 
- * @struct_end 
-*/
-
 // Modules
 
 /**
@@ -161,12 +138,6 @@ function modio_tags_mod_delete() {}
  * @ref modio_tags_mod_get
  * @ref modio_tags_mod_add
  * @ref modio_tags_mod_delete
- * @section_end
- * 
- * @section_struct
- * @desc Structs
- * @ref GameTagOption
- * @ref ModTag
  * @section_end
  * 
  * @module_end

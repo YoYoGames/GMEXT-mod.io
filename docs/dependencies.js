@@ -1,5 +1,3 @@
-@title Dependencies
-
 /** 
  * @function modio_dependencies_get
  * @description > **mod.io Endpoint:** [Get Mod Dependencies](https://docs.mod.io/#get-mod-dependencies) (`GET /games/{game-id}/mods/{mod-id}/dependencies`)
@@ -58,33 +56,14 @@ function modio_dependencies_add() {}
 function modio_dependencies_delete() {}
 
 /**
- * @struct ModDependencies
- * @description > **mod.io Response Schema:** [Mod Dependencies Object](https://docs.mod.io/#mod-dependencies-object)
- * 
- * @member {real} mod_id Unique ID of the mod that serves as the dependency.
- * @member {string} name Name of the mod dependency.
- * @member {string} name_id Path for the mod on mod.io. For example: https://mod.io/g/rogue-knight/m/**rogue-knight-hd-pack**
- * @member {int64} date_added Unix timestamp of date the dependency was added.
- * @member {real} dependency_depth When a dependency depth is greater than zero (0), it means that the dependencies themselves rely on additional dependencies. To ensure smooth installation, it is recommended dependencies be installed in *descending* order of depth, beginning with those with the highest depth. Please note only dependencies with a depth of up to 5 will be shown.
- * @member {struct.Logo} logo Contains media URL's to the logo for the mod.
- * @member {struct.Modfile} modfile The primary modfile for the mod.
- * 
- * @struct_end
- */
-
-/**
  * @module dependencies
+ * @title Dependencies
  * 
  * @section_func dependencies
  * @desc Dependencies
  * @ref modio_dependencies_get
  * @ref modio_dependencies_add
  * @ref modio_dependencies_delete
- * @section_end
- * 
- * @section_struct structs
- * @desc Structs
- * @ref ModDependencies
  * @section_end
  * 
  * @module_end
