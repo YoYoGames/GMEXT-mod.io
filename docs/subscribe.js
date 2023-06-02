@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_subscribe
- * @description > **mod.io Endpoint:** [Subscribe To Mod](https://docs.mod.io/#subscribe-to-mod) (`POST /games/{game-id}/mods/{mod-id}/subscribe`)
+ * @description > **mod.io Endpoint:** [Subscribe To Mod](https://docs.mod.io/#subscribe-to-mod)
  * 
  * Subscribe the *authenticated user* to a corresponding mod. No body parameters are required for this action. A successful request will return the ${struct.Mod} struct of the newly subscribed mod.
  * 
@@ -17,7 +17,7 @@ function modio_subscribe() {}
 
 /** 
  * @function modio_unsubscribe
- * @description > **mod.io Endpoint:** [Unsubscribe From Mod](https://docs.mod.io/#unsubscribe-from-mod) (`DELETE /games/{game-id}/mods/{mod-id}/subscribe`)
+ * @description > **mod.io Endpoint:** [Unsubscribe From Mod](https://docs.mod.io/#unsubscribe-from-mod)
  * 
  * Unsubscribe the *authenticated user* from the corresponding mod. No body parameters are required for this action. A successful request will return `204 No Content`.
  * 

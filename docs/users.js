@@ -1,6 +1,6 @@
 /** 
  * @function modio_user_mute
- * @description > **mod.io Endpoint:** [Mute a user](https://docs.mod.io/#mute-a-user) (`POST /users/{user-id}/mute`)
+ * @description > **mod.io Endpoint:** [Mute a user](https://docs.mod.io/#mute-a-user)
  * 
  * <br />
  * 
@@ -17,7 +17,7 @@ function modio_user_mute() {}
 
 /** 
  * @function modio_user_unmute
- * @description > **mod.io Endpoint:** [Unmute a user](https://docs.mod.io/#unmute-a-user) (`DELETE /users/{user-id}/mute`)
+ * @description > **mod.io Endpoint:** [Unmute a user](https://docs.mod.io/#unmute-a-user)
  * 
  * <br />
  * 

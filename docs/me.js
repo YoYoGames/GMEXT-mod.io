@@ -1,6 +1,6 @@
 /** 
  * @function modio_me
- * @description > **mod.io Endpoint:** [Get Authenticated User](https://docs.mod.io/#get-authenticated-user) (`GET /me`)
+ * @description > **mod.io Endpoint:** [Get Authenticated User](https://docs.mod.io/#get-authenticated-user)
  * 
  * <br />
  * 
@@ -17,7 +17,7 @@ function modio_me() {}
 
 /** 
  * @function modio_me_events
- * @description > **mod.io Endpoint:** [Get User Events](https://docs.mod.io/#get-user-events) (`GET /me/events`)
+ * @description > **mod.io Endpoint:** [Get User Events](https://docs.mod.io/#get-user-events)
  * 
  * <br />
  * 
@@ -32,7 +32,7 @@ function modio_me_events() {}
 
 /** 
  * @function modio_me_files
- * @description > **mod.io Endpoint:** [Get User Modfiles](https://docs.mod.io/#get-user-modfiles) (`GET /me/files`)
+ * @description > **mod.io Endpoint:** [Get User Modfiles](https://docs.mod.io/#get-user-modfiles)
  * 
  * <br />
  * 
@@ -49,7 +49,7 @@ function modio_me_files() {}
 
 /** 
  * @function modio_me_games
- * @description > **mod.io Endpoint:** [Get User Games](https://docs.mod.io/#get-user-games) (`GET /me/games`)
+ * @description > **mod.io Endpoint:** [Get User Games](https://docs.mod.io/#get-user-games)
  * 
  * <br />
  * 
@@ -64,7 +64,7 @@ function modio_me_games() {}
 
 /** 
  * @function modio_me_subscriptions
- * @description > **mod.io Endpoint:** [Get User Subscriptions](https://docs.mod.io/#get-user-subscriptions) (`GET /me/subscribed`)
+ * @description > **mod.io Endpoint:** [Get User Subscriptions](https://docs.mod.io/#get-user-subscriptions)
  * 
  * <br />
  * 
@@ -79,7 +79,7 @@ function modio_me_subscriptions() {}
 
 /** 
  * @function modio_me_mods
- * @description > **mod.io Endpoint:** [Get User Mods](https://docs.mod.io/#get-user-mods) (`GET /me/mods`)
+ * @description > **mod.io Endpoint:** [Get User Mods](https://docs.mod.io/#get-user-mods)
  * 
  * <br />
  * 
@@ -94,7 +94,7 @@ function modio_me_mods() {}
 
 /** 
  * @function modio_me_user_muted
- * @description > **mod.io Endpoint:** [Get Users Muted](https://docs.mod.io/#get-users-muted) (`GET /me/users/muted`)
+ * @description > **mod.io Endpoint:** [Get Users Muted](https://docs.mod.io/#get-users-muted)
  * 
  * <br />
  * 
@@ -109,7 +109,7 @@ function modio_me_user_muted() {}
 
 /** 
  * @function modio_me_ratings
- * @description > **mod.io Endpoint:** [Get User Ratings](https://docs.mod.io/#get-user-ratings) (`GET /me/ratings`)
+ * @description > **mod.io Endpoint:** [Get User Ratings](https://docs.mod.io/#get-user-ratings)
  * 
  * <br />
  * 

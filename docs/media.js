@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_media_game_add
- * @description > **mod.io Endpoint:** [Add Game Media](https://docs.mod.io/#add-game-media) (`POST /games/{game-id}/media`)
+ * @description > **mod.io Endpoint:** [Add Game Media](https://docs.mod.io/#add-game-media)
  * 
  * <br />
  * 
@@ -27,7 +27,7 @@ function modio_media_game_add() {}
 
 /** 
  * @function modio_media_mod_add
- * @description > **mod.io Endpoint:** [Add Mod Media](https://docs.mod.io/#add-mod-media) (`POST /games/{game-id}/mods/{mod-id}/media`)
+ * @description > **mod.io Endpoint:** [Add Mod Media](https://docs.mod.io/#add-mod-media)
  * 
  * <br />
  * 
@@ -56,7 +56,7 @@ function modio_media_mod_add() {}
 
 /** 
  * @function modio_media_mod_delete
- * @description > **mod.io Endpoint:** [Delete Mod Media](https://docs.mod.io/#delete-mod-media) (`DELETE /games/{game-id}/mods/{mod-id}/media`)
+ * @description > **mod.io Endpoint:** [Delete Mod Media](https://docs.mod.io/#delete-mod-media)
  * 
  * <br />
  * 
@@ -78,7 +78,7 @@ function modio_media_mod_delete() {}
 
 /** 
  * @function modio_media_mod_reorder
- * @description > **mod.io Endpoint:** [Reorder Mod Media](https://docs.mod.io/#reorder-mod-media) (`PUT /games/{game-id}/mods/{mod-id}/media/reorder`)
+ * @description > **mod.io Endpoint:** [Reorder Mod Media](https://docs.mod.io/#reorder-mod-media)
  * 
  * <br />
  * 

@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_general_get_resource_owner
- * @description > **mod.io Endpoint:** [Get Resource Owner](https://docs.mod.io/#get-resource-owner) (`POST /general/ownership`)
+ * @description > **mod.io Endpoint:** [Get Resource Owner](https://docs.mod.io/#get-resource-owner)
  * 
  * <br />
  * 

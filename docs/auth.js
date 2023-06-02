@@ -1,6 +1,6 @@
 /**
  * @function modio_auth_terms
- * @description > **mod.io Endpoint:** [Terms](https://docs.mod.io/#terms) (`GET /authenticate/terms`)
+ * @description > **mod.io Endpoint:** [Terms](https://docs.mod.io/#terms)
  * 
  * <br />
  * 
@@ -18,7 +18,7 @@
 
 /**
  * @function modio_auth_steam
- * @description > **mod.io Endpoint:** [Steam](https://docs.mod.io/#steam) (`POST /external/steamauth`)
+ * @description > **mod.io Endpoint:** [Steam](https://docs.mod.io/#steam)
  * 
  * <br />
  * 
@@ -45,7 +45,7 @@ function modio_auth_steam() {}
 
 /**
  * @function modio_auth_xboxlive
- * @description > **mod.io Endpoint:** [Xbox Live](https://docs.mod.io/#xbox-live) (`POST /external/xboxauth`)
+ * @description > **mod.io Endpoint:** [Xbox Live](https://docs.mod.io/#xbox-live)
  * 
  * <br />
  * 
@@ -74,7 +74,7 @@ function modio_auth_xboxlive() {}
 
 /**
  * @function modio_auth_playstation
- * @description > **mod.io Endpoint:** [PlayStation™Network](https://docs.mod.io/#playstation-network) (`POST /external/psnauth`)
+ * @description > **mod.io Endpoint:** [PlayStation™Network](https://docs.mod.io/#playstation-network)
  * 
  * <br />
  * 
@@ -106,7 +106,7 @@ function modio_auth_playstation() {}
 
 /**
  * @function modio_auth_nintendo_switch
- * @description > **mod.io Endpoint:** [Nintendo Switch](https://docs.mod.io/#nintendo-switch) (`POST /external/switchauth`)
+ * @description > **mod.io Endpoint:** [Nintendo Switch](https://docs.mod.io/#nintendo-switch)
  * 
  * <br />
  * 
@@ -135,7 +135,7 @@ function modio_auth_nintendo_switch() {}
 
 /**
  * @function modio_auth_metaquest
- * @description > **mod.io Endpoint:** [Meta Quest](https://docs.mod.io/#meta-quest) (`POST /external/oculusauth`)
+ * @description > **mod.io Endpoint:** [Meta Quest](https://docs.mod.io/#meta-quest)
  * 
  * <br />
  * 
@@ -167,7 +167,7 @@ function modio_auth_metaquest() {}
 
 /**
  * @function modio_auth_gog
- * @description > **mod.io Endpoint:** [GOG Galaxy](https://docs.mod.io/#gog-galaxy) (`POST /external/galaxyauth`)
+ * @description > **mod.io Endpoint:** [GOG Galaxy](https://docs.mod.io/#gog-galaxy)
  * 
  * <br />
  * 
@@ -191,7 +191,7 @@ function modio_auth_metaquest() {}
 function modio_auth_gog() {}
 
 /**
- * @function modio_auth_epicgames > **mod.io Endpoint:** [Epic Games](https://docs.mod.io/#epic-games) (`POST /external/epicgamesauth`)
+ * @function modio_auth_epicgames > **mod.io Endpoint:** [Epic Games](https://docs.mod.io/#epic-games)
  * 
  * <br />
  * 
@@ -220,7 +220,7 @@ function modio_auth_epicgames() {}
 
 /**
  * @function modio_auth_itchio
- * @description > **mod.io Endpoint:** [itch.io](https://docs.mod.io/#itch-io) (`POST /external/itchioauth`)
+ * @description > **mod.io Endpoint:** [itch.io](https://docs.mod.io/#itch-io)
  * 
  * <br />
  * 
@@ -249,7 +249,7 @@ function modio_auth_itchio() {}
 
 /**
  * @function modio_auth_google
- * @description > **mod.io Endpoint:** [Google](https://docs.mod.io/#google) (`POST /external/googleauth`)
+ * @description > **mod.io Endpoint:** [Google](https://docs.mod.io/#google)
  * 
  * <br />
  * 
@@ -281,7 +281,7 @@ function modio_auth_google() {}
 
 /**
  * @function modio_auth_discord
- * @description > **mod.io Endpoint:** [Discord](https://docs.mod.io/#discord) (`POST /external/discordauth`)
+ * @description > **mod.io Endpoint:** [Discord](https://docs.mod.io/#discord)
  * 
  * <br />
  * 
@@ -310,7 +310,7 @@ function modio_auth_discord() {}
 
 /**
  * @function modio_auth_openid
- * @description > **mod.io Endpoint:** [OpenID](https://docs.mod.io/#openid) (`POST /external/openid`)
+ * @description > **mod.io Endpoint:** [OpenID](https://docs.mod.io/#openid)
  * 
  * <br />
  * 
@@ -339,7 +339,7 @@ function modio_auth_openid() {}
 
 /**
  * @function modio_auth_email
- * @description > **mod.io Endpoint:** [Email Exchange](https://docs.mod.io/#email-exchange) (`POST /oauth/emailrequest`)
+ * @description > **mod.io Endpoint:** [Email Exchange](https://docs.mod.io/#email-exchange)
  * 
  * <br />
  * 
@@ -361,7 +361,7 @@ function modio_auth_email() {}
 
 /**
  * @function modio_auth_email_exchange
- * @description > **mod.io Endpoint:** [Email Exchange](https://docs.mod.io/#email-exchange) (`POST /oauth/emailexchange`)
+ * @description > **mod.io Endpoint:** [Email Exchange](https://docs.mod.io/#email-exchange)
  * 
  * <br />
  * 
@@ -387,7 +387,7 @@ function modio_auth_email_exchange() {}
 
 /**
  * @function modio_auth_logout
- * @description > **mod.io Endpoint:** [Logout](https://docs.mod.io/#logout) (`POST /oauth/logout`)
+ * @description > **mod.io Endpoint:** [Logout](https://docs.mod.io/#logout)
  * 
  * <br />
  * 

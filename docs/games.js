@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_games_get_list
- * @description > **mod.io Endpoint:** [Get Games](https://docs.mod.io/#get-games) (`GET /games`)
+ * @description > **mod.io Endpoint:** [Get Games](https://docs.mod.io/#get-games)
  * 
  * Get all games. A successful request will return an array of ${struct.Game}. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
@@ -15,7 +15,7 @@ function modio_games_get_list() {}
 
 /** 
  * @function modio_games_get
- * @description > **mod.io Endpoint:** [Get Game](https://docs.mod.io/#get-games) (`GET /games/{game-id}`)
+ * @description > **mod.io Endpoint:** [Get Game](https://docs.mod.io/#get-games)
  * 
  * This function gets a game. Successful request will return a single ${struct.Game}. We recommended reading the filtering documentation to return only the records you want.
  * 

@@ -1,6 +1,6 @@
 /** 
  * @function modio_comments_get_list
- * @description > **mod.io Endpoint:** [Get Mod Comments](https://docs.mod.io/#get-mod-comments) (`GET /games/{game-id}/mods/{mod-id}/comments`)
+ * @description > **mod.io Endpoint:** [Get Mod Comments](https://docs.mod.io/#get-mod-comments)
  * 
  * This function gets all the comments posted in the mods profile. A successful request will return an array of ${struct.Comment} structs.
  * 
@@ -37,7 +37,7 @@ function modio_comments_get_list() {}
 
 /** 
  * @function modio_comments_add
- * @description > **mod.io Endpoint:** [Add Mod Comment](https://docs.mod.io/#add-mod-comment) (`POST /games/{game-id}/mods/{mod-id}/comments`)
+ * @description > **mod.io Endpoint:** [Add Mod Comment](https://docs.mod.io/#add-mod-comment)
  * 
  * This function adds a comment for the corresponding mod. A successful request will return the newly created ${struct.Comment} struct and fire a `MOD_COMMENT_ADDED` event.
  * 
@@ -59,7 +59,7 @@ function modio_comments_add() {}
 
 /** 
  * @function modio_comments_get
- * @description > **mod.io Endpoint:** [Get Mod Comment](https://docs.mod.io/#get-mod-comment) (`GET /games/{game-id}/mods/{mod-id}/comments/{comment-id}`)
+ * @description > **mod.io Endpoint:** [Get Mod Comment](https://docs.mod.io/#get-mod-comment)
  * 
  * This function gets a mod comment. A successful request will return a single ${struct.Comment} struct.
  * 
@@ -77,7 +77,7 @@ function modio_comments_get() {}
 
 /** 
  * @function modio_comments_update
- * @description > **mod.io Endpoint:** [Update Mod Comment](https://docs.mod.io/#update-mod-comment) (`PUT /games/{game-id}/mods/{mod-id}/comments/{comment-id}`)
+ * @description > **mod.io Endpoint:** [Update Mod Comment](https://docs.mod.io/#update-mod-comment)
  * 
  * This function updates the given comment under the given mod. A successful request will return the updated ${struct.Comment} struct.
  * 
@@ -96,7 +96,7 @@ function modio_comments_update() {}
 
 /** 
  * @function modio_comments_delete
- * @description > **mod.io Endpoint:** [Delete Mod Comment](https://docs.mod.io/#delete-mod-comment) (`DELETE /games/{game-id}/mods/{mod-id}/comments/{comment-id}`)
+ * @description > **mod.io Endpoint:** [Delete Mod Comment](https://docs.mod.io/#delete-mod-comment)
  * 
  * This function deletes a comment from a mod profile. Successful request will return `204 No Content` and fire a `MOD_COMMENT_DELETED` event.
  * 
@@ -112,7 +112,7 @@ function modio_comments_delete() {}
 
 /** 
  * @function modio_comments_karma
- * @description > **mod.io Endpoint:** [Add Mod Comment Karma](https://docs.mod.io/#add-mod-comment-karma) (`POST /games/{game-id}/mods/{mod-id}/comments/{comment-id}/karma`)
+ * @description > **mod.io Endpoint:** [Add Mod Comment Karma](https://docs.mod.io/#add-mod-comment-karma)
  * 
  * This function updates the Karma rating in single increments or decrements for a corresponding mod comment. A successful request will return the updated {struct.Comment} struct.
  * 

@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_report
- * @description > **mod.io Endpoint:** [Submit Report](https://docs.mod.io/#submit-report) (`POST /report`)
+ * @description > **mod.io Endpoint:** [Submit Report](https://docs.mod.io/#submit-report)
  * 
  * <br />
  * 

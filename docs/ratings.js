@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_ratings
- * @description > **mod.io Endpoint:** [Add Mod Rating](https://docs.mod.io/#add-mod-rating) (`POST /games/{game-id}/mods/{mod-id}/ratings`)
+ * @description > **mod.io Endpoint:** [Add Mod Rating](https://docs.mod.io/#add-mod-rating)
  * 
  * <br />
  * 
@@ -25,21 +25,6 @@
 function modio_ratings() {}
 
 // Structs
-
-/**
- * @struct Rating
- * @description > **mod.io Response Schema:** [Rating Object](https://docs.mod.io/#rating-object)
- * @member {real} game_id Unique game id.
- * @member {real} mod_id Unique mod id.
- * @member {real} rating Mod rating value:
- * 
- * - 1 = Positive Rating
- * - -1 = Negative Rating
- * 
- * @member {real} date_added Unix timestamp of date rating was submitted.
- * 
- * @struct_end
- */
 
 // Modules
 

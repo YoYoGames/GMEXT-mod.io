@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_stats_game
- * @description > **mod.io Endpoint:** [Get Game Stats](https://docs.mod.io/#get-game-stats) (`GET /games/{game-id}/stats`)
+ * @description > **mod.io Endpoint:** [Get Game Stats](https://docs.mod.io/#get-game-stats)
  * 
  * <br />
  * 
@@ -17,7 +17,7 @@ function modio_stats_game() {}
 
 /** 
  * @function modio_stats_mods_get_list
- * @description > **mod.io Endpoint:** [Get Mods Stats](https://docs.mod.io/#get-mods-stats) (`GET /games/{game-id}/mods/stats`)
+ * @description > **mod.io Endpoint:** [Get Mods Stats](https://docs.mod.io/#get-mods-stats)
  * 
  * <br />
  * 
@@ -34,7 +34,7 @@ function modio_stats_mods_get_list() {}
 
 /** 
  * @function modio_stats_mods_get
- * @description > **mod.io Endpoint:** [Get Mod Stats](https://docs.mod.io/#get-mod-stats) (`GET /games/{game-id}/mods/{mod-id}/stats`)
+ * @description > **mod.io Endpoint:** [Get Mod Stats](https://docs.mod.io/#get-mod-stats)
  * 
  * <br />
  * 

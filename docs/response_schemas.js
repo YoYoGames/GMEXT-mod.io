@@ -521,7 +521,22 @@
  * @member {real} date_added Unix timestamp of date tag was applied.
  * 
  * @struct_end 
-*/
+ */
+
+/**
+ * @struct Rating
+ * @description > **mod.io Response Schema:** [Rating Object](https://docs.mod.io/#rating-object)
+ * @member {real} game_id Unique game id.
+ * @member {real} mod_id Unique mod id.
+ * @member {real} rating Mod rating value:
+ * 
+ * - 1 = Positive Rating
+ * - -1 = Negative Rating
+ * 
+ * @member {real} date_added Unix timestamp of date rating was submitted.
+ * 
+ * @struct_end
+ */
 
 /**
  * @struct TeamMember
@@ -644,6 +659,7 @@
  * @ref ModPlatforms
  * @ref ModStats
  * @ref ModTag
+ * @ref Rating
  * @ref TeamMember
  * @ref Terms
  * @ref Theme

@@ -1,6 +1,6 @@
 /** 
  * @function modio_dependencies_get
- * @description > **mod.io Endpoint:** [Get Mod Dependencies](https://docs.mod.io/#get-mod-dependencies) (`GET /games/{game-id}/mods/{mod-id}/dependencies`)
+ * @description > **mod.io Endpoint:** [Get Mod Dependencies](https://docs.mod.io/#get-mod-dependencies)
  * 
  * <br />
  * 
@@ -21,7 +21,7 @@ function modio_dependencies_get() {}
 
 /** 
  * @function modio_dependencies_add
- * @description > **mod.io Endpoint:** [Add Mod Dependencies](https://docs.mod.io/#add-mod-dependencies) (`POST /games/{game-id}/mods/{mod-id}/dependencies`)
+ * @description > **mod.io Endpoint:** [Add Mod Dependencies](https://docs.mod.io/#add-mod-dependencies)
  * 
  * <br />
  * 
@@ -39,7 +39,7 @@ function modio_dependencies_add() {}
 
 /** 
  * @function modio_dependencies_delete
- * @description > **mod.io Endpoint:** [Delete Mod Dependencies](https://docs.mod.io/#delete-mod-dependencies) (`DELETE /games/{game-id}/mods/{mod-id}/dependencies`)
+ * @description > **mod.io Endpoint:** [Delete Mod Dependencies](https://docs.mod.io/#delete-mod-dependencies)
  * 
  * <br />
  * 

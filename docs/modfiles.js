@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_modfiles_get_list
- * @description > **mod.io Endpoint:** [Get Modfiles](https://docs.mod.io/#get-modfiles) (`GET /games/{game-id}/mods/{mod-id}/files`)
+ * @description > **mod.io Endpoint:** [Get Modfiles](https://docs.mod.io/#get-modfiles)
  * 
  * Get all files that are published for the corresponding mod. Successful request will return an array of ${struct.Modfile} structs. We recommended reading the filtering documentation to return only the records you want.
  *
@@ -19,7 +19,7 @@ function modio_modfiles_get_list() {}
 
 /** 
  * @function modio_modfiles_get
- * @description > **mod.io Endpoint:** [Get Modfile](https://docs.mod.io/#get-modfile) (`GET /games/{game-id}/mods/{mod-id}/files/{file-id}`)
+ * @description > **mod.io Endpoint:** [Get Modfile](https://docs.mod.io/#get-modfile)
  * 
  * Get a file. A successful request will return a single ${struct.Modfile}.
  *
@@ -37,7 +37,7 @@ function modio_modfiles_get() {}
 
 /** 
  * @function modio_modfiles_add
- * @description > **mod.io Endpoint:** [Add Modfile](https://docs.mod.io/#add-modfile) (`POST /games/{game-id}/mods/{mod-id}/files`)
+ * @description > **mod.io Endpoint:** [Add Modfile](https://docs.mod.io/#add-modfile)
  * 
  * Upload a file for the corresponding mod. A successful request will return the newly created Modfile Object. Ensure that the release you are uploading is stable and free from any critical issues. Files are scanned upon upload, any users who upload malicious files will have their accounts closed.
  *
@@ -74,7 +74,7 @@ function modio_modfiles_add() {}
 
 /** 
  * @function modio_modfiles_edit
- * @description > **mod.io Endpoint:** [Edit Modfile](https://docs.mod.io/#edit-modfile) (`PUT /games/{game-id}/mods/{mod-id}/files/{file-id}`)
+ * @description > **mod.io Endpoint:** [Edit Modfile](https://docs.mod.io/#edit-modfile)
  * 
  * Edit the details of a published file. If you want to update fields other than the `changelog`, `version` and `active` status, you should add a new file instead. A successful request will return updated ${struct.Modfile} struct.
  * 
@@ -99,7 +99,7 @@ function modio_modfiles_edit() {}
 
 /** 
  * @function modio_modfiles_delete
- * @description > **mod.io Endpoint:** [Delete Modfile](https://docs.mod.io/#delete-modfile) (`DELETE /games/{game-id}/mods/{mod-id}/files/{file-id}`)
+ * @description > **mod.io Endpoint:** [Delete Modfile](https://docs.mod.io/#delete-modfile)
  * 
  * Delete a modfile. A successful request will return `204 No Content`.
  * 
@@ -117,7 +117,7 @@ function modio_modfiles_delete() {}
 
 /** 
  * @function modio_modfiles_platforms
- * @description > **mod.io Endpoint:** [Manage Platform Status](https://docs.mod.io/#manage-platform-status) (`POST /games/{game-id}/mods/{mod-id}/files/{file-id}/platforms`)
+ * @description > **mod.io Endpoint:** [Manage Platform Status](https://docs.mod.io/#manage-platform-status)
  * 
  * Manage the platform status of a particular modfile. This endpoint does not set any file live, instead it allows you to approve and deny new uploads. To set a file as the live file for the approved platforms after you have reviewed them, you must call the [Edit Modfile](https://docs.mod.io/#update-modfile) with the active flag enabled.
  * 

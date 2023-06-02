@@ -2,7 +2,7 @@
 
 /**
  * @function modio_mods_get_list
- * @description > **mod.io Endpoint:** [Get Mods](https://docs.mod.io/#get-mods) (`GET /games/{game-id}/mods`)
+ * @description > **mod.io Endpoint:** [Get Mods](https://docs.mod.io/#get-mods)
  * 
  * Get all mods for the corresponding game. Successful request will return an array of Mod Objects. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
@@ -15,7 +15,7 @@ function modio_mods_get_list() {}
 
 /** 
  * @function modio_mods_get
- * @description > **mod.io Endpoint:** [Get Mod](https://docs.mod.io/#get-mod) (`GET /games/{game-id}/mods/{mod-id}`)
+ * @description > **mod.io Endpoint:** [Get Mod](https://docs.mod.io/#get-mod)
  * 
  * Get a mod. A successful request will return a single ${struct.Mod} struct.
  * 
@@ -28,7 +28,7 @@ function modio_mods_get() {}
 
 /** 
  * @function modio_mods_add
- * @description > **mod.io Endpoint:** [Add Mod](https://docs.mod.io/#add-mod) (`POST /games/{game-id}/mods`)
+ * @description > **mod.io Endpoint:** [Add Mod](https://docs.mod.io/#add-mod)
  * 
  * Add a mod. A successful request will return the newly created ${struct.Mod}. All content published by users on mod.io is subject to the Terms of Use. It is a requirement that you provide a link to https://mod.io/terms in any place where users are submitting content to mod.io.
  *
@@ -78,7 +78,7 @@ function modio_mods_add() {}
 
 /** 
  * @function modio_mods_edit
- * @description > **mod.io Endpoint:** [Edit Mod](https://docs.mod.io/#edit-mod) (`POST /games/{game-id}/mods/{mod-id}`)
+ * @description > **mod.io Endpoint:** [Edit Mod](https://docs.mod.io/#edit-mod)
  * 
  * Edit details for a mod. If you want to update the `logo` or media associated with this mod, you need to use the Add Mod Media endpoint. The same applies to Mod Files, Metadata Key Value Pairs and Dependencies which are all managed via other endpoints. Successful request will return the updated Mod Object.
  * 
@@ -141,7 +141,7 @@ function modio_mods_edit() {}
 
 /** 
  * @function modio_mods_delete
- * @description > **mod.io Endpoint:** [Delete Mod](https://docs.mod.io/#delete-mod) (`DELETE /games/{game-id}/mods/{mod-id}`)
+ * @description > **mod.io Endpoint:** [Delete Mod](https://docs.mod.io/#delete-mod)
  * 
  * Delete a mod profile. A successful request will return `204 No Content` and fire a MOD_UNAVAILABLE event.
  * 

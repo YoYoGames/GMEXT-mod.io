@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_teams_get_mod_members
- * @description > **mod.io Endpoint:** [Get Mod Team Members](https://docs.mod.io/#get-mod-team-members) (`GET /games/{game-id}/mods/{mod-id}/team`)
+ * @description > **mod.io Endpoint:** [Get Mod Team Members](https://docs.mod.io/#get-mod-team-members)
  * 
  * <br />
  * 

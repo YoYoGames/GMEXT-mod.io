@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_events_get_list
- * @description > **mod.io Endpoint:** [Get Mods Events](https://docs.mod.io/#get-mods-events) (`GET /games/{game-id}/mods/events`)
+ * @description > **mod.io Endpoint:** [Get Mods Events](https://docs.mod.io/#get-mods-events)
  * 
  * <br />
  * 
@@ -40,7 +40,7 @@ function modio_events_get_list() {}
 
 /** 
  * @function modio_events_get
- * @description > **mod.io Endpoint:** [Get Mod Events](https://docs.mod.io/#get-mod-events) (`GET /games/{game-id}/mods/{mod-id}/events`)
+ * @description > **mod.io Endpoint:** [Get Mod Events](https://docs.mod.io/#get-mod-events)
  * 
  * <br />
  * 

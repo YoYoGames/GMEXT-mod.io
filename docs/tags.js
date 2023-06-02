@@ -2,7 +2,7 @@
 
 /** 
  * @function modio_tags_game_get
- * @description > **mod.io Endpoint:** [Get Game Tag Options](https://docs.mod.io/#get-game-tag-options) (`GET /games/{game-id}/tags`)
+ * @description > **mod.io Endpoint:** [Get Game Tag Options](https://docs.mod.io/#get-game-tag-options)
  * 
  * Get all tags for the corresponding game, that can be applied to any of its mods. Hidden tag groups will only be returned if the authenticated user is a team member of the parent game with either `Manager` or `Administrator` status. Successful request will return an array of ${struct.GameTagOption} structs.
  * 
@@ -17,7 +17,7 @@ function modio_tags_game_get() {}
 
 /** 
  * @function modio_tags_game_add
- * @description > **mod.io Endpoint:** [Add Game Tag Option](https://docs.mod.io/#add-game-tag-option) (`POST /games/{game-id}/tags`)
+ * @description > **mod.io Endpoint:** [Add Game Tag Option](https://docs.mod.io/#add-game-tag-option)
  * 
  * Add tags which mods can apply to their profiles. A successful request will return a ${struct.Message} struct.
  *
@@ -50,7 +50,7 @@ function modio_tags_game_add() {}
 
 /** 
  * @function modio_tags_game_delete
- * @description > **mod.io Endpoint:** [Delete Game Tag Option](https://docs.mod.io/#delete-game-tag-option) (`DELETE /games/{game-id}/tags`)
+ * @description > **mod.io Endpoint:** [Delete Game Tag Option](https://docs.mod.io/#delete-game-tag-option)
  * 
  * <br />
  * 
@@ -70,7 +70,7 @@ function modio_tags_game_delete() {}
 
 /** 
  * @function modio_tags_mod_get
- * @description > **mod.io Endpoint:** [Get Mod Tags](https://docs.mod.io/#get-mod-tags) (`GET /games/{game-id}/mods/{mod-id}/tags`)
+ * @description > **mod.io Endpoint:** [Get Mod Tags](https://docs.mod.io/#get-mod-tags)
  * 
  * <br />
  * 
@@ -90,7 +90,7 @@ function modio_tags_mod_get() {}
 
 /** 
  * @function modio_tags_mod_add
- * @description > **mod.io Endpoint:** [Add Mod Tags](https://docs.mod.io/#add-mod-tags) (`POST /games/{game-id}/mods/{mod-id}/tags`)
+ * @description > **mod.io Endpoint:** [Add Mod Tags](https://docs.mod.io/#add-mod-tags)
  * 
  * <br />
  * 
@@ -107,7 +107,7 @@ function modio_tags_mod_add() {}
 
 /** 
  * @function modio_tags_mod_delete
- * @description > **mod.io Endpoint:** [Delete Mod Tags](https://docs.mod.io/#delete-mod-tags) (`DELETE /games/{game-id}/mods/{mod-id}/tags`)
+ * @description > **mod.io Endpoint:** [Delete Mod Tags](https://docs.mod.io/#delete-mod-tags)
  * 
  * <br />
  * 
