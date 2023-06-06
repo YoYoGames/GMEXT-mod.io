@@ -15,6 +15,8 @@
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.GetModDependencies}
+ * 
  * @function_end
 */
 function modio_dependencies_get() {}
@@ -32,6 +34,8 @@ function modio_dependencies_get() {}
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.Message}
  * 
  * @function_end
 */

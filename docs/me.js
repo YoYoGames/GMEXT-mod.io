@@ -11,6 +11,8 @@
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.User}
+ * 
  * @function_end
 */
 function modio_me() {}
@@ -25,6 +27,8 @@ function modio_me() {}
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.GetUserEvents}
  * 
  * @function_end
 */
@@ -43,6 +47,8 @@ function modio_me_events() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.GetModfiles}
+ * 
  * @function_end
 */
 function modio_me_files() {}
@@ -53,10 +59,12 @@ function modio_me_files() {}
  * 
  * <br />
  * 
- * This function gets all games the *authenticated user* added or is a team member of. A successful request will return an array of ${struct.Game}. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets all games the *authenticated user* added or is a team member of. A successful request will return an array of ${struct.Game} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.GetGames}
  * 
  * @function_end
 */
@@ -73,6 +81,8 @@ function modio_me_games() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.GetSubscriptions}
+ * 
  * @function_end
 */
 function modio_me_subscriptions() {}
@@ -87,6 +97,8 @@ function modio_me_subscriptions() {}
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.GetMods}
  * 
  * @function_end
 */
@@ -103,6 +115,8 @@ function modio_me_mods() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.GetMutedUsers}
+ * 
  * @function_end
 */
 function modio_me_user_muted() {}
@@ -117,6 +131,8 @@ function modio_me_user_muted() {}
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.GetUserRatings}
  * 
  * @function_end
 */

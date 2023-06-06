@@ -16,6 +16,8 @@
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.User}
+ * 
  * @function_end
 */
 function modio_general_get_resource_owner() {}

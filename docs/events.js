@@ -6,7 +6,7 @@
  * 
  * <br />
  * 
- * This function gets all mods events for the corresponding game sorted by latest event first. A successful request will return an array of {struct.Event} structs.
+ * This function gets all mods events for the corresponding game sorted by latest event first. A successful request will return an array of ${struct.ModEvent} structs.
  * 
  * From the [mod.io docs](https://docs.mod.io/#get-mods-events):
  * [[NOTE: We recommend you poll this endpoint to keep mods up-to-date. If polling this endpoint for updates, you should store the `id` or `date_added` of the latest event, and on subsequent requests use that information [in the filter](https://docs.mod.io/#filtering), to return only newer events to process.]]
@@ -34,6 +34,8 @@
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.GetModEvents}
+ * 
  * @function_end
 */
 function modio_events_get_list() {}
@@ -51,7 +53,7 @@ function modio_events_get_list() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
- * @returns {struct.ModEvent}
+ * @returns {struct.GetModEvents}
  * 
  * @function_end
 */

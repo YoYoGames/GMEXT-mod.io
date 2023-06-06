@@ -6,7 +6,7 @@
  * 
  * <br />
  * 
- * Upload new media to a game. The request `Content-Type` header must be `multipart/form-data` to submit image files. Any request you make to this endpoint should contain a binary file for each of the fields you want to update below. Successful request will return Message Object.
+ * Upload new media to a game. The request `Content-Type` header must be `multipart/form-data` to submit image files. Any request you make to this endpoint should contain a binary file for each of the fields you want to update below. Successful request will return a ${struct.Message} struct.
  * 
  * [[NOTE: You can also add media to [your games profile](https://mod.io/me/library) on the mod.io website. This is the recommended approach.]]
  * 
@@ -31,7 +31,7 @@ function modio_media_game_add() {}
  * 
  * <br />
  * 
- * This endpoint is very flexible and will add any images posted to the mods gallery regardless of their body name providing they are a valid image. The request `Content-Type` header must be `multipart/form-data` to submit image files. Successful request will return a {struct.Message} struct.
+ * This endpoint is very flexible and will add any images posted to the mods gallery regardless of their body name providing they are a valid image. The request `Content-Type` header must be `multipart/form-data` to submit image files. Successful request will return a ${struct.Message} struct.
  *
  * [[NOTE: You can also add media to [your mods profile](https://mod.io/me/library) on the mod.io website. This is the easiest way.]]
  * 

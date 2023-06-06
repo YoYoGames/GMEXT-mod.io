@@ -9,6 +9,8 @@
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.GetGames}
+ * 
  * @function_end
 */
 function modio_games_get_list() {}
@@ -21,6 +23,8 @@ function modio_games_get_list() {}
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.GetGames}
  * 
  * @function_end
 */

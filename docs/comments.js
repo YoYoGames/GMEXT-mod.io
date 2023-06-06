@@ -29,7 +29,7 @@
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
- * @returns 
+ * @returns {struct.Comment}
  * 
  * @function_end
 */
@@ -122,6 +122,8 @@ function modio_comments_delete() {}
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.Comment}
  * 
  * @function_end
 */

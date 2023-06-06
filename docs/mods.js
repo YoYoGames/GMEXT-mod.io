@@ -4,10 +4,12 @@
  * @function modio_mods_get_list
  * @description > **mod.io Endpoint:** [Get Mods](https://docs.mod.io/#get-mods)
  * 
- * Get all mods for the corresponding game. Successful request will return an array of Mod Objects. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets all mods for the corresponding game. A successful request will return an array of ${struct.Mod} structs. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.GetMods}
  * 
  * @function_end
  */
@@ -17,10 +19,12 @@ function modio_mods_get_list() {}
  * @function modio_mods_get
  * @description > **mod.io Endpoint:** [Get Mod](https://docs.mod.io/#get-mod)
  * 
- * Get a mod. A successful request will return a single ${struct.Mod} struct.
+ * This function gets a mod. A successful request will return a single ${struct.Mod} struct.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.Mod}
  * 
  * @function_end
 */
@@ -30,7 +34,7 @@ function modio_mods_get() {}
  * @function modio_mods_add
  * @description > **mod.io Endpoint:** [Add Mod](https://docs.mod.io/#add-mod)
  * 
- * Add a mod. A successful request will return the newly created ${struct.Mod}. All content published by users on mod.io is subject to the Terms of Use. It is a requirement that you provide a link to https://mod.io/terms in any place where users are submitting content to mod.io.
+ * This function adds a mod. A successful request will return the newly created ${struct.Mod}. All content published by users on mod.io is subject to the [Terms of Use](https://mod.io/terms/widget). It is a requirement that you provide a link to https://mod.io/terms in any place where users are submitting content to mod.io.
  *
  * [[NOTE: By default new mods are 'not accepted' and 'public'. They can only be 'accepted' and made available via the API once a Mod File has been uploaded. Media, Metadata Key Value Pairs and Dependencies can also be added after a mod profile is created.``
  * 
@@ -72,6 +76,8 @@ function modio_mods_get() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.Mod}
+ * 
  * @function_end
 */
 function modio_mods_add() {}
@@ -80,7 +86,7 @@ function modio_mods_add() {}
  * @function modio_mods_edit
  * @description > **mod.io Endpoint:** [Edit Mod](https://docs.mod.io/#edit-mod)
  * 
- * Edit details for a mod. If you want to update the `logo` or media associated with this mod, you need to use the Add Mod Media endpoint. The same applies to Mod Files, Metadata Key Value Pairs and Dependencies which are all managed via other endpoints. Successful request will return the updated Mod Object.
+ * This function edits the details for a mod. If you want to update the `logo` or media associated with this mod, you need to use ${function.modio_media_mod_add}. The same applies to Mod Files, Metadata Key Value Pairs and Dependencies which are all managed via other endpoints. A duccessful request will return the updated ${struct.Mod} struct.
  * 
  * @param {real} mod_id Unique id of the mod.
  * @param {string} logo Image file which will represent your mods logo. Must be gif, jpg or png format and cannot exceed 8MB in filesize. Dimensions must be at least 512x288 and we recommended you supply a high resolution image with a 16 / 9 ratio. mod.io will use this image to make three thumbnails for the dimensions 320x180, 640x360 and 1280x720.
@@ -135,6 +141,8 @@ function modio_mods_add() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.Mod}
+ * 
  * @function_end
 */
 function modio_mods_edit() {}
@@ -143,7 +151,7 @@ function modio_mods_edit() {}
  * @function modio_mods_delete
  * @description > **mod.io Endpoint:** [Delete Mod](https://docs.mod.io/#delete-mod)
  * 
- * Delete a mod profile. A successful request will return `204 No Content` and fire a MOD_UNAVAILABLE event.
+ * This function deletes a mod profile. A successful request will return `204 No Content` and fire a MOD_UNAVAILABLE event.
  * 
  * [[NOTE: This will close the mod profile which means it cannot be viewed or retrieved via API requests but will still exist in-case you choose to restore it at a later date. If you wish to permanently delete a mod you have access rights to, you must do it via the [mods profile page](https://mod.io/me/library) on the mod.io website.]]
  * 
