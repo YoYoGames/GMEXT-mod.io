@@ -20,16 +20,6 @@ function modio_price() {}
  * @struct_end
  */
 
-// Mdules
+// Modules
 
-/**
- * @module price
- * @title Price
- * 
- * @section_func price
- * @desc Price
- * @ref modio_price
- * @section_end
- * 
- * @module_end
- */
+// modio_price is currently (or no longer) in the mod.io API, not listing it here
