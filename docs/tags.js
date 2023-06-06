@@ -4,12 +4,12 @@
  * @function modio_tags_game_get
  * @description > **mod.io Endpoint:** [Get Game Tag Options](https://docs.mod.io/#get-game-tag-options)
  * 
- * Get all tags for the corresponding game, that can be applied to any of its mods. Hidden tag groups will only be returned if the authenticated user is a team member of the parent game with either `Manager` or `Administrator` status. Successful request will return an array of ${struct.GameTagOption} structs.
+ * This function gets all tags for the corresponding game, that can be applied to any of its mods. Hidden tag groups will only be returned if the authenticated user is a team member of the parent game with either `Manager` or `Administrator` status. A successful request will return an array of ${struct.GameTagOption} structs.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
- * @returns {array<GameTagOption>}
+ * @returns {struct.GetGameTagOptions}
  * 
  * @function_end
 */
@@ -19,7 +19,7 @@ function modio_tags_game_get() {}
  * @function modio_tags_game_add
  * @description > **mod.io Endpoint:** [Add Game Tag Option](https://docs.mod.io/#add-game-tag-option)
  * 
- * Add tags which mods can apply to their profiles. A successful request will return a ${struct.Message} struct.
+ * This function adds tags which mods can apply to their profiles. A successful request will return a ${struct.Message} struct.
  *
  * Tagging is a critical feature that powers the searching and filtering of mods for your game, as well as allowing you to control how mods are installed and played. For example you might enforce mods to be a particular type (map, model, script, save, effects, blueprint), which dictates how you install it. You may use tags to specify what the mod replaces (building, prop, car, boat, character). Or perhaps the tags describe the theme of the mod (fun, scenic, realism). The implementation is up to you, but the more detail you support the better filtering and searching becomes. If you need to store more advanced information, you can also use [Metadata Key Value Pairs](https://docs.mod.io/#metadata).
  *
@@ -44,6 +44,8 @@ function modio_tags_game_get() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
+ * @returns {struct.Message}
+ * 
  * @function_end
 */
 function modio_tags_game_add() {}
@@ -54,12 +56,12 @@ function modio_tags_game_add() {}
  * 
  * <br />
  * 
- * Delete an entire group of tags or individual tags. A successful request will return `204 No Content`.
+ * This function deletes an entire group of tags or individual tags. A successful request will return `204 No Content`.
  * 
  * @param {string} name Name of the tag group that you want to delete tags from.
  * @param {string} tags Tags to delete from the game and all mod profiles. Every tag to delete requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2).
  * 
- * [[NOTE: An empty value will delete the entire group.``
+ * [[NOTE: An empty value will delete the entire group.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -74,7 +76,7 @@ function modio_tags_game_delete() {}
  * 
  * <br />
  * 
- * Get all tags for the corresponding mod. A successful request will return an array of ${struct.ModTag} structs. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets all tags for the corresponding mod. A successful request will return an array of ${struct.ModTag} structs. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * **Filters:**
  *
@@ -83,6 +85,8 @@ function modio_tags_game_delete() {}
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.GetModTags}
  * 
  * @function_end
 */
@@ -94,12 +98,14 @@ function modio_tags_mod_get() {}
  * 
  * <br />
  * 
- * Add tags to a mod's profile. You can only add tags allowed by the parent game, which are listed in the `tag_option` column in the [Game's Object](https://docs.mod.io/#game-object). Successful request will return ${struct.Message}.
+ * This function adds tags to a mod's profile. You can only add tags allowed by the parent game, which are listed in the `tag_option` column in the ${struct.GameObject}. A successful request will return a ${struct.Message} struct.
  * 
- * @param {string} tags Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within tag_options column on the parent Game Object.
+ * @param {string} tags Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within `tag_options` column on the parent ${struct.Game}.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.AddModTag}
  * 
  * @function_end
 */
@@ -111,7 +117,7 @@ function modio_tags_mod_add() {}
  * 
  * <br />
  * 
- * Delete tags from a mod's profile. Deleting tags is identical to adding tags except the request method is `DELETE` instead of `POST`. Successful request will return `204 No Content`.
+ * This function deletes tags from a mod's profile. A successful request will return `204 No Content`.
  * 
  * @param {string} tags Tags to delete from the mod's profile. Every tag to delete requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2).
  * 

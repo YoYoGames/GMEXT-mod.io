@@ -4,7 +4,7 @@
  * 
  * <br />
  * 
- * This function provides the text, links and buttons you can use to get a user's agreement and consent prior to authenticating them in-game. A successful response returns a ${struct.Terms} struct.
+ * This function provides the text, links and buttons you can use to get a users agreement and consent prior to authenticating them in-game. A successful response returns a ${struct.Terms} struct.
  * 
  * See [Terms](https://docs.mod.io/#terms) for an example dialog and requirements for this function.
  * 
@@ -26,10 +26,10 @@
  * 
  * [[NOTE: Steam is the only authentication endpoint that requires the token to be base64 encoded. All other endpoints tokens should be provided as a UTF-8 character string.]]
  * 
- * @param {string} appdata The Steam user's [Encrypted App Ticket](https://partner.steamgames.com/doc/features/auth#encryptedapptickets) provided by the Steamworks SDK, as a base64-encoded string.
+ * @param {string} appdata The Steam user's [Encrypted App Ticket](https://partner.steamgames.com/doc/features/auth#encryptedapptickets) provided by the Steamworks SDK, as a [base64-encoded string](https://manual.yoyogames.com/GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/base64_encode.htm).
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${type.string}) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and the respective user does not have an email registered for their account we will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and the respective user does not have an email registered for their account mod.io will send a confirmation email to confirm they have ownership of the specified email.
  * * date_expires (${type.real}) The Unix timestamp of the date in which the returned token will expire. The value cannot be higher than the default value, which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * * terms_agreed (${type.boolean}) This *must* be set to `false`, unless you have collected the [users agreement](https://docs.mod.io/#terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
@@ -57,11 +57,11 @@ function modio_auth_steam() {}
  * @param {string} xbox_token A valid Xbox Live token
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${type.string}) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and when the respective user does not have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email. This functionality is also available at a later time via the [Link an Email](https://docs.mod.io/#link-an-email) endpoint. NOTE: If the user already has an email on record with us, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.
+ * * email (${type.string}) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and when the respective user does not have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email. This functionality is also available at a later time via the [Link an Email](https://docs.mod.io/#link-an-email) endpoint. NOTE: If the user already has an email on record with mod.io, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.
  * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value, which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized response`.
  * * terms_agreed(${type.boolean}) This *must* be set to `false` unless you have collected the users agreement prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
- * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error 403 Forbidden (error_ref 11074) will be returned and you will need to collect the [users agreement](#modio_auth_terms) and retry with this value set to true to authenticate the user.]]
+ * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](#modio_auth_terms) and retry with this value set to true to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -81,7 +81,7 @@ function modio_auth_xboxlive() {}
  * Request an access token on behalf of a PlayStation Network (PSN) user. A successful request will return an ${struct.AccessToken} struct.
  * 
  * From the [mod.io docs](https://docs.mod.io/#playstation-network):
- * [[NOTE: To use this endpoint you will need to setup some additional settings prior to being able to authenticate PlayStation users. For these instructions please [contact mod.io](mailto:developers@mod.io?subject=PlayStation%20Network%20SSO%20Request).]]
+ * [[NOTE: To use this endpoint you will need to set up some additional settings prior to being able to authenticate PlayStation users. For these instructions please [contact mod.io](mailto:developers@mod.io?subject=PlayStation%20Network%20SSO%20Request).]]
  * [[TIP: If you want to overlay the mod.io site in-game on PlayStation, we recommend you add `?portal=psn` to the end of the URL you open which will prompt the user to login with PlayStation Network. See Web Overlay Authentication for details.]]
  * 
  * "PlayStation" and "DualSense" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
@@ -90,10 +90,10 @@ function modio_auth_xboxlive() {}
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
  * * email (${type.string}) The users email address. If supplied, and the respective user does not have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.
- * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](#modio_auth_terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
- * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error 403 Forbidden (error_ref 11074) will be returned and you will need to collect the [users agreement](#modio_auth_terms) and retry with this value set to `true` to authenticate the user.]]
+ * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](#modio_auth_terms) and retry with this value set to `true` to authenticate the user.]]
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -112,14 +112,13 @@ function modio_auth_playstation() {}
  * 
  * This function requests an access token on behalf of a Nintendo Switch user. A successful request will return an ${struct.AccessToken} struct.
  * 
- * From the [mod.io docs](https://docs.mod.io/#nintendo-switch):
  * [[NOTE: To use this endpoint you will need to setup some additional settings prior to being able to authenticate Nintendo Switch users. For these instructions you should [contact mod.io](mailto:developers@mod.io?subject=Nintendo%20Switch%20SSO%20Request).]]
  * 
  * @param {string} id_token The NSA ID supplied by the Nintendo Switch SDK.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.
- * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.
+ * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](#modio_auth_terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](#modio_auth_terms) and retry with this value set to `true` to authenticate the user.]]
@@ -144,14 +143,14 @@ function modio_auth_nintendo_switch() {}
  * @param {string} device The Meta Quest device being used for authentication.
  * @param {string} nonce The nonce provided by calling [ovr_User_GetUserProof()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK.
  * @param {real} user_id The user's Meta Quest ID providing by calling [ovr_GetLoggedInUserID()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK.
- * @param {string} access_token The user's access token, providing by calling [ovr_User_GetAccessToken()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK. mod.io uses this access token on the first login only to obtain the user's alias and is not saved on our servers.
+ * @param {string} access_token The user's access token, providing by calling [ovr_User_GetAccessToken()](https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/) from the Meta Quest SDK. mod.io uses this access token on the first login only to obtain the user's alias and is not saved on the mod.io servers.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
- * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](#modio_auth_terms) prior to calling this endpoint in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](#modio_auth_terms) and retry with this value set to `true` to authenticate the user.]]
@@ -178,7 +177,7 @@ function modio_auth_metaquest() {}
  * 
  * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.
  * 
- * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a 401 Unauthorized response.
+ * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the [users agreement](#modio_auth_terms) prior to calling this endpoint, in which case it can be set to `true` and will be recorded.
  * 
  * [[NOTE: If this is set to `false` and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error `403 Forbidden (error_ref 11074)` will be returned and you will need to collect the [users agreement](#modio_auth_terms) and retry with this value set to `true` to authenticate the user.]]
@@ -231,7 +230,7 @@ function modio_auth_epicgames() {}
  * @param {string} itchio_token The [JWT Token](https://itch.io/docs/itch/integrating/manifest-actions.html) provided by the itch.io desktop application to your game as the environment variable `ITCHIO_API_KEY`. You must set up your itch.io app manifest to include the [API scope](https://itch.io/docs/itch/integrating/manifest-actions.html) to force itch.io to set this variable.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
@@ -257,13 +256,12 @@ function modio_auth_itchio() {}
  * 
  * This function requests an access token on behalf of a Google user. A successful request will return an ${struct.AccessToken} struct.
  * 
- * From the [mod.io docs](https://docs.mod.io/#google):
- * [[NOTE: To use this endpoint you will need to set up some additional settings prior to being able to authenticate Google users. For these instructions please [contact us](mailto:developers@mod.io?subject=Google%20SSO%20Request).]]
+ * [[NOTE: To use this endpoint you will need to set up some additional settings prior to being able to authenticate Google users. For these instructions please [contact mod.io](mailto:developers@mod.io?subject=Google%20SSO%20Request).]]
  * 
- * @param {string} id_token The id_token value returned from Google after you have authenticated a user via the Google OAuth2 flow.
+ * @param {string} id_token The `id_token` value [returned from Google](https://developers.google.com/identity/sign-in/web/backend-auth#calling-the-tokeninfo-endpoint) after you have authenticated a user via the Google OAuth2 flow.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
@@ -292,7 +290,7 @@ function modio_auth_google() {}
  * @param {string} discord_token The access token of the user provided by Discord.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
@@ -321,7 +319,7 @@ function modio_auth_discord() {}
  * @param {string} id_token The ID token issued by the configured identity provider.
  * @param {struct} optionals A struct that can contain one or more of the following variables: 
  * 
- * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.
+ * * email (${type.string}) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.
  * 
  * [[NOTE: If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
@@ -347,7 +345,6 @@ function modio_auth_openid() {}
  * 
  * This function requests a security code for a user, identified by their e-mail which can then be exchanged for an access token. A successful request will return a ${struct.Message} struct.
  * 
- * From the [mod.io docs](https://docs.mod.io/#email-exchange):
  * > To use this functionality you **must** use your game's api_key from your game's profile on mod.io.
  * 
  * @param {string} email An email address the user can access to retrieve the security code. This parameter should also be URL encoded before the request is sent.
@@ -355,7 +352,7 @@ function modio_auth_openid() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
- * @returns {struct.AccessToken}
+ * @returns {struct.EmailRequestResponse}
  * 
  * @function_end
  */
@@ -395,7 +392,6 @@ function modio_auth_email_exchange() {}
  * 
  * This function logs out the user by revoking their current access token.
  * 
- * From the [mod.io docs](https://docs.mod.io/#logout):
  * If this request successfully completes, you should remove any tokens/cookies/cached credentials linking to the now revoked access token so that the user is required to login again through your application. A successful request will return `204 No Content`.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.

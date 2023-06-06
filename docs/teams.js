@@ -6,12 +6,14 @@
  * 
  * <br />
  * 
- * Get all users that are part of a mod team. A successful request will return an array of ${struct.TeamMember} structs. We recommended reading the [filtering](https://docs.mod.io/#filtering) documentation to return only the records you want.
+ * This function gets all users that are part of a mod team. A successful request will return an array of ${struct.TeamMember} structs. We recommended reading the [filtering](https://docs.mod.io/#filtering) documentation to return only the records you want.
  * 
  * @param {real} mod_id Unique id of the mod.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.GetTeamMembers}
  * 
  * @function_end
 */

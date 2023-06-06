@@ -4,7 +4,7 @@
  * 
  * <br />
  * 
- * Mute a user. This will prevent mod.io from returning mods to you authored by the muted user. A successful request will return `204 No Content`.
+ * This function mutes a user. This will prevent mod.io from returning mods to you authored by the muted user. A successful request will return `204 No Content`.
  * 
  * @param {real} user_id user unique identifier
  * 
@@ -21,7 +21,7 @@ function modio_user_mute() {}
  * 
  * <br />
  * 
- * Unmute a previously muted user. This will re-enable mod.io to returning mods to you authored by the muted user. Successful request will return `204 No Content`.
+ * This function unmutes a previously muted user. This will re-enable mod.io to returning mods to you authored by the muted user. Successful request will return `204 No Content`.
  * 
  * @param {real} user_id user unique identifier
  * 
