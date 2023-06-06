@@ -4,7 +4,7 @@
  * 
  * <br />
  * 
- * Get the *authenticated user* details. A successful request will return a single ${struct.User}.
+ * This function gets the *authenticated user* details. A successful request will return a single ${struct.User}.
  * 
  * @param {real} user_id
  * 
@@ -21,7 +21,7 @@ function modio_me() {}
  * 
  * <br />
  * 
- * Get events that have been fired specific to the user. A successful request will return an array of ${struct.ModEvent}. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets events that have been fired specific to the user. A successful request will return an array of ${struct.ModEvent}. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -36,7 +36,7 @@ function modio_me_events() {}
  * 
  * <br />
  * 
- * Get all modfiles the *authenticated user* uploaded. A successful request will return an array of ${struct.Modfile} structsd. We recommended reading the filtering documentation to return only the records you want.
+ * This function gets all modfiles the *authenticated user* uploaded. A successful request will return an array of ${struct.Modfile} structs. We recommended reading the filtering documentation to return only the records you want.
  * 
  * [[NOTE: If the [game](https://docs.mod.io/#edit-game) requires mod downloads to be initiated via the API, the `binary_url` returned will contain a verification hash. This hash must be supplied to get the modfile, and will expire after a certain period of time. Saving and reusing the `binary_url` won't work in this situation given its dynamic nature.]]
  * 
@@ -53,7 +53,7 @@ function modio_me_files() {}
  * 
  * <br />
  * 
- * Get all games the *authenticated user* added or is a team member of. A successful request will return an array of ${struct.Game}. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets all games the *authenticated user* added or is a team member of. A successful request will return an array of ${struct.Game}. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -68,7 +68,7 @@ function modio_me_games() {}
  * 
  * <br />
  * 
- * Get all mod's the *authenticated user* is subscribed to. A successful request will return an array of ${struct.Mod} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets all mods the *authenticated user* is subscribed to. A successful request will return an array of ${struct.Mod} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -83,7 +83,7 @@ function modio_me_subscriptions() {}
  * 
  * <br />
  * 
- * Get all mods the *authenticated user* added or is a team member of. A successful request will return an array of ${struct.Mod} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets all mods the *authenticated user* added or is a team member of. A successful request will return an array of ${struct.Mod} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -98,7 +98,7 @@ function modio_me_mods() {}
  * 
  * <br />
  * 
- * Get all users muted by the *authenticated user*. A successful request will return an array of ${struct.User} structs.
+ * This function gets all users muted by the *authenticated user*. A successful request will return an array of ${struct.User} structs.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -113,7 +113,7 @@ function modio_me_user_muted() {}
  * 
  * <br />
  * 
- * Get all mod ratings submitted by the *authenticated user*. Successful request will return an array of ${struct.Rating}.
+ * This function gets all mod ratings submitted by the *authenticated user*. Successful request will return an array of ${struct.Rating}.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
