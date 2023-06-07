@@ -23,7 +23,7 @@ function modio_modfiles_get_list() {}
  * @function modio_modfiles_get
  * @description > **mod.io Endpoint:** [Get Modfile](https://docs.mod.io/#get-modfile)
  * 
- * This function gets a file. A successful request will return a single ${struct.Modfile}.
+ * This function gets a file. A successful request will return a single ${struct.Modfile} struct.
  *
  * [[NOTE: If the [game](https://docs.mod.io/#edit-game) requires mod downloads to be initiated via the API, the `binary_url` returned will contain a verification hash. This hash must be supplied to get the modfile, and will expire after a certain period of time. Saving and reusing the `binary_url` won't work in this situation given its dynamic nature.]]
  * 
@@ -63,7 +63,7 @@ function modio_modfiles_get() {}
  * - changelog (${type.string}) Changelog of this release.
  * - active (${type.boolean}) Default value is `true`. Flag this upload as the current release, this will change the `modfile` field on the parent mod to the `id` of this file after upload.
  * 
- *   NOTE: If the active parameter is `true`, a [MODFILE_CHANGED event](https://docs.mod.io/#get-mod-events) will be fired, so game clients know there is an update available for this mod.
+ *   NOTE: If the `active` parameter is `true`, a MODFILE_CHANGED event (${function.modio_events_get_list}) will be fired, so game clients know there is an update available for this mod.
  * 
  * - filehash (${type.string}) MD5 of the submitted file. When supplied the MD5 will be compared against the uploaded files MD5. If they don't match a `422 Unprocessible Entity` error will be returned.
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties such as what version of the game this file is compatible with.
@@ -92,7 +92,7 @@ function modio_modfiles_add() {}
  * - changelog (${type.string}) Changelog of this release.
  * - active (${type.boolean}) Flag this upload as the current release.
  * 
- * [[NOTE: If the active parameter causes the parent mod's `modfile` parameter to change, a [MODFILE_CHANGED event](https://docs.mod.io/#get-mod-events) will be fired, so game clients know there is an update available for this mod.]]
+ * [[NOTE: If the active parameter causes the parent mod's `modfile` parameter to change, a MODFILE_CHANGED event (${function.modio_events_get_list}) will be fired, so game clients know there is an update available for this mod.]]
  * 
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties such as what version of the game this file is compatible with
  * 

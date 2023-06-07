@@ -4,7 +4,7 @@
  * @function modio_games_get_list
  * @description > **mod.io Endpoint:** [Get Games](https://docs.mod.io/#get-games)
  * 
- * Get all games. A successful request will return an array of ${struct.Game}. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
+ * This function gets all games. A successful request will return an array of ${struct.Game} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
@@ -19,7 +19,7 @@ function modio_games_get_list() {}
  * @function modio_games_get
  * @description > **mod.io Endpoint:** [Get Game](https://docs.mod.io/#get-games)
  * 
- * This function gets a game. Successful request will return a single ${struct.Game}. We recommended reading the filtering documentation to return only the records you want.
+ * This function gets a game. Successful request will return a single ${struct.Game} struct. We recommended reading the filtering documentation to return only the records you want.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.

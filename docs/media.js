@@ -6,7 +6,7 @@
  * 
  * <br />
  * 
- * Upload new media to a game. The request `Content-Type` header must be `multipart/form-data` to submit image files. Any request you make to this endpoint should contain a binary file for each of the fields you want to update below. Successful request will return a ${struct.Message} struct.
+ * This function uploads new media to a game. A successful request will return a ${struct.Message} struct.
  * 
  * [[NOTE: You can also add media to [your games profile](https://mod.io/me/library) on the mod.io website. This is the recommended approach.]]
  * 
@@ -31,7 +31,7 @@ function modio_media_game_add() {}
  * 
  * <br />
  * 
- * This endpoint is very flexible and will add any images posted to the mods gallery regardless of their body name providing they are a valid image. The request `Content-Type` header must be `multipart/form-data` to submit image files. Successful request will return a ${struct.Message} struct.
+ * This function adds any images posted to the mods gallery regardless of their body name providing they are a valid image. A successful request will return a ${struct.Message} struct.
  *
  * [[NOTE: You can also add media to [your mods profile](https://mod.io/me/library) on the mod.io website. This is the easiest way.]]
  * 
@@ -60,7 +60,7 @@ function modio_media_mod_add() {}
  * 
  * <br />
  * 
- * Delete images, sketchfab or youtube links from a mod profile. A successful request will return `204 No Content`.
+ * Delete images, sketchfab or youtube links from a mod profile.
  * 
  * [[NOTE: You can also delete media from [your mods profile](https://mod.io/me/library) on the mod.io website. This is the easiest way.]]
  * 
@@ -82,9 +82,9 @@ function modio_media_mod_delete() {}
  * 
  * <br />
  * 
- * Reorder images, Sketchfab or YouTube links from a mod profile. A duccessful request will return `204 No Content`.
+ * Reorder images, Sketchfab or YouTube links from a mod profile.
  * 
- * [[NOTE: You can only reorder existing media, any differences in the media arrays will result in a `400 Bad Request response.`]]
+ * [[NOTE: You can only reorder existing media, any differences in the media arrays will result in a failed request.]]
  * 
  * @param {struct} optionals
  * 

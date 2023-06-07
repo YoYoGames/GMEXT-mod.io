@@ -29,7 +29,7 @@
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
- * @returns {struct.Comment}
+ * @returns {struct.GetModComments}
  * 
  * @function_end
 */
@@ -39,7 +39,7 @@ function modio_comments_get_list() {}
  * @function modio_comments_add
  * @description > **mod.io Endpoint:** [Add Mod Comment](https://docs.mod.io/#add-mod-comment)
  * 
- * This function adds a comment for the corresponding mod. A successful request will return the newly created ${struct.Comment} struct and fire a `MOD_COMMENT_ADDED` event.
+ * This function adds a comment for the corresponding mod. A successful request will return the newly created ${struct.Comment} struct and fire a `MOD_COMMENT_ADDED` ($function.modio_mods_get_list}) event.
  * 
  * @param {real} mod_id The unique id of the mod.
  * @param {string} content Contents of the comment. You can include @mentions to users, which will notify them that they have been tagged in this comment.
@@ -52,6 +52,8 @@ function modio_comments_get_list() {}
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @returns {struct.Comment}
  * 
  * @function_end
 */
@@ -98,7 +100,7 @@ function modio_comments_update() {}
  * @function modio_comments_delete
  * @description > **mod.io Endpoint:** [Delete Mod Comment](https://docs.mod.io/#delete-mod-comment)
  * 
- * This function deletes a comment from a mod profile. Successful request will return `204 No Content` and fire a `MOD_COMMENT_DELETED` event.
+ * This function deletes a comment from a mod profile. A successful request will fire a `MOD_COMMENT_DELETED` ($function.modio_mods_get_list}) event.
  * 
  * @param {real} mod_id Unique id of the mod.
  * @param {string} comment_id Unique id of the comment.

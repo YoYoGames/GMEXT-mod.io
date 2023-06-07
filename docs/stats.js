@@ -30,7 +30,7 @@ function modio_stats_game() {}
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
- * @returns {struct.ModStats}
+ * @returns {struct.GetModStats}
  * 
  * @function_end
 */
@@ -59,10 +59,11 @@ function modio_stats_mods_get() {}
  * @module stats
  * @title Stats
  * 
- * @section stats
+ * @section_func stats
  * @desc Stats
  * @ref modio_stats_game
  * @ref modio_stats_mods_get_list
+ * @ref modio_stats_mods_get
  * @section_end
  * 
  * @module_end

@@ -56,7 +56,7 @@ function modio_tags_game_add() {}
  * 
  * <br />
  * 
- * This function deletes an entire group of tags or individual tags. A successful request will return `204 No Content`.
+ * This function deletes an entire group of tags or individual tags.
  * 
  * @param {string} name Name of the tag group that you want to delete tags from.
  * @param {string} tags Tags to delete from the game and all mod profiles. Every tag to delete requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2).
@@ -98,14 +98,14 @@ function modio_tags_mod_get() {}
  * 
  * <br />
  * 
- * This function adds tags to a mod's profile. You can only add tags allowed by the parent game, which are listed in the `tag_option` column in the ${struct.GameObject}. A successful request will return a ${struct.Message} struct.
+ * This function adds tags to a mod's profile. You can only add tags allowed by the parent game, which are listed in the `tag_option` column in the ${struct.Game}. A successful request will return a ${struct.Message} struct.
  * 
  * @param {string} tags Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within `tag_options` column on the parent ${struct.Game}.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
  * 
- * @returns {struct.AddModTag}
+ * @returns {struct.Message}
  * 
  * @function_end
 */
@@ -117,7 +117,7 @@ function modio_tags_mod_add() {}
  * 
  * <br />
  * 
- * This function deletes tags from a mod's profile. A successful request will return `204 No Content`.
+ * This function deletes tags from a mod's profile.
  * 
  * @param {string} tags Tags to delete from the mod's profile. Every tag to delete requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2).
  * 

@@ -1,6 +1,6 @@
 /** 
  * @function limit
- * @description Limit the number of results for a request. By default **100** results are returned per request.
+ * @description This function limits the number of results for a request. By default **100** results are returned per request.
  * 
  * @param {real} value The maximum number of results to return. The default value is 100. 
  * 
@@ -10,7 +10,7 @@ function limit() {}
 
 /** 
  * @function offset
- * @description Use `_offset` to skip over the specified number of results, regardless of the data they contain. This works the same way offset does in a SQL query.
+ * @description Use this function to skip over the specified number of results, regardless of the data they contain. This works the same way offset does in a SQL query.
  * 
  * @param {real} value 
  * 
@@ -20,7 +20,7 @@ function offset() {}
 
 /** 
  * @function ascending
- * @description Sort the data ascending on the given key.
+ * @description This function sorts the data ascending on the given key.
  * 
  * @param {string} key The key to sort on
  * 
@@ -30,7 +30,7 @@ function ascending() {}
 
 /** 
  * @function descending
- * @description Sort the data descending on the given key.
+ * @description This function sorts the data descending on the given key.
  * 
  * @param {string} key The key to sort on
  * 
@@ -40,7 +40,7 @@ function descending() {}
 
 /** 
  * @function fulltextsearch
- * @description Full-text search is a lenient search filter that **is only available** if the endpoint you are querying contains a `name` column. Wildcards should **not** be applied to this filter as they are ignored.
+ * @description This function provides a lenient search filter that **is only available** if the endpoint you are querying contains a `name` column. Wildcards should **not** be applied to this filter as they are ignored.
  * 
  * @param {string} text The text to search for
  * 
@@ -85,7 +85,7 @@ function likewildcards() {}
 
 /** 
  * @function notlikewildcards
- * @description Where the string supplied does not match the preceding column value. This is equivalent to SQL's NOT LIKE. Wildcard's * can be used as described above.
+ * @description Where the string supplied does not match the preceding column value. This is equivalent to SQL's NOT LIKE. Wildcards * can be used as described above.
  * 
  * @param {string} key The key to compare
  * @param {string} value The value to compare to
@@ -129,7 +129,7 @@ function notin() {}
  * @param {string} key The key to compare
  * @param {string} value The value to compare to
  * 
- * @example todo
+ * @example 
  * 
  * @function_end
 */
@@ -142,7 +142,7 @@ function smallerthanorequalto() {}
  * @param {string} key The key to compare
  * @param {string} value The value to compare to
  * 
- * @example todo
+ * @example 
  * 
  * @function_end
 */
@@ -152,7 +152,7 @@ function greaterthanorequalto() {}
  * @function bitwiseand
  * @description Some columns are stored as bits within an integer. Their value depends on the bits selected. For example, suppose a column has 4 options:
  * 
- * @example todo
+ * @example 
  * 
  * 1. Option A
  * 2. Option B
@@ -161,8 +161,7 @@ function greaterthanorequalto() {}
  * 
  * You can combine any of these options by adding them together which means there are (2 ^ 4 = 16 possible combinations). For example Option A (1) and Option C (4) would be (1 + 4 = 5), Option A (1), Option C (4) and Option D (8) would be (1 + 4 + 8 = 13), all Options together would be (1 + 2 + 4 + 8 = 15).
  *
- * The number of combinations makes using equals, in and other filters a little complex. To solve this we support Bitwise AND (&) which makes it easy to match a column which contains any of the options you want.
- *
+ * The number of combinations makes using ${function.equals}, ${function.in} and other filters a little complex. To solve this we support Bitwise AND (&) which makes it easy to match a column which contains any of the options you want.
  * 
  * @param {string} key The key to compare
  * @param {string} value The value to compare to
@@ -179,16 +178,21 @@ function bitwiseand() {}
  * 
  * @section_func pagination
  * 
- * @desc When requesting data from endpoints that contain more than one object, you can supply an _offset and _limit to paginate through the results. Think of it as a page 1, 2, 3... system but you control the number of results per page, and the page to start from. Appended to each response will be the pagination metadata:
+ * @desc When requesting data from endpoints that contain more than one object, you can supply an ${function.offset} and ${function.limit} to paginate through the results. Think of it as a page 1, 2, 3... system but you control the number of results per page, and the page to start from. Appended to each response will be the pagination metadata:
+ * 
+ * result_count - Number of results returned in this request.
+ * result_offset - Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
+ * result_limit - Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
+ * result_total - Total number of results.
  * 
  * @ref limit
  * @ref offset
  * @section_end
  * 
  * @section_func sorting
- * @desc All endpoints are sorted by the id column in ascending order by default (oldest first). You can override this by including a _sort with the column you want to sort by in the request. You can sort on all columns in the parent object only. You cannot sort on columns in nested objects, so if a game contains a tags object you cannot sort on the tag name column, but you can sort by the games name since the games name resides in the parent object.
+ * @desc All endpoints are sorted by the id column in ${function.ascending} order by default (oldest first). You can override this by including a sort with the column you want to sort by in the request. You can sort on all columns in the parent object only. You cannot sort on columns in nested objects, so if a game contains a tags object you cannot sort on the tag name column, but you can sort by the games name since the games name resides in the parent object.
  *
- * [[NOTE: Some endpoints like Get Mods have special sort columns like popular, downloads, rating and subscribers which are documented alongside the filters.]]
+ * [[NOTE: Some functions like ${function.modio_mods_get_list} have special sort columns like popular, downloads, rating and subscribers which are documented alongside the filters.]]
  *
  * @ref ascending
  * @ref descending

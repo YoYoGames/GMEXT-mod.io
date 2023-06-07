@@ -151,7 +151,7 @@ function modio_mods_edit() {}
  * @function modio_mods_delete
  * @description > **mod.io Endpoint:** [Delete Mod](https://docs.mod.io/#delete-mod)
  * 
- * This function deletes a mod profile. A successful request will return `204 No Content` and fire a MOD_UNAVAILABLE event.
+ * This function deletes a mod profile. A successful request will fire a `MOD_UNAVAILABLE` (${function.modio_mods_get_list}) event.
  * 
  * [[NOTE: This will close the mod profile which means it cannot be viewed or retrieved via API requests but will still exist in-case you choose to restore it at a later date. If you wish to permanently delete a mod you have access rights to, you must do it via the [mods profile page](https://mod.io/me/library) on the mod.io website.]]
  * 
@@ -174,6 +174,7 @@ function modio_mods_delete() {}
  * 
  * @section_func
  * @desc Mods
+ * @ref modio_mods_get_list
  * @ref modio_mods_get
  * @ref modio_mods_add
  * @ref modio_mods_edit
