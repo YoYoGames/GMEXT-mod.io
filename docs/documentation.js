@@ -7,10 +7,15 @@
 
 /**
  * @module home
- * @title Home
+ * @title mod.io
+ * @description This is the mod.io extension which allows you to add mods to your GameMaker games.
+ * 
+ * This wiki contains the API documentation for this extension.
  * 
  * @section Guides
  * @desc Guides for the mod.io extension.
+ * @ref page.quick_start_guide
+ * @ref module.pagination_filtering_sorting
  * @section_end
  * 
  * @section Modules
