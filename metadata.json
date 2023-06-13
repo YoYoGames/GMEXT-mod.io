@@ -1,0 +1,14 @@
+[
+    {
+        "projectFile": "source/mod.io_gml/mod.io.yyp",
+        "extensionFile": "source/mod.io_gml/extensions/ModIO/ModIO.yy",
+        "packageId": "com.yoyogames.modioext",
+        "packageName": "ModIO Extension",
+        "packageVersion": "1.0.0",
+        "includeFolders": "GM Extension Assets,mod.io,mod.io DEMO",
+        "includeResources": null,
+        "excludeFolders": "Authentication Extensions",
+        "excludeResources": null,
+        "format": "LTS22"
+    }
+]
