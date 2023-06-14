@@ -71,7 +71,7 @@ function modio_modfiles_get() {}
  * 
  * - filehash (${type.string}) MD5 of the submitted file. When supplied the MD5 will be compared against the uploaded files MD5. If they don't match a `422 Unprocessible Entity` error will be returned.
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties such as what version of the game this file is compatible with.
- * - platforms (${type.array<string>}) An array containing one or more [platforms](https://docs.mod.io/#targeting-a-platform) this file is targeting. Valid values can be found under the [targeting a platform](https://docs.mod.io/#targeting-a-platform) section.
+ * - platforms (${array[string]}) An array containing one or more [platforms](https://docs.mod.io/#targeting-a-platform) this file is targeting. Valid values can be found under the [targeting a platform](https://docs.mod.io/#targeting-a-platform) section.
  * 
  * @param {function|method} _callback_success The function to trigger when the request is successful.
  * @param {function|method} _callback_failed The function to trigger when the request failed.

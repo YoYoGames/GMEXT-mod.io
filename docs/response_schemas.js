@@ -223,7 +223,7 @@
  * @member {struct} tag_count_map List of tag names and the count of mods with these tags.
  * @member {boolean} hidden Groups of tags flagged as 'hidden' are intended to be used for filtering (eg. game version), but should not be displayed to users. Hidden tags will only be returned if `show_hidden_tags` is set to `true`.
  * @member {boolean} locked Groups of tags flagged as 'locked' are editable only if the authenticated user is a team member of the parent game. Useful for games to tag special functionality, which users can see and filter on (eg. competition winners).
- * @member {array<string>} tags Array of tags in this group.
+ * @member {array[string]} tags Array of tags in this group.
  * 
  * @struct_end
 */
@@ -232,7 +232,7 @@
  * @struct GetGameTagOptions
  * @desc > **mod.io Response Schema:** [Get Game Tag Options](https://docs.mod.io/#get-game-tag-options-2)
  * 
- * @member {array[GameTagOption]} data Array containing game tag structs.
+ * @member {array[struct.GameTagOption]} data Array containing game tag structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -245,7 +245,7 @@
  * @struct GetGames
  * @desc > **mod.io Response Schema:** [Get Games](https://docs.mod.io/#get-games-2)
  * 
- * @member {array[Game]} data Array containing game structs.
+ * @member {array[struct.Game]} data Array containing game structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -259,7 +259,7 @@
  * @struct GetGuideComments
  * @desc > **mod.io Response Schema:** [Get Guide Comments](https://docs.mod.io/#get-guide-comments-2)
  * 
- * @member {array[Comment]} data Array containing comment structs.
+ * @member {array[struct.Comment]} data Array containing comment structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -272,7 +272,7 @@
  * @struct GetGuideTags
  * @desc > **mod.io Response Schema:** [Get Guide Tags](https://docs.mod.io/#get-guide-tags)
  * 
- * @member {array[GuideTag]} data Array containing guide tag structs.
+ * @member {array[struct.GuideTag]} data Array containing guide tag structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -285,7 +285,7 @@
  * @struct GetGuides
  * @desc > **mod.io Response Schema:** [Get Guides](https://docs.mod.io/#get-guides-2)
  * 
- * @member {array[Guide]} data Array containing guide structs.
+ * @member {array[struct.Guide]} data Array containing guide structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -298,7 +298,7 @@
  * @struct GetModComments
  * @desc > **mod.io Response Schema:** [Get Mod Comments](https://docs.mod.io/#get-mod-comments-2)
  * 
- * @member {array[Comment]} data Array containing comment structs.
+ * @member {array[struct.Comment]} data Array containing comment structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -311,7 +311,7 @@
  * @struct GetModDependencies
  * @desc > **mod.io Response Schema:** [Get Mod Dependencies](https://docs.mod.io/#get-mod-dependencies-2)
  * 
- * @member {array[ModDependencies]} data Array containing mod dependencies structs.
+ * @member {array[struct.ModDependencies]} data Array containing mod dependencies structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -324,7 +324,7 @@
  * @struct GetModEvents
  * @desc > **mod.io Response Schema:** [Get Mod Events](https://docs.mod.io/#get-mod-events-2)
  * 
- * @member {array[ModEvent]} data Array containing mod event structs.
+ * @member {array[struct.ModEvent]} data Array containing mod event structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -337,7 +337,7 @@
  * @struct GetModKVPMetadata
  * @desc > **mod.io Response Schema:** [Get Mod KVP Metadata](https://docs.mod.io/#get-mod-kvp-metadata-2)
  * 
- * @member {array[MetadataKVP]} data Array containing metadata KVP structs.
+ * @member {array[struct.MetadataKVP]} data Array containing metadata KVP structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -350,7 +350,7 @@
  * @struct GetModStats
  * @desc > **mod.io Response Schema:** [Get Mod Stats](https://docs.mod.io/#get-mod-stats-2)
  * 
- * @member {array[ModStats]} data Array containing stats structs.
+ * @member {array[struct.ModStats]} data Array containing stats structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -363,7 +363,7 @@
  * @struct GetModTags
  * @desc > **mod.io Response Schema:** [Get Mod Tags](https://docs.mod.io/#get-mod-tags-2)
  * 
- * @member {array[ModTag]} data Array containing mod tag structs.
+ * @member {array[struct.ModTag]} data Array containing mod tag structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -376,7 +376,7 @@
  * @struct GetModfiles
  * @desc > **mod.io Response Schema:** [Get Modfiles](https://docs.mod.io/#get-modfiles-2)
  * 
- * @member {array[ModFile]} data Array containing modfile structs.
+ * @member {array[struct.Modfile]} data Array containing modfile structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -389,7 +389,7 @@
  * @struct GetMods
  * @desc > **mod.io Response Schema:** [Get Mods](https://docs.mod.io/#get-mods-2)
  * 
- * @member {array[Mod]} data Array containing mod structs.
+ * @member {array[struct.Mod]} data Array containing mod structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -402,7 +402,7 @@
  * @struct GetMutedUsers
  * @desc > **mod.io Response Schema:** [Get Muted Users](https://docs.mod.io/#get-muted-users)
  * 
- * @member {array[User]} data Array containing user structs.
+ * @member {array[struct.User]} data Array containing user structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -415,7 +415,7 @@
  * @struct GetTeamMembers
  * @desc > **mod.io Response Schema:** [Get Team Members](https://docs.mod.io/#get-team-members)
  * 
- * @member {array[TeamMember]} data Array containing team member structs.
+ * @member {array[struct.TeamMember]} data Array containing team member structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -428,7 +428,7 @@
  * @struct GetUserEvents
  * @desc > **mod.io Response Schema:** [Get User Events](https://docs.mod.io/#get-user-events-2)
  * 
- * @member {array[UserEvent]} data Array containing user event structs.
+ * @member {array[struct.UserEvent]} data Array containing user event structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -441,7 +441,7 @@
  * @struct GetUserRatings
  * @desc > **mod.io Response Schema:** [Get User Ratings](https://docs.mod.io/#get-user-ratings-2)
  * 
- * @member {array[Rating]} data Array containing rating structs.
+ * @member {array[struct.Rating]} data Array containing rating structs.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by ${function.offset} filter.
  * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by ${function.limit} filter.
@@ -685,9 +685,9 @@
  * @struct ModMedia
  * @description > **mod.io Response Schema:** [Mod Media Object](https://docs.mod.io/#mod-media-object)
  * 
- * @member {string[]} youtube Array of YouTube links.
- * @member {string[]} sketchfab Array of SketchFab links.
- * @member {struct.Image[]} images Array of image objects (a gallery).
+ * @member {array[string]} youtube Array of YouTube links.
+ * @member {array[string]} sketchfab Array of SketchFab links.
+ * @member {array[struct.Image]} images Array of image objects (a gallery).
  * 
  * @struct_end
  */
@@ -836,6 +836,25 @@
 */
 
 /**
+ * @struct UserEvent
+ * @description > **mod.io Response Schema:** [User Event Object](https://docs.mod.io/#user-event-object)
+ * 
+ * @member {real} id Unique id of the event object.
+ * @member {real} game_id Unique id of the parent game.
+ * @member {real} mod_id Unique id of the parent mod.
+ * @member {real} user_id Unique id of the user who performed the action.
+ * @member {real} date_added Unix timestamp of date the event occurred.
+ * @member {string} event_type Type of event that was triggered. List of possible events: 
+ * 
+ * - USER_TEAM_JOIN
+ * - USER_TEAM_LEAVE
+ * - USER_SUBSCRIBE
+ * - USER_UNSUBSCRIBE
+ * 
+ * @struct_end
+*/
+
+/**
  * @struct WebMessage
  * @desc > **mod.io Response Schema:** [Web Message Object](https://docs.mod.io/#schemaweb_message_object)
  * 
@@ -877,8 +896,6 @@
  * @ref GetGameTagOptions
  * @ref GetGames
  * @ref GetGuideComments
- * @ref GetGuideTags
- * @ref GetGuides
  * @ref GetModComments
  * @ref GetModDependencies
  * @ref GetModEvents
@@ -912,6 +929,7 @@
  * @ref Terms
  * @ref Theme
  * @ref User
+ * @ref UserEvent
  * @ref WebMessage
  * @section_end
  * 
