@@ -15,7 +15,7 @@
  * @section Guides
  * @desc Guides for the mod.io extension.
  * @ref page.quick_start_guide
- * @ref module.pagination_filtering_sorting
+ * @ref page.pagination_filtering_sorting_guide
  * @section_end
  * 
  * @section Modules
@@ -40,7 +40,7 @@
  * @reference module.users
  * @reference module.me
  * @reference module.price
- * @reference module.pagination
+ * @reference module.pagination_filtering_sorting
  * 
  * @reference module.login
  * 

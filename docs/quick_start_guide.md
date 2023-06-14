@@ -20,7 +20,6 @@ The ${module.auth} page contains the full reference of authentication functions 
 
 Currently supported are: 
 
-* Discord
 * Epic Online Services
 * GOG
 * GoogleSignIn
@@ -40,7 +39,7 @@ Copy the game ID to the **GameID** and the API key to the **ApiKey** extension o
 
 [[NOTE: Most of the `modio_*` functions take the game ID as an optional parameter. If you provide it here, it will be used in all the functions.]]
 
-Here you can also set the **ProductionURL** and **TestURL** to use. The **Test** option determines which of these is used; **TestURL** when it's checked, **ProductionURL** when it's not.
+Here you can also set whether to use the **Production** or the **Test** environment and whether to **Keep Alive** the session.
 
 ## Using the Extension
 

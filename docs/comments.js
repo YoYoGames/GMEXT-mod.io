@@ -24,10 +24,12 @@
  * **karma**:(${type.real}) Karma received for the comment (can be positive or negative).
  * **content**:(${type.string}) Contents of the comment.
  * 
- * @param {real} mod_id Unique id of the mod.
+ * @param {real} _mod_id Unique id of the mod.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.GetModComments}
  * 
@@ -41,17 +43,19 @@ function modio_comments_get_list() {}
  * 
  * This function adds a comment for the corresponding mod. A successful request will return the newly created ${struct.Comment} struct and fire a `MOD_COMMENT_ADDED` ($function.modio_mods_get_list}) event.
  * 
- * @param {real} mod_id The unique id of the mod.
- * @param {string} content Contents of the comment. You can include @mentions to users, which will notify them that they have been tagged in this comment.
+ * @param {real} _mod_id The unique id of the mod.
+ * @param {string} _content Contents of the comment. You can include @mentions to users, which will notify them that they have been tagged in this comment.
  * 
  * **Mention Markup**
  * - Format: `@<display-name>`
  * - Example: Hey @XanT, you should check out this mod!
  * 
- * @param {real} reply_id ID of the parent comment to reply to (can be 0 if the comment is not a reply and thus will not be nested). Default is 0.
+ * @param {real} _reply_id ID of the parent comment to reply to (can be 0 if the comment is not a reply and thus will not be nested). Default is 0.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.Comment}
  * 
@@ -65,11 +69,13 @@ function modio_comments_add() {}
  * 
  * This function gets a mod comment. A successful request will return a single ${struct.Comment} struct.
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {string} comment_id Unique id of the comment.
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {string} _comment_id Unique id of the comment.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.Comment}
  * 
@@ -102,11 +108,13 @@ function modio_comments_update() {}
  * 
  * This function deletes a comment from a mod profile. A successful request will fire a `MOD_COMMENT_DELETED` ($function.modio_mods_get_list}) event.
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {string} comment_id Unique id of the comment.
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {string} _comment_id Unique id of the comment.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @function_end
 */
@@ -118,12 +126,14 @@ function modio_comments_delete() {}
  * 
  * This function updates the Karma rating in single increments or decrements for a corresponding mod comment. A successful request will return the updated {struct.Comment} struct.
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {string} comment_id Unique id of the comment.
- * @param {real} karma Either 1 or -1 for positive and negative increments
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {string} _comment_id Unique id of the comment.
+ * @param {real} _karma Either 1 or -1 for positive and negative increments
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.Comment}
  * 

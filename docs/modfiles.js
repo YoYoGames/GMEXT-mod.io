@@ -8,10 +8,12 @@
  *
  * [[NOTE: If the game requires mod downloads to be initiated via the API, the `binary_url` returned will contain a verification hash. This hash must be supplied to get the modfile, and will expire after a certain period of time. Saving and reusing the `binary_url` won't work in this situation given its dynamic nature.]]
  * 
- * @param {real} mod_id Unique id of the mod.
+ * @param {real} _mod_id Unique id of the mod.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.GetModfiles}
  * 
@@ -27,11 +29,13 @@ function modio_modfiles_get_list() {}
  *
  * [[NOTE: If the [game](https://docs.mod.io/#edit-game) requires mod downloads to be initiated via the API, the `binary_url` returned will contain a verification hash. This hash must be supplied to get the modfile, and will expire after a certain period of time. Saving and reusing the `binary_url` won't work in this situation given its dynamic nature.]]
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {real} file_id Unique id of the mod file.
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {real} _file_id Unique id of the mod file.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.Modfile}
  * 
@@ -49,14 +53,14 @@ function modio_modfiles_get() {}
  *
  * NOTE: To upload files greater than 100MB, we recommend using the Multipart Uploads system. This endpoint supports files up to a max of 500MB in size.
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {real} filedata The binary file for the release. File must be zipped and cannot exceed 500MB in filesize (see [Multipart Uploads](https://docs.mod.io/#create-multipart-upload-session) to upload larger files)
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {real} _filedata The binary file for the release. File must be zipped and cannot exceed 500MB in filesize (see [Multipart Uploads](https://docs.mod.io/#create-multipart-upload-session) to upload larger files)
  * 
  * - Filenames cannot contain any of the following characters: `\ / ? " < > | : *`
  * - Mods which span multiple game directories are not supported unless the game manages this
  * - Mods which overwrite files are not supported unless the game manages this
  * 
- * @param {struct} optionals
+ * @param {struct} _optionals
  * 
  * - upload_id (${type.string}) Required if the filedata parameter is omitted. The UUID of a completed [multipart upload session](https://docs.mod.io/#complete-multipart-upload-session).
  * - version (${type.string}) Version of the file release (recommended format 1.0.0 - MAJOR.MINOR.PATCH).
@@ -69,8 +73,10 @@ function modio_modfiles_get() {}
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties such as what version of the game this file is compatible with.
  * - platforms (${type.array<string>}) An array containing one or more [platforms](https://docs.mod.io/#targeting-a-platform) this file is targeting. Valid values can be found under the [targeting a platform](https://docs.mod.io/#targeting-a-platform) section.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.Modfile}
  * 
@@ -84,9 +90,9 @@ function modio_modfiles_add() {}
  * 
  * This function edits the details of a published file. If you want to update fields other than the `changelog`, `version` and `active` status, you should add a new file instead. A successful request will return updated ${struct.Modfile} struct.
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {real} mod_file Unique id of the mod_file.
- * @param {struct} optionals
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {real} _mod_file Unique id of the mod_file.
+ * @param {struct} _optionals
  * 
  * - version (${type.string}) Version of the file release (recommended format 1.0.0 - MAJOR.MINOR.PATCH)
  * - changelog (${type.string}) Changelog of this release.
@@ -96,8 +102,10 @@ function modio_modfiles_add() {}
  * 
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties such as what version of the game this file is compatible with
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.Modfile}
  * 
@@ -113,11 +121,13 @@ function modio_modfiles_edit() {}
  * 
  * [[NOTE: A modfile can never be removed if it is the current active release for the corresponding mod regardless of user permissions. Furthermore, this ability is only available if you are authenticated as the game administrator for this game **or** are the original uploader of the modfile.]]
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {real} mod_file Unique id of the mod_file.
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {real} _file_id Unique id of the mod_file.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @function_end
 */
@@ -131,18 +141,20 @@ function modio_modfiles_delete() {}
  * 
  * [[NOTE: This is ony applicable if the parent game has cross-platform moderation enabled. A successful request will return the updated ${struct.Modfile} struct.]]
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {real} mod_file Unique id of the mod_file.
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {real} _file_id Unique id of the mod_file.
  * 
- * @param {struct} optionals
+ * @param {struct} _optionals
  * 
  * - approved (${type.array}) An array containing one or more [platform strings](https://docs.mod.io/#targeting-a-platform) that the specified modfile is approved for.
  * - denied (${type.array}) An array containing one or more [platform strings](https://docs.mod.io/#targeting-a-platform) that the specified modfile is denied for.
  * 
  * [[NOTE: You cannot mark a live modfile as denied, if a modfile is live the only option to remove it is to set another existing modfile as the live modfile for that platform using ${function.modio_modfiles_edit}, or add a new modfile using ${function.modio_modfiles_add}.]]
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.Modfile}
  * 

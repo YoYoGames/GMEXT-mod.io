@@ -12,9 +12,9 @@
  * [[NOTE: If you are a game owner or manager, you can view all reports submitted for your game. You can also configure in your games control panel the number of reports required before content is automatically taken down for review.]]
  * [[NOTE: Read the mod.io [Terms of Use](https://mod.io/terms/widget) for information about what is/isn't acceptable.]]
  * 
- * @param {string} resource The type of resource you are reporting. Must be one of the following values: "games", "mods" and "users"
- * @param {real} id Unique id of the resource you are reporting.
- * @param {real} type Type of report you are submitting. Must be one of the following values:
+ * @param {string} _resource The type of resource you are reporting. Must be one of the following values: "games", "mods" and "users"
+ * @param {real} _unique_id Unique id of the resource you are reporting.
+ * @param {real} _type Type of report you are submitting. Must be one of the following values:
  * 
  * 0 = Generic
  * 1 = DMCA
@@ -25,14 +25,14 @@
  * 6 = False Information
  * 7 = Other
  * 
- * @param {string} summary Detailed description of your report. Make sure you include all relevant information and links to help moderators investigate and respond appropriately.
- * @param {struct} optionals 
+ * @param {string} _summary Detailed description of your report. Make sure you include all relevant information and links to help moderators investigate and respond appropriately.
+ * @param {struct} _optionals 
  * 
  * - name (${type.string}) name of the user submitting the report. Recommended for DMCA reports.
  * - contact (${type.string}) Contact details of the user submitting the report. Recommended for DMCA reports.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.Message}
  * 

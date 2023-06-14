@@ -6,10 +6,8 @@
  * 
  * This function gets the *authenticated user* details. A successful request will return a single ${struct.User} struct.
  * 
- * @param {real} user_id
- * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.User}
  * 
@@ -44,8 +42,8 @@ function modio_me_events() {}
  * 
  * [[NOTE: If the [game](https://docs.mod.io/#edit-game) requires mod downloads to be initiated via the API, the `binary_url` returned will contain a verification hash. This hash must be supplied to get the modfile, and will expire after a certain period of time. Saving and reusing the `binary_url` won't work in this situation given its dynamic nature.]]
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.GetModfiles}
  * 
@@ -61,8 +59,8 @@ function modio_me_files() {}
  * 
  * This function gets all games the *authenticated user* added or is a team member of. A successful request will return an array of ${struct.Game} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.GetGames}
  * 
@@ -95,8 +93,8 @@ function modio_me_subscriptions() {}
  * 
  * This function gets all mods the *authenticated user* added or is a team member of. A successful request will return an array of ${struct.Mod} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.GetMods}
  * 
@@ -112,8 +110,8 @@ function modio_me_mods() {}
  * 
  * This function gets all users muted by the *authenticated user*. A successful request will return an array of ${struct.User} structs.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.GetMutedUsers}
  * 
@@ -129,8 +127,8 @@ function modio_me_user_muted() {}
  * 
  * This function gets all mod ratings submitted by the *authenticated user*. A successful request will return an array of ${struct.Rating} structs.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.GetUserRatings}
  * 

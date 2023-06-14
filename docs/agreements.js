@@ -4,7 +4,7 @@
  * 
  * This function gets the current agreement version by type. A successful request will return a single ${struct.AgreementVersion} struct.
  * 
- * @param {real} agreement_type_id Valid agreement types are:
+ * @param {real} _agreement_type_id Valid agreement types are:
  *
  * 1 = Terms of Use - https://mod.io/terms
  * 2 = Privacy Policy - https://mod.io/privacy
@@ -13,8 +13,8 @@
  * 5 = Monetisation Terms - https://mod.io/monetisationterms
  * 6 = Acceptable Use Policy - https://mod.io/aup
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.AgreementVersion}
  * 
@@ -28,10 +28,10 @@ function modio_agreements_get() {}
  * 
  * This function gets the specified agreement version. A successful request will return a ${struct.AgreementVersion} struct.
  * 
- * @param {real} version The version to get
+ * @param {real} _version The version to get
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.AgreementVersion}
  * 

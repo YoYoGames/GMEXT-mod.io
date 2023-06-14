@@ -6,10 +6,12 @@
  * 
  * This function subscribes the *authenticated user* to a corresponding mod. A successful request will return the ${struct.Mod} struct of the newly subscribed mod.
  * 
- * @param {real} mod_id Unique id of the mod.
+ * @param {real} _mod_id Unique id of the mod.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.Mod}
  * 
@@ -25,10 +27,12 @@ function modio_subscribe() {}
  * 
  * [[NOTE: Users can unsubscribe from mods via mod.io, we recommend you poll ${function.modio_events_get} when needed, to keep a user's mods collection up to date.]]
  * 
- * @param {real} mod_id Unique id of the mod.
+ * @param {real} _mod_id Unique id of the mod.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @function_end
 */

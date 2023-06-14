@@ -30,8 +30,10 @@
  * latest (Bool) Default value is `true`. Returns only the latest unique events, which is useful for checking if the live modfile has changed.
  * subscribed (Bool) Default value is `false`. Returns only events connected to mods the authenticated user is subscribed to, which is useful for keeping the user's mods up-to-date.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.GetModEvents}
  * 
@@ -47,10 +49,12 @@ function modio_events_get_list() {}
  * 
  * This function gets the event log for a mod, showing changes made sorted by latest event first. A successful request will return an array of ${struct.ModEvent} structs. It's recommended to read the [filtering](https://docs.mod.io/#filtering) documentation to return only the records you want.
  * 
- * @param {real} mod_id
+ * @param {real} _mod_id Unique id of the mod.
  * 
  * @param {function|method} callback_success The function to trigger when the request is successful.
  * @param {function|method} callback_failed The function to trigger when the request failed.
+ * 
+ * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 
  * @returns {struct.GetModEvents}
  * 

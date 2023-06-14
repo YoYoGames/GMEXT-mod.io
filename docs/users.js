@@ -8,8 +8,8 @@
  * 
  * @param {real} user_id user unique identifier
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @function_end
 */
@@ -23,10 +23,10 @@ function modio_user_mute() {}
  * 
  * This function unmutes a previously muted user. This will re-enable mod.io to returning mods to you authored by the muted user.
  * 
- * @param {real} user_id user unique identifier
+ * @param {real} _user_id user unique identifier
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @function_end
 */
