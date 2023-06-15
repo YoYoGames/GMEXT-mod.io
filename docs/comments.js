@@ -113,7 +113,7 @@ function modio_comments_update() {}
  * @function modio_comments_delete
  * @description > **mod.io Endpoint:** [Delete Mod Comment](https://docs.mod.io/#delete-mod-comment)
  * 
- * This function deletes a comment from a mod profile. A successful request will fire a `MOD_COMMENT_DELETED` ($function.modio_mods_get_list}) event.
+ * This function deletes a comment from a mod profile. A successful request will fire a `MOD_COMMENT_DELETED` (${function.modio_mods_get_list}) event.
  * 
  * @param {real} _mod_id Unique id of the mod.
  * @param {string} _comment_id Unique id of the comment.
