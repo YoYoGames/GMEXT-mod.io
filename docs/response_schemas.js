@@ -142,7 +142,7 @@
  * 4 = Enable marketplace
  * ? = Add the options you want together, to enable multiple features (see [BITWISE fields](https://docs.mod.io/#bitwise-and-bitwise-and))
  * 
- * @member {real} revenue_options Deprecated: Please use monetisation_options instead, this will be removed in subsequent API version.
+ * @member {real} revenue_options Deprecated: Please use `monetisation_options` instead, this will be removed in subsequent API version.
  * 
  * @member {real} api_access_options Level of API access allowed by this game:
  * 
@@ -194,7 +194,7 @@
  * 
  * @member {string} platform A [target platform](https://docs.mod.io/#targeting-a-platform).
  * @member {string} label A presentable label of the platform.
- * @member {boolean} moderated Is this platform moderated by game admins? If false, then user submissions for the platform will be available immediately providing the game has mod curation disabled.
+ * @member {boolean} moderated Is this platform moderated by game admins? If `false`, then user submissions for the platform will be available immediately providing the game has mod curation disabled.
  * 
  * @struct_end
  */
@@ -605,7 +605,7 @@
  * @member {struct.ModEvent} data Array containing mod event objects.
  * @member {real} result_count Number of results returned in this request.
  * @member {real} result_offset Number of results skipped over. Defaults to 0 unless overridden by `_offset` filter.
- * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by `_limit filter`.
+ * @member {real} result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by `_limit` filter.
  * @member {real} result_total Total number of results found.
  * 
  * @struct_end
@@ -653,7 +653,7 @@
  * 0 = No threats detected
  * 1 = Flagged as malicious
  * 
- * @member {string} virustotal_hash [[Deprecated: No longer used and will be removed in subsequent API version.]]
+ * @member {string} virustotal_hash [[DEPRECATED: No longer used and will be removed in subsequent API version.]]
  * @member {real} filesize Size of the file in bytes.
  * @member {real} filesize_uncompressed The uncompressed filesize of the zip archive.
  * @member {struct.Filehash} filehash Contains a dictionary of filehashes for the contents of the download.
@@ -876,7 +876,7 @@
  * 
  * * result_count Number of results returned in this request.
  * * result_offset Number of results skipped over. Defaults to 0 unless overridden by `_offset` filter.
- * * result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by `_limit filter`.
+ * * result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by `_limit` filter.
  * * result_total Total number of results found.
  * 
  * The actual data is always returned in the `data` attribute.

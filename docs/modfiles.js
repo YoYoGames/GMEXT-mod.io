@@ -49,12 +49,10 @@ function modio_modfiles_get() {}
  * 
  * This function uploads a file for the corresponding mod. A successful request will return the newly created ${struct.Modfile} struct. Ensure that the release you are uploading is stable and free from any critical issues. Files are scanned upon upload, any users who upload malicious files will have their accounts closed.
  *
- * NOTE: This endpoint does not support `input_json` even if you base64-encode your file, due to the already-large file sizes of some releases and base64-encoding inflating the filesize.
- *
- * NOTE: To upload files greater than 100MB, we recommend using the Multipart Uploads system. This endpoint supports files up to a max of 500MB in size.
+ * [[NOTE: This endpoint does not support `input_json` even if you base64-encode your file, due to the already-large file sizes of some releases and base64-encoding inflating the filesize.]]
  * 
  * @param {real} _mod_id Unique id of the mod.
- * @param {real} _filedata The binary file for the release. File must be zipped and cannot exceed 500MB in filesize (see [Multipart Uploads](https://docs.mod.io/#create-multipart-upload-session) to upload larger files)
+ * @param {real} _filedata The binary file for the release. File must be zipped and cannot exceed 500MB in filesize.
  * 
  * - Filenames cannot contain any of the following characters: `\ / ? " < > | : *`
  * - Mods which span multiple game directories are not supported unless the game manages this
@@ -67,11 +65,11 @@ function modio_modfiles_get() {}
  * - changelog (${type.string}) Changelog of this release.
  * - active (${type.boolean}) Default value is `true`. Flag this upload as the current release, this will change the `modfile` field on the parent mod to the `id` of this file after upload.
  * 
- *   NOTE: If the `active` parameter is `true`, a MODFILE_CHANGED event (${function.modio_events_get_list}) will be fired, so game clients know there is an update available for this mod.
+ *   [[NOTE: If the `active` parameter is `true`, a `MODFILE_CHANGED` event (${function.modio_events_get_list}) will be fired, so game clients know there is an update available for this mod.``
  * 
  * - filehash (${type.string}) MD5 of the submitted file. When supplied the MD5 will be compared against the uploaded files MD5. If they don't match a `422 Unprocessible Entity` error will be returned.
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties such as what version of the game this file is compatible with.
- * - platforms (${array[string]}) An array containing one or more [platforms](https://docs.mod.io/#targeting-a-platform) this file is targeting. Valid values can be found under the [targeting a platform](https://docs.mod.io/#targeting-a-platform) section.
+ * - platforms (${type.array} of ${type.string}) An array containing one or more [platforms](https://docs.mod.io/#targeting-a-platform) this file is targeting. Valid values can be found under the [targeting a platform](https://docs.mod.io/#targeting-a-platform) section.
  * 
  * @param {function|method} _callback_success The function to trigger when the request is successful.
  * @param {function|method} _callback_failed The function to trigger when the request failed.
@@ -98,7 +96,7 @@ function modio_modfiles_add() {}
  * - changelog (${type.string}) Changelog of this release.
  * - active (${type.boolean}) Flag this upload as the current release.
  * 
- * [[NOTE: If the active parameter causes the parent mod's `modfile` parameter to change, a MODFILE_CHANGED event (${function.modio_events_get_list}) will be fired, so game clients know there is an update available for this mod.]]
+ * [[NOTE: If the active parameter causes the parent mod's `modfile` parameter to change, a `MODFILE_CHANGED` event (${function.modio_events_get_list}) will be fired, so game clients know there is an update available for this mod.]]
  * 
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties such as what version of the game this file is compatible with
  * 

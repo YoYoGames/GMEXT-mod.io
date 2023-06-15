@@ -23,8 +23,8 @@ function modio_me() {}
  * 
  * This function gets events that have been fired specific to the user. A successful request will return an array of ${struct.ModEvent}. We recommended reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.GetUserEvents}
  * 
@@ -76,8 +76,8 @@ function modio_me_games() {}
  * 
  * This function gets all mods the *authenticated user* is subscribed to. A successful request will return an array of ${struct.Mod} structs. We recommend reading the [filtering documentation](https://docs.mod.io/#filtering) to return only the records you want.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.GetMods}
  * 

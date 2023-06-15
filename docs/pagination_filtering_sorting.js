@@ -86,9 +86,9 @@ function notequalto() {}
  * @function likewildcards
  * @description Where the string supplied matches the preceding column value. This is equivalent to SQL's LIKE. Wildcards * can be used to find content that partially matches as described below.
  * 
- * request().likewildcards("name", "texture") - Get all results where the `name` column value is "texture".
- * request().likewildcards("name", "texture*") - Get all results where the `name` column value begins with "texture". This means the query would return results for "texture", "textures" and "texture pack".
- * request().likewildcards("name", "*texture*") - Get all results where the `name` column value contains "texture". This means the query would return results for "texture", "HD textures" and "armor texture pack".
+ * - request().likewildcards("name", "texture") - Get all results where the `name` column value is "texture".
+ * - request().likewildcards("name", "texture*") - Get all results where the `name` column value begins with "texture". This means the query would return results for "texture", "textures" and "texture pack".
+ * - request().likewildcards("name", "*texture*") - Get all results where the `name` column value contains "texture". This means the query would return results for "texture", "HD textures" and "armor texture pack".
  * 
  * @param {string} key The key/column to compare
  * @param {string} value The value to compare to (which may include wildcards "*")

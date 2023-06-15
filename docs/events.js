@@ -27,8 +27,8 @@
  *   - "MOD_COMMENT_ADDED" = A comment has been published for a mod
  *   - "MOD_COMMENT_DELETED" = A comment has been deleted from a mod
  *
- * latest (Bool) Default value is `true`. Returns only the latest unique events, which is useful for checking if the live modfile has changed.
- * subscribed (Bool) Default value is `false`. Returns only events connected to mods the authenticated user is subscribed to, which is useful for keeping the user's mods up-to-date.
+ * - latest (Bool) Default value is `true`. Returns only the latest unique events, which is useful for checking if the live modfile has changed.
+ * - subscribed (Bool) Default value is `false`. Returns only events connected to mods the authenticated user is subscribed to, which is useful for keeping the user's mods up-to-date.
  * 
  * @param {function|method} _callback_success The function to trigger when the request is successful.
  * @param {function|method} _callback_failed The function to trigger when the request failed.
@@ -51,8 +51,8 @@ function modio_events_get_list() {}
  * 
  * @param {real} _mod_id Unique id of the mod.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @param {real} _game_id OPTIONAL The ID of the game, defaults to the value set in the **Game ID** extension option if not provided
  * 

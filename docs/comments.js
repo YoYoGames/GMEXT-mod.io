@@ -9,11 +9,17 @@
  * Filters:
  *
  * **id**:(${type.real}) Unique id of the comment.
+ * 
  * **mod_id**:(${type.real}) Unique id of the parent mod. This is now deprecated and will be removed in future API versions, please use resource_id instead.
+ * 
  * **resource_id**:(${type.real}) Unique id of the resource.	
+ * 
  * **submitted_by**:(${type.real}) Unique id of the user who posted the comment.
+ * 
  * **date_added**:(${type.real}) Unix timestamp of date comment was posted.
+ * 
  * **reply_id**:(${type.real}) Id of the parent comment this comment is replying to (can be 0 if the comment is not a reply).
+ * 
  * **thread_position**:(${type.string}) Levels of nesting in a comment thread. You should order by this field, to maintain comment grouping. How it works:
  *
  * - The first comment will have the position '01'.
@@ -22,6 +28,7 @@
  * - A maximum of 3 levels is supported.
  * 
  * **karma**:(${type.real}) Karma received for the comment (can be positive or negative).
+ * 
  * **content**:(${type.string}) Contents of the comment.
  * 
  * @param {real} _mod_id Unique id of the mod.
@@ -41,7 +48,7 @@ function modio_comments_get_list() {}
  * @function modio_comments_add
  * @description > **mod.io Endpoint:** [Add Mod Comment](https://docs.mod.io/#add-mod-comment)
  * 
- * This function adds a comment for the corresponding mod. A successful request will return the newly created ${struct.Comment} struct and fire a `MOD_COMMENT_ADDED` ($function.modio_mods_get_list}) event.
+ * This function adds a comment for the corresponding mod. A successful request will return the newly created ${struct.Comment} struct and fire a `MOD_COMMENT_ADDED` (${function.modio_mods_get_list}) event.
  * 
  * @param {real} _mod_id The unique id of the mod.
  * @param {string} _content Contents of the comment. You can include @mentions to users, which will notify them that they have been tagged in this comment.
@@ -89,12 +96,12 @@ function modio_comments_get() {}
  * 
  * This function updates the given comment under the given mod. A successful request will return the updated ${struct.Comment} struct.
  * 
- * @param {real} mod_id Unique id of the mod.
- * @param {string} comment_id Unique id of the comment.
- * @param {string} content Updated contents of the comment.
+ * @param {real} _mod_id Unique id of the mod.
+ * @param {string} _comment_id Unique id of the comment.
+ * @param {string} _content Updated contents of the comment.
  * 
- * @param {function|method} callback_success The function to trigger when the request is successful.
- * @param {function|method} callback_failed The function to trigger when the request failed.
+ * @param {function|method} _callback_success The function to trigger when the request is successful.
+ * @param {function|method} _callback_failed The function to trigger when the request failed.
  * 
  * @returns {struct.Comment}
  * 

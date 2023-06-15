@@ -24,7 +24,7 @@
  * 
  * This function requests an access token on behalf of a Steam user. To use this functionality you must add your game's encrypted app ticket key from Steamworks, to the **Game Admin** > **Settings** page of your game's profile on mod.io. A successful request will return an ${struct.AccessToken} struct.
  * 
- * [[IMPORTANT: In order to use this authentication method you need to include the [Steamworks extension](https://github.com/YoYoGames/GMEXT-Steamworks) in your project and call `steam_user_request_encrypted_app_ticket` to get a ticket.
+ * [[WARNING: In order to use this authentication method you need to include the [Steamworks extension](https://github.com/YoYoGames/GMEXT-Steamworks) in your project and call `steam_user_request_encrypted_app_ticket` to get a ticket.
  *   The ticket is then returned in the `ticket_data` key of the ${var.async_load} ds_map.]]
  * 
  * [[NOTE: Steam is the only authentication endpoint that requires the token to be [base64 encoded](https://manual.yoyogames.com/GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/base64_encode.htm). All other endpoints' tokens should be provided as a UTF-8 character string.]]
@@ -61,7 +61,7 @@ function modio_auth_steam() {}
  * 
  * * email (${type.string}) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and when the respective user does not have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email. This functionality is also available at a later time via the [Link an Email](https://docs.mod.io/#link-an-email) endpoint.
  * 
- *   NOTE: If the user already has an email on record with mod.io, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.
+ * [[NOTE: If the user already has an email on record with mod.io, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.]]
  * 
  * * date_expires (${type.real}) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value, which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a `401 Unauthorized` response.
  * * terms_agreed (${type.boolean}) This *must* be set to `false` unless you have collected the users agreement prior to calling this endpoint in which case it can be set to `true` and will be recorded.
@@ -296,7 +296,7 @@ function modio_auth_google() {}
  * 
  * This function requests an access token on behalf of a Discord user. A successful request will return an ${struct.AccessToken} struct.
  * 
- * [[IMPORTANT: You can get an access token using the [Discord extension](https://github.com/YoYoGames/GMEXT-Discord)'s `Discord_Application_GetOAuth2Token` function.
+ * [[IMPORTANT: You can get an access token using the [Discord extension](https://github.com/YoYoGames/GMEXT-Discord)'s `Discord_Application_GetOAuth2Token` function.]]
  * 
  * @param {string} _discord_token The access token of the user provided by Discord.
  * @param {struct} _optionals A struct that can contain one or more of the following variables: 

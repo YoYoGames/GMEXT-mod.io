@@ -42,7 +42,7 @@ function modio_mods_get() {}
  * 
  * This function adds a mod. A successful request will return the newly created ${struct.Mod}. All content published by users on mod.io is subject to the [Terms of Use](https://mod.io/terms/widget). It is a requirement that you provide a link to https://mod.io/terms in any place where users are submitting content to mod.io.
  *
- * [[NOTE: By default new mods are 'not accepted' and 'public'. They can only be 'accepted' and made available via the API once a Mod File has been uploaded. Media, Metadata Key Value Pairs and Dependencies can also be added after a mod profile is created.``
+ * [[NOTE: By default new mods are 'not accepted' and 'public'. They can only be 'accepted' and made available via the API once a Mod File has been uploaded. Media, Metadata Key Value Pairs and Dependencies can also be added after a mod profile is created.]]
  * 
  * @param {string} _name Name of your mod.
  * @param {string} _logo Image file which will represent your mods logo. Must be gif, jpg or png format and cannot exceed 8MB in filesize. Dimensions must be at least 512x288 and we recommended you supply a high resolution image with a 16 / 9 ratio. mod.io will use this image to make three thumbnails for the dimensions 320x180, 640x360 and 1280x720.
@@ -77,7 +77,7 @@ function modio_mods_get() {}
  * ? = Add the options you want together, to enable multiple options (see BITWISE fields)
  * 
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties as to how the item works, or other information you need to display. Metadata can also be stored as searchable key value pairs, and to individual mod files.
- * - tags (${type.array[string]}) Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within `tag_options` column on the parent ${struct.Game}.
+ * - tags (${type.array} of ${type.string}) Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within `tag_options` column on the parent ${struct.Game}.
  * 
  * @param {function|method} _callback_success The function to trigger when the request is successful.
  * @param {function|method} _callback_failed The function to trigger when the request failed.
@@ -140,7 +140,7 @@ function modio_mods_add() {}
  *     community_options(Real)Select which interactions players can have with your mod.
  * 
  * - metadata_blob (${type.string}) Metadata stored by the game developer which may include properties as to how the item works, or other information you need to display. Metadata can also be stored as searchable [key value pairs](https://docs.mod.io/#metadata), and to individual [mod files](https://docs.mod.io/#get-modfiles).
- * - tags (${type.array[string]}) Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within `tag_options` column on the parent ${struct.Game}.
+ * - tags (${type.array} of ${type.string}) Tags to apply to the mod. Every tag to apply requires a separate field with tags[] as the key (eg. tags[]=tag1, tags[]=tag2). Only the tags pre-defined by the parent game can be applied. To determine what tags are eligible, see the tags values within `tag_options` column on the parent ${struct.Game}.
  * 
  * @param {function|method} _callback_success The function to trigger when the request is successful.
  * @param {function|method} _callback_failed The function to trigger when the request failed.
