@@ -6,7 +6,7 @@
         "packageName": "ModIO Extension",
         "packageVersion": "1.0.0",
         "includeFolders": "GM Extension Assets,mod.io,mod.io DEMO",
-        "includeResources": null,
+        "includeResources": "modio_documentation.html",
         "excludeFolders": "Authentication Extensions",
         "excludeResources": null,
         "format": "LTS22"
