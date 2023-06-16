@@ -192,8 +192,7 @@ function bitwiseand() {}
  * @title Pagination, Filtering and Sorting
  * @desc This page lists the functions that you can add to a request to add pagination, filtering and sorting to your requests.
  * 
- * @section_func pagination
- * @title Pagination Functions
+ * @section_func Pagination Functions
  * @desc When requesting data from endpoints that contain more than one object, you can supply an ${function.offset} and ${function.limit} to paginate through the results. Think of it as a page 1, 2, 3... system but you control the number of results per page, and the page to start from. Appended to each response will be the pagination metadata:
  * 
  * * result_count - Number of results returned in this request.
@@ -207,8 +206,7 @@ function bitwiseand() {}
  * @ref offset
  * @section_end
  * 
- * @section_func sorting
- * @title Sorting Functions
+ * @section_func Sorting Functions
  * @desc All endpoints are sorted by the `id` column in ${function.ascending} order by default (oldest first). You can override this by including a sort with the column you want to sort by in the request. You can sort on all columns **in the parent object only**. You cannot sort on columns in nested objects, so if a game contains a tags object you cannot sort on the `tag name` column, but you can sort by the games `name` since the games `name` resides in the parent object.
  *
  * [[NOTE: Some functions like ${function.modio_mods_get_list} have special sort columns like popular, downloads, rating and subscribers which are documented alongside the filters.]]
@@ -217,8 +215,7 @@ function bitwiseand() {}
  * @ref descending
  * @section_end
  * 
- * @section_func filtering
- * @title Filtering Functions
+ * @section_func Filtering Functions
  * @desc mod.io has powerful filtering available to assist you when making requests to the API. You can filter on all columns **in the parent object only**. You cannot apply filters to columns in nested objects, so if a game contains a tags object you cannot filter by the `tag name` column, but you can filter by the games `name` since the games `name` resides in the parent object.
  * 
  * @ref fulltextsearch
