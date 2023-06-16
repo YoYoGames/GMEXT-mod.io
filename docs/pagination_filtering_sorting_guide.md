@@ -1,5 +1,7 @@
 @title Pagination, Filtering and Sorting
 
+# Pagination, Filtering and Sorting Guide
+
 This page provides a short guide on how to use the functions in the ${module.pagination_filtering_sorting} module to modify which results are returned by your request.
 
 The functions are called on a request using the dot operator `.`: 

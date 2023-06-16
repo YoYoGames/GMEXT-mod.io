@@ -1,5 +1,7 @@
 @title Quick Start Guide
 
+# Quick Start Guide
+
 This page contains an overview on how to get started with the mod.io extension for GameMaker.
 
 ## Overview
