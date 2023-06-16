@@ -9,7 +9,7 @@ function __modio_internal()
 /// @ignore
 function __modio_request_get_base_url()
 {
-	static _api_url = extension_get_option_value("ModIO", $"{extension_get_option_value("ModIO", "environment")}URL");
+	static _api_url = string(extension_get_option_value("ModIO", $"{extension_get_option_value("ModIO", "environment")}URL"), MODIO_GAME_ID);
 	return _api_url;
 }
 
