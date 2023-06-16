@@ -181,7 +181,6 @@ function modio_mods_delete() {}
  * @title Mods
  * 
  * @section_func
- * @desc Mods
  * @ref modio_mods_get_list
  * @ref modio_mods_get
  * @ref modio_mods_add

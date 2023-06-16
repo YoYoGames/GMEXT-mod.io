@@ -37,7 +37,6 @@ function modio_ratings() {}
  * @title Ratings
  * 
  * @section_func
- * @desc Ratings
  * @ref modio_ratings
  * @section_end
  * 

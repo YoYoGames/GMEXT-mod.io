@@ -155,7 +155,6 @@ function modio_tags_mod_delete() {}
  * @title Tags
  * 
  * @section_func
- * @desc Functions
  * @ref modio_tags_game_get
  * @ref modio_tags_game_add
  * @ref modio_tags_game_delete

@@ -71,7 +71,6 @@ function modio_events_get() {}
  * @title Events
  * 
  * @section_func
- * @desc Functions
  * @ref modio_events_get_list
  * @ref modio_events_get
  * @section_end

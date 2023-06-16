@@ -29,7 +29,6 @@ function modio_general_get_resource_owner() {}
  * @title General
  * 
  * @section_func
- * @desc General
  * @ref modio_general_get_resource_owner
  * @section_end
  * 

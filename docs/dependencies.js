@@ -68,8 +68,7 @@ function modio_dependencies_delete() {}
  * @module dependencies
  * @title Dependencies
  * 
- * @section_func dependencies
- * @desc Dependencies
+ * @section_func
  * @ref modio_dependencies_get
  * @ref modio_dependencies_add
  * @ref modio_dependencies_delete

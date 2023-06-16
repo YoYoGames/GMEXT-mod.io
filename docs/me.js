@@ -141,9 +141,7 @@ function modio_me_ratings() {}
  * @module me
  * @title Me
  * 
- * @section_func me
- * 
- * @desc Me
+ * @section_func
  * 
  * @ref modio_me
  * @ref modio_me_events

@@ -168,8 +168,7 @@ function modio_modfiles_platforms() {}
  * @module modfiles
  * @title Modfiles
  * 
- * @section_func modfiles
- * @desc Modfiles
+ * @section_func
  * @ref modio_modfiles_get_list
  * @ref modio_modfiles_get
  * @ref modio_modfiles_add

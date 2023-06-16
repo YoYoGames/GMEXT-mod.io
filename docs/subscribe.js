@@ -45,7 +45,6 @@ function modio_unsubscribe() {}
  * @title Subscribe
  * 
  * @section_func
- * @desc Subscribe
  * @ref modio_subscribe
  * @ref modio_unsubscribe
  * @section_end

@@ -67,8 +67,7 @@ function modio_stats_mods_get() {}
  * @module stats
  * @title Stats
  * 
- * @section_func stats
- * @desc Stats
+ * @section_func
  * @ref modio_stats_game
  * @ref modio_stats_mods_get_list
  * @ref modio_stats_mods_get

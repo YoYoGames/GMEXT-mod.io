@@ -419,7 +419,6 @@ function modio_auth_logout() {}
  * @title Authentication
  *
  * @section_func
- * @desc Auth
  * @ref modio_auth_terms
  * @ref modio_auth_steam
  * @ref modio_auth_xboxlive
