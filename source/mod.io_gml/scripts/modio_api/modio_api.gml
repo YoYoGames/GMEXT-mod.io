@@ -50,7 +50,7 @@ function modio_auth_terms(_callback_success = undefined, _callback_failed = unde
 
 function modio_auth_steam(_appdata, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/steamauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -68,7 +68,7 @@ function modio_auth_steam(_appdata, _optionals = {}, _callback_success = undefin
 
 function modio_auth_xboxlive(_xbox_token, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/xboxauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -86,7 +86,7 @@ function modio_auth_xboxlive(_xbox_token, _optionals = {}, _callback_success = u
 
 function modio_auth_playstation(_auth_code, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "env", "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "env", "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/psnauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -104,7 +104,7 @@ function modio_auth_playstation(_auth_code, _optionals = {}, _callback_success =
 
 function modio_auth_nintendo_switch(_id_token, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/switchauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -122,7 +122,7 @@ function modio_auth_nintendo_switch(_id_token, _optionals = {}, _callback_succes
 
 function modio_auth_metaquest(_device, _nonce, _user_id, _access_token, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/oculusauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -140,7 +140,7 @@ function modio_auth_metaquest(_device, _nonce, _user_id, _access_token, _optiona
 
 function modio_auth_gog(_appdata, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	var _base_url = $"{MODIO_API_URL}/external/galaxyauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -158,7 +158,7 @@ function modio_auth_gog(_appdata, _optionals = {}, _callback_success = undefined
 
 function modio_auth_epicgames(_access_token, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/epicgamesauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -176,7 +176,7 @@ function modio_auth_epicgames(_access_token, _optionals = {}, _callback_success 
 
 function modio_auth_itchio(_itchio_token, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/itchioauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -194,7 +194,7 @@ function modio_auth_itchio(_itchio_token, _optionals = {}, _callback_success = u
 
 function modio_auth_google(_id_token, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	var _base_url = $"{MODIO_API_URL}/external/googleauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -212,7 +212,7 @@ function modio_auth_google(_id_token, _optionals = {}, _callback_success = undef
 
 function modio_auth_discord(_discord_token, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/discordauth";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
@@ -230,7 +230,7 @@ function modio_auth_discord(_discord_token, _optionals = {}, _callback_success =
 
 function modio_auth_openid(_id_token, _optionals = {}, _callback_success = undefined, _callback_failed = undefined)
 {
-	static _optional_params = [ "email", "data_expires", "terms_agreed" ];
+	static _optional_params = [ "email", "date_expires", "terms_agreed" ];
 	static _base_url = $"{MODIO_API_URL}/external/openid";
 	
 	var _params = __modio_optionals_extract(_optionals, _optional_params);
