@@ -9,7 +9,7 @@ The mod.io API works on all platforms using the REST API.
 
 ## Important
 
-Do not download from the **main branch** this branch is a "_work in progress_" branch and probably has features that might be broken or not working properly, please download from the releases panel (right side instead).
+If you want a fully functional extension do not download from the **main branch** as this branch is a "_work in progress_" and probably has features that might be broken or not working properly, please download from the releases panel (right side) instead.
 
 ---
 
