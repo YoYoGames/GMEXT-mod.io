@@ -40,8 +40,7 @@ function modio_user_unmute() {}
  * @module users
  * @title Users
  * 
- * @section_func users
- * @desc Users
+ * @section_func
  * @ref modio_user_mute
  * @ref modio_user_unmute
  * @section_end

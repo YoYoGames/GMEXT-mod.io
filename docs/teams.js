@@ -28,7 +28,6 @@ function modio_teams_get_mod_members() {}
  * @title Teams
  * 
  * @section_func
- * @desc Teams
  * @ref modio_teams_get_mod_members
  * @section_end
  * 

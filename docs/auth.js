@@ -296,8 +296,6 @@ function modio_auth_google() {}
  * 
  * This function requests an access token on behalf of a Discord user. A successful request will return an ${struct.AccessToken} struct.
  * 
- * [[IMPORTANT: You can get an access token using the [Discord extension](https://github.com/YoYoGames/GMEXT-Discord)'s `Discord_Application_GetOAuth2Token` function.]]
- * 
  * @param {string} _discord_token The access token of the user provided by Discord.
  * @param {struct} _optionals A struct that can contain one or more of the following variables: 
  * 
@@ -421,7 +419,6 @@ function modio_auth_logout() {}
  * @title Authentication
  *
  * @section_func
- * @desc Auth
  * @ref modio_auth_terms
  * @ref modio_auth_steam
  * @ref modio_auth_xboxlive

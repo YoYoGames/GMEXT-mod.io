@@ -155,7 +155,6 @@ function modio_comments_karma() {}
  * @title Comments
  * 
  * @section_func
- * @desc Comments
  * @ref modio_comments_get_list
  * @ref modio_comments_add
  * @ref modio_comments_get

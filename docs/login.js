@@ -38,10 +38,9 @@
  * @module login
  * @title Login
  * 
- * @desc This module contains functions to check the login status of the user.
+ * @desc This module contains functions to check the login status of the user and to log in using the currently cached credentials.
  * 
  * @section_func
- * @desc Functions
  * @ref modio_is_logged
  * @ref modio_access_token
  * @ref modio_login_from_cache

@@ -120,7 +120,6 @@ function modio_media_mod_reorder() {}
  * @title Media
  * 
  * @section_func 
- * @desc Media
  * @ref modio_media_game_add
  * @ref modio_media_mod_add
  * @ref modio_media_mod_delete

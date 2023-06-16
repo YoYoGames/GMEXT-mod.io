@@ -43,8 +43,7 @@ function modio_agreements_version() {}
  * @module agreements
  * @title Agreements
  * 
- * @section_func agreements
- * @desc Agreements
+ * @section_func
  * @ref modio_agreements_get
  * @ref modio_agreements_version
  * @section_end

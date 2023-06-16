@@ -41,7 +41,6 @@ function modio_games_get() {}
  * @title Games
  * 
  * @section_func
- * @desc The following functions are part of the Games module: 
  * 
  * @ref modio_games_get_list
  * @ref modio_games_get
