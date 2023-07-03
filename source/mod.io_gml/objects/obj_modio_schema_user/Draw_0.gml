@@ -12,7 +12,7 @@ if (sprite_exists(sprite_index))
 	draw_text(x, bbox_bottom + 20 + _sep*_ind++, $"username: {data.username}");
 	draw_text(x, bbox_bottom + 20 + _sep*_ind++, $"date_online: {data.date_online}");
 	draw_text(x, bbox_bottom + 20 + _sep*_ind++, $"date_joined: {data.date_joined}");
-	draw_text(x, bbox_bottom + 20 + _sep*_ind++, $"timezone: {data.timezone}");
-	draw_text(x, bbox_bottom + 20 + _sep*_ind++, $"language: {data.language}");
+	//draw_text(x, bbox_bottom + 20 + _sep*_ind++, $"timezone: {data.timezone}");
+	//draw_text(x, bbox_bottom + 20 + _sep*_ind++, $"language: {data.language}");
 }
 

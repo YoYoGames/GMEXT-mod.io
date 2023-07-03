@@ -7,7 +7,7 @@ subscriptions_count = 0
 muted_count = 0
 
 modio_me(function(_response){
-	instance_create_depth(1000, 150, depth, obj_modio_schema_user, _response)
+	instance_create_depth(900, 100, depth, obj_modio_schema_user, { data: _response } );
 });
 
 modio_me_events(function(_response) {
@@ -26,7 +26,7 @@ page_limit = 3;
 page_index = 0;
 
 instance_create_depth(64, 300, 0, obj_modio_load_previous, { owner:id });
-instance_create_depth(64, 550, 0, obj_modio_load_next, {owner:id} );
+instance_create_depth(64, 550, 0, obj_modio_load_next, { owner:id } );
 
 function refresh()
 {
