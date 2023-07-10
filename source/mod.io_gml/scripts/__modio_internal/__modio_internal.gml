@@ -251,8 +251,8 @@ function __modio_session_load(_callback = undefined)
 				var _struct = json_parse(_data);
 			
 				// Check if the token has expired
-				var _epoch = floor(date_create_datetime(1970, 1, 1, 0, 0, 0));
-				var _has_expired = floor(date_second_span(_epoch, date_current_datetime())) > _struct.date_expires;
+				static _timeAtEpoch = 25569;
+				var _has_expired = floor(date_second_span(_timeAtEpoch, date_current_datetime())) > _struct.date_expires;
 				
 				// If is valid store it else delete the session file
 				if (!_has_expired) modio_access_token.access_token_internal = _struct.access_token;
