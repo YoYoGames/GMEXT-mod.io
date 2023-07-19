@@ -8,12 +8,12 @@ if(file_exists("background.png"))
 if(file_exists("sound.ogg"))
 	file_delete("sound.ogg")
 
-if(file_exists("character1"))
-	file_delete("character1")
+if(file_exists("character1.png"))
+	file_delete("character1.png")
 	
-if(file_exists("character2"))
-	file_delete("character2")
-	
+if(file_exists("character2.png"))
+	file_delete("character2.png")
+
 var _temp_png = "submit.png"
 if(file_exists(_temp_png)) file_delete(_temp_png)
 
@@ -45,20 +45,9 @@ modio_mods_add(obj_modio_create_textbox_title.text, _temp_png, obj_modio_create_
 		
 	with(obj_modio_create_add_frame)
 	{
-		if (directory_exists( $"./{owner.name}"))
+		if (sprite_exists(owner.sprite))
 		{
-			var _index = 0
-			var _array = []
-			var _file_frame = $"./{owner.name}/{_index}.png"
-			while (file_exists(_file_frame))
-			{
-				array_push(_array, _file_frame)
-				_index++
-				_file_frame = $"./{owner.name}/{_index}.png"
-			}
-			var _surf = array_of_images_to_surface_strip(_array, owner.width, owner.height)
-			surface_save(_surf, $"{owner.name}.png")
-			surface_free(_surf)
+			sprite_save_strip(owner.sprite, $"{owner.name}.png")
 			var __ = zip_add_file(_zip, $"{owner.name}.png", $"{owner.name}.png" );
 				
 			_struct_data[$ owner.name] = owner.index;

@@ -1,4 +1,6 @@
 
+exit;
+
 if(async_load[?"id"] == request_zip)
 if(async_load[?"status"] == 0 /*success*/)
 {

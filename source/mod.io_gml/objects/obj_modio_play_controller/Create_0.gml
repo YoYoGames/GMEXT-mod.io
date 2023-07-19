@@ -1,7 +1,7 @@
 
-sound_filename = undefined;
-sound = undefined;
-background = undefined;
+sound_filename = -1;
+sound = -1;
+background = -1;
 
 folder_path = "./extracted/"
 
