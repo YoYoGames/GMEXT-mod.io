@@ -16,7 +16,7 @@
   "date": "2023-01-12T00:26:27.9949324+00:00",
   "description": "",
   "exportToGame": true,
-  "extensionVersion": "1.0.0",
+  "extensionVersion": "1.0.1",
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"ModIO.gml","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"_modio_init","argCount":0,"args":[],"documentation":"","externalName":"_modio_init","help":"_modio_init()","hidden":true,"kind":2,"returnType":1,},
