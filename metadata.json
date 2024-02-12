@@ -1,14 +1,18 @@
-[
-    {
-        "projectFile": "source/mod.io_gml/mod.io.yyp",
-        "extensionFile": "source/mod.io_gml/extensions/ModIO/ModIO.yy",
-        "packageId": "com.yoyogames.modioext",
-        "packageName": "ModIO Extension",
-        "packageVersion": "1.0.1",
-        "includeFolders": "GM Extension Assets,mod.io,mod.io DEMO",
-        "includeResources": "modio_documentation.html",
-        "excludeFolders": "Authentication Extensions",
-        "excludeResources": null,
-        "format": "LTS22"
-    }
-]
+{
+    "gitHubUrl": "https://github.com/YoYoGames/GMEXT-mod.io",
+    "projectFile": "source/mod.io_gml/mod.io.yyp",
+    "projectVersion": "LTS22",
+    "releaseTemplate": "templates/release_body.md",
+    "extensionMetaData": [
+        {
+            "extensionFile": "source/mod.io_gml/extensions/ModIO/ModIO.yy",
+            "packageId": "com.yoyogames.modioext",
+            "packageName": "ModIO Extension",
+            "packageVersion": "1.0.1",
+            "packageFormat": "LTS22",
+            "includeFolders": "GM Extension Assets,mod.io,mod.io DEMO",
+            "includeResources": "modio_documentation.html",
+            "excludeResources": null
+        }
+    ]
+}
