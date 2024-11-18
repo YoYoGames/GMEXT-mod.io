@@ -2,3 +2,15 @@
 source/mod.io_gml/options/extensions/
 
 output/
+
+source/mod.io_gml/extensions/EpicOnlineServices/scriptUtils.bat.bak
+
+source/mod.io_gml/extensions/EpicOnlineServices/scriptUtils.sh.bak
+
+source/mod.io_gml/extensions/GOG/scriptUtils.bat.bak
+
+source/mod.io_gml/extensions/GOG/scriptUtils.sh.bak
+
+source/mod.io_gml/extensions/Steamworks/scriptUtils.bat.bak
+
+source/mod.io_gml/extensions/Steamworks/scriptUtils.sh.bak
