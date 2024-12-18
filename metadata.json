@@ -10,9 +10,9 @@
             "packageName": "ModIO Extension",
             "packageVersion": "1.0.1",
             "packageFormat": "LTS22",
-            "includeFolders": "GM Extension Assets,mod.io,mod.io DEMO",
-            "includeResources": "modio_documentation.html",
+            "excludeFolders": "Authentication Extensions",
             "excludeResources": null
         }
-    ]
+    ],
+    "documentationFolder": "source/mod.io_gml/extensions/ModIO/ModIO.yy"
 }

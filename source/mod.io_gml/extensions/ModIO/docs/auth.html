@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Authentication - GMEXT-mod.io</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="assets/css/gmext_style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Authentication";
+        var mkdocs_page_input_path = "auth.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/gml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> GMEXT-mod.io
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="home.html">mod.io</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="quick_start_guide.html">Quick Start Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="pagination_filtering_sorting_guide.html">Pagination, Filtering and Sorting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="agreements.html">Agreements</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Authentication</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="comments.html">Comments</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="games.html">Games</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="general.html">General</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="login.html">Login</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="me.html">Me</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="media.html">Media</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="modfiles.html">Modfiles</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mods.html">Mods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="pagination_filtering_sorting.html">Pagination, Filtering and Sorting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ratings.html">Ratings</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="stats.html">Stats</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="subscribe.html">Subscribe</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="tags.html">Tags</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="teams.html">Teams</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="users.html">Users</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="response_schemas.html">Response Schemas</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">GMEXT-mod.io</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Authentication</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/YoYoGames/GMEXT-mod.io/edit/master/docs/auth.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a id="top"></a></p>
+<h1 id="authentication"><strong>Authentication</strong></h1>
+<h2 id="functions">Functions</h2>
+<p>This module offers a collection of functions designed to address specific tasks and provide utilities for various purposes. Explore the available functions to make the most of the functionalities provided by this module.</p>
+<ul>
+<li><a href="auth.html#modio_auth_terms">modio_auth_terms</a></li>
+<li><a href="auth.html#modio_auth_steam">modio_auth_steam</a></li>
+<li><a href="auth.html#modio_auth_xboxlive">modio_auth_xboxlive</a></li>
+<li><a href="auth.html#modio_auth_playstation">modio_auth_playstation</a></li>
+<li><a href="auth.html#modio_auth_nintendo_switch">modio_auth_nintendo_switch</a></li>
+<li><a href="auth.html#modio_auth_metaquest">modio_auth_metaquest</a></li>
+<li><a href="auth.html#modio_auth_gog">modio_auth_gog</a></li>
+<li><a href="auth.html#modio_auth_epicgames">modio_auth_epicgames</a></li>
+<li><a href="auth.html#modio_auth_itchio">modio_auth_itchio</a></li>
+<li><a href="auth.html#modio_auth_google">modio_auth_google</a></li>
+<li><a href="auth.html#modio_auth_discord">modio_auth_discord</a></li>
+<li><a href="auth.html#modio_auth_openid">modio_auth_openid</a></li>
+<li><a href="auth.html#modio_auth_email">modio_auth_email</a></li>
+<li><a href="auth.html#modio_auth_email">modio_auth_email</a></li>
+<li><a href="auth.html#modio_auth_email_exchange">modio_auth_email_exchange</a></li>
+<li><a href="auth.html#modio_auth_logout">modio_auth_logout</a></li>
+</ul>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_terms">modio_auth_terms</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#terms">Terms</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function provides the text, links and buttons you can use to get a users agreement and consent prior to authenticating them in-game. A successful response returns a <a href="response_schemas.html#terms">Terms</a> struct.</p>
+<p>See <a href="https://docs.mod.io/#terms">Terms</a> for an example dialog and requirements for this function.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_terms(_callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to execute when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to execute when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#terms">Terms</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_steam">modio_auth_steam</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#steam">Steam</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of a Steam user. To use this functionality you must add your game's encrypted app ticket key from Steamworks, to the <strong>Game Admin</strong> &gt; <strong>Settings</strong> page of your game's profile on mod.io. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In order to use this authentication method you need to include the <a href="https://github.com/YoYoGames/GMEXT-Steamworks">Steamworks extension</a> in your project and call <code>steam_user_request_encrypted_app_ticket</code> to get a ticket.
+  The ticket is then returned in the <code>ticket_data</code> key of the <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> ds_map.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Steam is the only authentication endpoint that requires the token to be <a href="https://manual.yoyogames.com/GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/base64_encode.htm">base64 encoded</a>. All other endpoints' tokens should be provided as a UTF-8 character string.</p>
+</div>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_steam(_appdata, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_appdata</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The Steam user's <a href="https://partner.steamgames.com/doc/features/auth#encryptedapptickets">Encrypted App Ticket</a> provided by the Steamworks SDK, as a <a href="https://manual.yoyogames.com/GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/base64_encode.htm">base64-encoded string</a>.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and the respective user doesn't have an email registered for their account mod.io will send a confirmation email to confirm they have ownership of the specified email.<br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date in which the returned token will expire. The value cannot be higher than the default value, which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code>, unless you have collected the <a href="https://docs.mod.io/#terms">users agreement</a> prior to calling this endpoint, in which case it can be set to <code>true</code> and will be recorded.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function that is triggered when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function that is triggered when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_xboxlive">modio_auth_xboxlive</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#xbox-live">Xbox Live</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of an Xbox Live user. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this endpoint you will need to set up some additional settings prior to being able to authenticate Xbox Live users. For these instructions you should <a href="mailto:developers@mod.io?subject=Xbox%20Live%20SSO%20Request.md">contact mod.io</a>.</p>
+</div>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_xboxlive(_xbox_token, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_xbox_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>A valid Xbox Live token</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address (optional but recommended to help users recover lost accounts). If supplied, and when the respective user does not have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email. This functionality is also available at a later time via the <a href="https://docs.mod.io/#link-an-email">Link an Email</a> endpoint.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If the user already has an email on record with mod.io, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.<br><br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value, which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the users agreement prior to calling this endpoint in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you will need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_playstation">modio_auth_playstation</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#playstation-network">PlayStation™Network</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of a PlayStation Network (PSN) user. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<p>From the <a href="https://docs.mod.io/#playstation-network">mod.io docs</a>:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this endpoint you will need to set up some additional settings prior to being able to authenticate PlayStation users. For these instructions please <a href="mailto:developers@mod.io?subject=PlayStation%20Network%20SSO%20Request.md">contact mod.io</a>.</p>
+</div>
+<p>"PlayStation" and "DualSense" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_playstation(_auth_code, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_auth_code</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The auth code returned from the PlayStation Network API.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The users email address. If supplied, and the respective user does not have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.<br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you will need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_nintendo_switch">modio_auth_nintendo_switch</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#nintendo-switch">Nintendo Switch</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of a Nintendo Switch user. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this endpoint you will need to setup some additional settings prior to being able to authenticate Nintendo Switch users. For these instructions you should <a href="mailto:developers@mod.io?subject=Nintendo%20Switch%20SSO%20Request.md">contact mod.io</a>.</p>
+</div>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_nintendo_switch(_id_token, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_id_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The NSA ID supplied by the Nintendo Switch SDK.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.<br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you will need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_metaquest">modio_auth_metaquest</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#meta-quest">Meta Quest</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of a Meta Quest user. To use this functionality you must add your game's <a href="https://dashboard.oculus.com/">AppId and secret</a> from the Meta Quest Dashboard, to the <em>Game Admin</em> &gt; <em>Settings</em> page of your game's profile on mod.io. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_metaquest(_device, _nonce, _user_id, _access_token, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_device</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The Meta Quest device being used for authentication.</td>
+</tr>
+<tr>
+<td>_nonce</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The nonce provided by calling <a href="https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/">ovr_User_GetUserProof()</a> from the Meta Quest SDK.</td>
+</tr>
+<tr>
+<td>_user_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>The user's Meta Quest ID providing by calling <a href="https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/">ovr_GetLoggedInUserID()</a> from the Meta Quest SDK.</td>
+</tr>
+<tr>
+<td>_access_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The user's access token, providing by calling <a href="https://developer.oculus.com/documentation/platform/latest/concepts/dg-ownership/">ovr_User_GetAccessToken()</a> from the Meta Quest SDK. mod.io uses this access token on the first login only to obtain the user's alias and is not saved on the mod.io servers.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.<br><br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you will need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_gog">modio_auth_gog</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#gog-galaxy">GOG Galaxy</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of a GOG Galaxy user. To use this functionality you must add your game's encrypted app ticket key from GOG Galaxy, to the <em>Game Admin</em> &gt; <em>Settings</em> page of your game's profile on mod.io. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_gog(_appdata, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_appdata</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The GOG Galaxy user's <a href="https://cdn.gog.com/open/galaxy/sdk/1.133.3/Documentation/classgalaxy_1_1api_1_1IUser.html#a352802aab7a6e71b1cd1b9b1adfd53d8">Encrypted App Ticket</a>. You can get this using the GOG extension's <code>GOG_User_GetEncryptedAppTicket</code> function.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.<br><br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (Unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint, in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you will need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_epicgames">modio_auth_epicgames</h1>
+<p>This function requests an access token on behalf of an Epic Games user. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a>.</p>
+<blockquote>
+<p>IMPORTANT</p>
+<p>You can get an access token by first logging in the user using <a href="https://github.com/YoYoGames/GMEXT-EpicOnlineServices/wiki/Auth#epicgames_auth_login"><code>EpicGames_Auth_Login</code></a>, followed by <a href="https://github.com/YoYoGames/GMEXT-EpicOnlineServices/wiki/Auth#epicgames_auth_copyuserauthtoken"><code>EpicGames_Auth_CopyUserAuthToken</code></a>.</p>
+</blockquote>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_epicgames(_access_token, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_access_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The access token returned by the <a href="https://github.com/YoYoGames/GMEXT-EpicOnlineServices/wiki/Auth#EpicGames_Auth_CopyUserAuthToken"><code>EpicGames_Auth_CopyUserAuthToken</code></a> function of the <a href="https://github.com/YoYoGames/GMEXT-EpicOnlineServices">Epic online Services extension</a>.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, it will send a confirmation email to confirm they have ownership of the specified email.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.<br><br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint, in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you'll need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_itchio">modio_auth_itchio</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#itch-io">itch.io</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of an itch.io user via the itch.io desktop app. Due to the desktop application allowing multiple users to be logged in at once, if more than one user is logged in then the user at the top of that list on the itch.io login dialog will be the authenticating user. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_itchio(_itchio_token, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_itchio_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The <a href="https://itch.io/docs/itch/integrating/manifest-actions.html">JWT Token</a> provided by the itch.io desktop application to your game as the environment variable <code>ITCHIO_API_KEY</code>. You must set up your itch.io app manifest to include the <a href="https://itch.io/docs/itch/integrating/manifest-actions.html">API scope</a> to force itch.io to set this variable.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.<br><br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint, in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you'll need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_google">modio_auth_google</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#google">Google</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of a Google user. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<blockquote>
+<p>IMPORTANT</p>
+<p>You can get an access token by calling the <code>GoogleSignIn_Show</code> function of the <a href="https://github.com/YoYoGames/GMEXT-GoogleSignIn">GoogleSignIn</a> extension.
+  The token is returned in the <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a>'s <code>idToken</code> key.</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this endpoint you will need to set up some additional settings prior to being able to authenticate Google users. For these instructions please <a href="mailto:developers@mod.io?subject=Google%20SSO%20Request.md">contact mod.io</a>.</p>
+</div>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_google(_id_token, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_id_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The <code>id_token</code> value <a href="https://developers.google.com/identity/sign-in/web/backend-auth#calling-the-tokeninfo-endpoint">returned from Google</a> after you have authenticated a user via the Google OAuth2 flow.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.<br><br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint, in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you'll need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_discord">modio_auth_discord</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#discord">Discord</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of a Discord user. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_discord(_discord_token, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_discord_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The access token of the user provided by Discord.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.<br><br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint, in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you'll need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_openid">modio_auth_openid</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#openid">OpenID</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests an access token on behalf of an OpenID identity provider. To use this method of authentication, you must configure the OpenID config in your game's authentication admin page. A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_openid(_id_token, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_id_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The ID token issued by the configured identity provider.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br><em> email (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a>) The user's email address. If supplied, and the respective user doesn't have an email registered for their account, mod.io will send a confirmation email to confirm they have ownership of the specified email.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If the user already has an email on record, this parameter will be ignored. This parameter should also be URL encoded before the request is sent.<br><br></em> date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a week (Unix timestamp + 604800 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.<br><em> terms_agreed (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a>) This </em>must* be set to <code>false</code> unless you have collected the <a href="#modio_auth_terms">users agreement</a> prior to calling this endpoint, in which case it can be set to <code>true</code> and will be recorded.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If this is set to <code>false</code> and the user has not agreed to the latest mod.io Terms of Use and Privacy Policy, an error <code>403 Forbidden (error_ref 11074)</code> will be returned and you'll need to collect the <a href="#modio_auth_terms">users agreement</a> and retry with this value set to <code>true</code> to authenticate the user.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_email">modio_auth_email</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#email-exchange">Email Exchange</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function requests a security code for a user, identified by their e-mail which can then be <a href="https://docs.mod.io/#email">exchanged</a> for an access token. A successful request will return a <a href="response_schemas.html#message">Message</a> struct.</p>
+<blockquote>
+<p>To use this functionality you <strong>must</strong> use your game's api_key from your game's profile on mod.io.</p>
+</blockquote>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_email(_email, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_email</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>An email address the user can access to retrieve the security code. This parameter should also be URL encoded before the request is sent.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#message">Message</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_email_exchange">modio_auth_email_exchange</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#email-exchange">Email Exchange</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function exchanges a security code issued from the <a href="https://docs.mod.io/#email">Email Request endpoint</a> for an access token.</p>
+<p>To use this functionality you <strong>must</strong> use your game's api_key from your game's profile on mod.io and the same api_key must be used from the original request for a security code.</p>
+<p>A successful request will return an <a href="response_schemas.html#accesstoken">AccessToken</a> struct.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_email_exchange(_security_code, _optionals, _callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_security_code</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The alphanumeric security code.</td>
+</tr>
+<tr>
+<td>_optionals</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>A struct that can contain one or more of the following variables:<br><br>* date_expires (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a>) The Unix timestamp of the date on which the returned token will expire. The value cannot be higher than the default value which is a common year (unix timestamp + 31536000 seconds). Using a token after its expiry time has elapsed will result in a <code>401 Unauthorized</code> response.</td>
+</tr>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#accesstoken">AccessToken</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modio_auth_logout">modio_auth_logout</h1>
+<blockquote>
+<p><strong>mod.io Endpoint:</strong> <a href="https://docs.mod.io/#logout">Logout</a></p>
+</blockquote>
+<p><br /></p>
+<p>This function logs out the user by revoking their current access token.</p>
+<p>If this request successfully completes, you should remove any tokens/cookies/cached credentials linking to the now revoked access token so that the user is required to login again through your application.</p>
+<p><br></p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<pre class="highlight"><code class="language-gml">modio_auth_logout(_callback_success, _callback_failed)</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_callback_success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request is successful.</td>
+</tr>
+<tr>
+<td>_callback_failed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a> or <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></td>
+<td>The function to trigger when the request failed.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Returns:</strong></p>
+<blockquote>
+<p><a href="response_schemas.html#webmessage">WebMessage</a></p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="agreements.html" class="btn btn-neutral float-left" title="Agreements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="comments.html" class="btn btn-neutral float-right" title="Comments">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p align="center">GameMaker 2024</p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/YoYoGames/GMEXT-mod.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="agreements.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="comments.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/gml.min.js"></script>
+      <script src="assets/js/gmext_script.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

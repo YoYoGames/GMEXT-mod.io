@@ -36,14 +36,16 @@
  * @reference module.general
  * @reference module.reports
  * @reference module.agreements
- * @reference module.reports
  * @reference module.users
  * @reference module.me
  * @reference module.price
  * @reference module.pagination_filtering_sorting
- * 
  * @reference module.login
+ * @section_end
  * 
+ * @section Data Model
+ * @desc Here is a reference of all data models used by the extension:
+ * @ref module.response_schemas
  * @section_end
  * 
  * @module_end

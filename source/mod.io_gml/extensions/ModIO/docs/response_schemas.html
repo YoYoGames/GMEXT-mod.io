@@ -1,0 +1,2974 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Response Schemas - GMEXT-mod.io</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="assets/css/gmext_style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Response Schemas";
+        var mkdocs_page_input_path = "response_schemas.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/gml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> GMEXT-mod.io
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="home.html">mod.io</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="quick_start_guide.html">Quick Start Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="pagination_filtering_sorting_guide.html">Pagination, Filtering and Sorting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="agreements.html">Agreements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="comments.html">Comments</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="games.html">Games</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="general.html">General</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="login.html">Login</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="me.html">Me</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="media.html">Media</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="modfiles.html">Modfiles</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mods.html">Mods</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="pagination_filtering_sorting.html">Pagination, Filtering and Sorting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ratings.html">Ratings</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="stats.html">Stats</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="subscribe.html">Subscribe</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="tags.html">Tags</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="teams.html">Teams</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="users.html">Users</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Response Schemas</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#structs">Structs</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">GMEXT-mod.io</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Response Schemas</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/YoYoGames/GMEXT-mod.io/edit/master/docs/response_schemas.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a id="top"></a></p>
+<h1 id="response-schemas"><strong>Response Schemas</strong></h1>
+<p>This page lists all possible data types.</p>
+<p>When you call one of the mod.io extension functions, you pass a success callback function to it as the first parameter.
+This callback function is called by GameMaker and passes the mod.io response to it as the <code>response</code> argument.</p>
+<ul>
+<li>result_count Number of results returned in this request.</li>
+<li>result_offset Number of results skipped over. Defaults to 0 unless overridden by <code>_offset</code> filter.</li>
+<li>result_limit Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <code>_limit</code> filter.</li>
+<li>result_total Total number of results found.</li>
+</ul>
+<p>The actual data is always returned in the <code>data</code> attribute.</p>
+<h2 id="structs">Structs</h2>
+<p>This module offers a collection of structs, which serve as custom data models for organizing and structuring data. Explore the provided structs to better understand the relationships between data elements and simplify your data manipulation tasks.</p>
+<ul>
+<li><a href="response_schemas.html#accesstoken">AccessToken</a></li>
+<li><a href="response_schemas.html#agreementversion">AgreementVersion</a></li>
+<li><a href="response_schemas.html#avatar">Avatar</a></li>
+<li><a href="response_schemas.html#comment">Comment</a></li>
+<li><a href="response_schemas.html#download">Download</a></li>
+<li><a href="response_schemas.html#filehash">Filehash</a></li>
+<li><a href="response_schemas.html#game">Game</a></li>
+<li><a href="response_schemas.html#gameotherurls">GameOtherUrls</a></li>
+<li><a href="response_schemas.html#gameplatforms">GamePlatforms</a></li>
+<li><a href="response_schemas.html#gamestats">GameStats</a></li>
+<li><a href="response_schemas.html#gametagoption">GameTagOption</a></li>
+<li><a href="response_schemas.html#getgametagoptions">GetGameTagOptions</a></li>
+<li><a href="response_schemas.html#getgames">GetGames</a></li>
+<li><a href="response_schemas.html#getguidecomments">GetGuideComments</a></li>
+<li><a href="response_schemas.html#getmodcomments">GetModComments</a></li>
+<li><a href="response_schemas.html#getmoddependencies">GetModDependencies</a></li>
+<li><a href="response_schemas.html#getmodevents">GetModEvents</a></li>
+<li><a href="response_schemas.html#getmodkvpmetadata">GetModKVPMetadata</a></li>
+<li><a href="response_schemas.html#getmodstats">GetModStats</a></li>
+<li><a href="response_schemas.html#getmodtags">GetModTags</a></li>
+<li><a href="response_schemas.html#getmodfiles">GetModfiles</a></li>
+<li><a href="response_schemas.html#getmods">GetMods</a></li>
+<li><a href="response_schemas.html#getmutedusers">GetMutedUsers</a></li>
+<li><a href="response_schemas.html#getteammembers">GetTeamMembers</a></li>
+<li><a href="response_schemas.html#getuserevents">GetUserEvents</a></li>
+<li><a href="response_schemas.html#getuserratings">GetUserRatings</a></li>
+<li><a href="response_schemas.html#headerimage">HeaderImage</a></li>
+<li><a href="response_schemas.html#icon">Icon</a></li>
+<li><a href="response_schemas.html#image">Image</a></li>
+<li><a href="response_schemas.html#logo">Logo</a></li>
+<li><a href="response_schemas.html#message">Message</a></li>
+<li><a href="response_schemas.html#metadatakvp">MetadataKVP</a></li>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+<li><a href="response_schemas.html#moddependencies">ModDependencies</a></li>
+<li><a href="response_schemas.html#modevents">ModEvents</a></li>
+<li><a href="response_schemas.html#modevent">ModEvent</a></li>
+<li><a href="response_schemas.html#modfile">Modfile</a></li>
+<li><a href="response_schemas.html#modfileplatform">ModfilePlatform</a></li>
+<li><a href="response_schemas.html#modmedia">ModMedia</a></li>
+<li><a href="response_schemas.html#modplatforms">ModPlatforms</a></li>
+<li><a href="response_schemas.html#modstats">ModStats</a></li>
+<li><a href="response_schemas.html#modtag">ModTag</a></li>
+<li><a href="response_schemas.html#rating">Rating</a></li>
+<li><a href="response_schemas.html#teammember">TeamMember</a></li>
+<li><a href="response_schemas.html#terms">Terms</a></li>
+<li><a href="response_schemas.html#theme">Theme</a></li>
+<li><a href="response_schemas.html#user">User</a></li>
+<li><a href="response_schemas.html#userevent">UserEvent</a></li>
+<li><a href="response_schemas.html#webmessage">WebMessage</a></li>
+</ul>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="accesstoken">AccessToken</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#schemaaccess_token_object">Access Token Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="auth.html#modio_auth_steam">modio_auth_steam</a></li>
+<li><a href="auth.html#modio_auth_xboxlive">modio_auth_xboxlive</a></li>
+<li><a href="auth.html#modio_auth_playstation">modio_auth_playstation</a></li>
+<li><a href="auth.html#modio_auth_nintendo_switch">modio_auth_nintendo_switch</a></li>
+<li><a href="auth.html#modio_auth_metaquest">modio_auth_metaquest</a></li>
+<li><a href="auth.html#modio_auth_gog">modio_auth_gog</a></li>
+<li><a href="auth.html#modio_auth_epicgames">modio_auth_epicgames</a></li>
+<li><a href="auth.html#modio_auth_itchio">modio_auth_itchio</a></li>
+<li><a href="auth.html#modio_auth_google">modio_auth_google</a></li>
+<li><a href="auth.html#modio_auth_discord">modio_auth_discord</a></li>
+<li><a href="auth.html#modio_auth_openid">modio_auth_openid</a></li>
+<li><a href="auth.html#modio_auth_email_exchange">modio_auth_email_exchange</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>HTTP Response Code.</td>
+</tr>
+<tr>
+<td>access_token</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The user's access token.</td>
+</tr>
+<tr>
+<td>date_expires</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>The Unix timestamp of the date this token will expire. Default is one year from issue date. See <a href="https://docs.mod.io/#making-requests">Access Token Lifetime &amp; Expiry</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="agreementversion">AgreementVersion</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#agreement-version-object">Agreement Version Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="agreements.html#modio_agreements_get">modio_agreements_get</a></li>
+<li><a href="agreements.html#modio_agreements_version">modio_agreements_version</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the agreement.</td>
+</tr>
+<tr>
+<td>is_active</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></td>
+<td>Is the agreement currently active? (This can also be determined if date_live &gt; 0).</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>The type of agreement. Can be one of the following:<br><br>1 = Terms<br>2 = Privacy<br>3 = Developers<br>4 = API<br>5 = Payment<br>6 = AUP</td>
+</tr>
+<tr>
+<td>user</td>
+<td><a href="response_schemas.html#user">User</a></td>
+<td>No description</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of the date the agreement was added.</td>
+</tr>
+<tr>
+<td>date_updated</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of the date the agreement was updated.</td>
+</tr>
+<tr>
+<td>date_live</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of the date the agreement was set live.</td>
+</tr>
+<tr>
+<td>name</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Name of the agreement.</td>
+</tr>
+<tr>
+<td>changelog</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Changelog for version of this agreement.</td>
+</tr>
+<tr>
+<td>description</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The contents of the agreement</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="avatar">Avatar</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#avatar-object">Avatar Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#user">User</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Avatar filename including extension.</td>
+</tr>
+<tr>
+<td>original</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the full-sized avatar.</td>
+</tr>
+<tr>
+<td>thumb_50x50</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the small avatar thumbnail.</td>
+</tr>
+<tr>
+<td>thumb_100x100</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the medium avatar thumbnail.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="comment">Comment</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#comment-object">Comment Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="comments.html#modio_comments_add">modio_comments_add</a></li>
+<li><a href="comments.html#modio_comments_get">modio_comments_get</a></li>
+<li><a href="comments.html#modio_comments_update">modio_comments_update</a></li>
+<li><a href="comments.html#modio_comments_karma">modio_comments_karma</a></li>
+</ul>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getguidecomments">GetGuideComments</a></li>
+<li><a href="response_schemas.html#getmodcomments">GetModComments</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the comment.</td>
+</tr>
+<tr>
+<td>game_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique game id (if applicable).</td>
+</tr>
+<tr>
+<td>resource_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the parent resource.</td>
+</tr>
+<tr>
+<td>The</td>
+<td><a href="response_schemas.html#user">User</a></td>
+<td>user who published the comment.</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date the comment was posted.</td>
+</tr>
+<tr>
+<td>reply_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Id of the parent comment this comment is replying to (can be 0 if the comment is not a reply).</td>
+</tr>
+<tr>
+<td>thread_position</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Levels of nesting in a comment thread. How it works:<br><br>- The first comment will have the position '01'.<br>- The second comment will have the position '02'.<br>- If someone responds to the second comment the position will be '02.01'.<br>- A maximum of 3 levels is supported.</td>
+</tr>
+<tr>
+<td>karma</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Karma received for the comment (can be positive or negative).</td>
+</tr>
+<tr>
+<td>content</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Contents of the comment.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="download">Download</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#download-object">Download Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#modfile">Modfile</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>binary_url</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The URL to download the file from the mod.io CDN.<br><br>&gt; [!NOTE]<br>&gt;<br>&gt;  If the <a href="https://docs.mod.io/#edit-game">game</a> requires mod downloads to be initiated via the API, the <code>binary_url</code> returned will contain a verification hash. This hash must be supplied to get the modfile, and will expire after a certain period of time. Saving and reusing the <code>binary_url</code> won't work in this situation given its dynamic nature.</td>
+</tr>
+<tr>
+<td>date_expires</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of when the <code>binary_url</code> will expire.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="filehash">Filehash</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#filehash-object">Filehash Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#modfile">Modfile</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>md5</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>MD5 hash of the file.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="game">Game</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#game-object">Game Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getgames">GetGames</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique game id.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Status of the game (see <a href="https://docs.mod.io/#status-amp-visibility">status and visibility</a> for details):<br><br>0 = Not Accepted<br>1 = Accepted<br>3 = Deleted</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date game was registered.</td>
+</tr>
+<tr>
+<td>date_updated</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date game was updated.</td>
+</tr>
+<tr>
+<td>date_live</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date game was set live.</td>
+</tr>
+<tr>
+<td>presentation_option</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Presentation style used on the mod.io website:<br><br>0 = Grid View: Displays mods in a grid<br>1 = Table View: Displays mods in a table</td>
+</tr>
+<tr>
+<td>submission_option</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Submission process modders must follow:<br><br>0 = Mod uploads must occur via the API using a tool created by the game developers<br>1 = Mod uploads can occur from anywhere, including the website and API</td>
+</tr>
+<tr>
+<td>curation_option</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Curation process used to approve mods:<br><br>0 = No curation: Mods are immediately available to play<br>2 = Full curation: All mods must be accepted by someone to be listed</td>
+</tr>
+<tr>
+<td>community_options</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Community features enabled for this game:<br><br>0 = All of the options below are disabled<br>1 = Enable comments<br>2 = Enable guides<br>4 = Pin on homepage<br>8 = Show on homepage<br>16 = Show more on homepage<br>32 = Allow change status<br>? = Add the options you want together, to enable multiple features (see <a href="https://docs.mod.io/#bitwise-and-bitwise-and">BITWISE fields</a>)</td>
+</tr>
+<tr>
+<td>monetisation_options</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Monetisation features mods can enable:<br><br>0 = All of the options below are disabled<br>1 = Enabled<br>2 = Enable recognition<br>4 = Enable marketplace<br>? = Add the options you want together, to enable multiple features (see <a href="https://docs.mod.io/#bitwise-and-bitwise-and">BITWISE fields</a>)</td>
+</tr>
+<tr>
+<td>revenue_options</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Deprecated: Please use <code>monetisation_options</code> instead, this will be removed in subsequent API version.</td>
+</tr>
+<tr>
+<td>api_access_options</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Level of API access allowed by this game:<br><br>0 = All of the options below are disabled<br>1 = Allow 3rd parties to access this games API endpoints<br>2 = Allow mods to be downloaded directly (if disabled all download URLs will contain a frequently changing verification hash to stop unauthorized use)<br>? = Add the options you want together, to enable multiple features (see <a href="https://docs.mod.io/#bitwise-and-bitwise-and">BITWISE fields</a>)</td>
+</tr>
+<tr>
+<td>maturity_options</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Mature content setup for this game:<br><br>0 = Don't allow mature content in mods<br>1 = Allow mature content in mods<br>2 = This game is for mature audiences only<br>? = Add the options you want together, to enable multiple features (see <a href="https://docs.mod.io/#bitwise-and-bitwise-and">BITWISE fields</a>)</td>
+</tr>
+<tr>
+<td>ugc_name</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Word used to describe user-generated content (mods, items, addons etc).</td>
+</tr>
+<tr>
+<td>icon</td>
+<td><a href="response_schemas.html#icon">Icon</a></td>
+<td>Contains media URL's to the icon for the game.</td>
+</tr>
+<tr>
+<td>logo</td>
+<td><a href="response_schemas.html#logo">Logo</a></td>
+<td>Contains media URL's to the logo for the game.</td>
+</tr>
+<tr>
+<td>header</td>
+<td><a href="response_schemas.html#headerimage">HeaderImage</a></td>
+<td>Contains media URL's to the preview header for the game.</td>
+</tr>
+<tr>
+<td>name</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Name of the game.</td>
+</tr>
+<tr>
+<td>name_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Path for the game on mod.io. For example: https://mod.io/g/rogue-knight</td>
+</tr>
+<tr>
+<td>summary</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Summary of the games mod support.</td>
+</tr>
+<tr>
+<td>instructions</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>A guide about creating and uploading mods for this game to mod.io (applicable if submission_option = 0).</td>
+</tr>
+<tr>
+<td>instructions_url</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Link to a mod.io guide, your modding wiki or a page where modders can learn how to make and submit mods to your games profile.</td>
+</tr>
+<tr>
+<td>profile_url</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the game.</td>
+</tr>
+<tr>
+<td>stats</td>
+<td><a href="response_schemas.html#gamestats">GameStats</a></td>
+<td>Numerous aggregate stats for the game.</td>
+</tr>
+<tr>
+<td>theme</td>
+<td><a href="response_schemas.html#theme">Theme</a></td>
+<td>Theme color values for the game.</td>
+</tr>
+<tr>
+<td>other_urls</td>
+<td><a href="response_schemas.html#gameotherurls">GameOtherUrls</a></td>
+<td>Creator defined URLs to share.</td>
+</tr>
+<tr>
+<td>tag_options</td>
+<td><a href="response_schemas.html#gametagoption">GameTagOption</a></td>
+<td>Groups of tags configured by the game developer, that mods can select. Hidden tags will only be returned if <code>show_hidden_tags</code> is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td>platforms</td>
+<td><a href="response_schemas.html#gameplatforms">GamePlatforms</a></td>
+<td>Platforms that are supported by this title.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="gameotherurls">GameOtherUrls</h1>
+<p>GameOtherUrls struct</p>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#game">Game</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Label of the link you are sharing.</td>
+</tr>
+<tr>
+<td>url</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The URL to be associated with the label.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="gameplatforms">GamePlatforms</h1>
+<p>GamePlatforms struct</p>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#game">Game</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>platform</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>A <a href="https://docs.mod.io/#targeting-a-platform">target platform</a>.</td>
+</tr>
+<tr>
+<td>label</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>A presentable label of the platform.</td>
+</tr>
+<tr>
+<td>moderated</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></td>
+<td>Is this platform moderated by game admins? If <code>false</code>, then user submissions for the platform will be available immediately providing the game has mod curation disabled.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="gamestats">GameStats</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#game-stats-object">Game Stats Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="stats.html#modio_stats_game">modio_stats_game</a></li>
+</ul>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#game">Game</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>game_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique game id.</td>
+</tr>
+<tr>
+<td>mods_count_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Available mod count for the game.</td>
+</tr>
+<tr>
+<td>mods_downloads_today</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Mods downloaded today for the game.</td>
+</tr>
+<tr>
+<td>mods_downloads_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total Mods downloaded for the game.</td>
+</tr>
+<tr>
+<td>mods_downloads_daily_average</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Average mods downloaded on a daily basis.</td>
+</tr>
+<tr>
+<td>mods_subscribers_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of total users who have subscribed to the mods for the game.</td>
+</tr>
+<tr>
+<td>date_expires</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp until this game's statistics are considered stale.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="gametagoption">GameTagOption</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#game-tag-option-object">Game Tag Option Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#game">Game</a></li>
+<li><a href="response_schemas.html#getgametagoptions">GetGameTagOptions</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Name of the tag group.</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Can multiple tags be selected via 'checkboxes' or should only a single tag be selected via a 'dropdown'.</td>
+</tr>
+<tr>
+<td>tag_count_map</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>List of tag names and the count of mods with these tags.</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></td>
+<td>Groups of tags flagged as 'hidden' are intended to be used for filtering (eg. game version), but should not be displayed to users. Hidden tags will only be returned if <code>show_hidden_tags</code> is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td>locked</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></td>
+<td>Groups of tags flagged as 'locked' are editable only if the authenticated user is a team member of the parent game. Useful for games to tag special functionality, which users can see and filter on (eg. competition winners).</td>
+</tr>
+<tr>
+<td>tags</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Array of tags in this group.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getgametagoptions">GetGameTagOptions</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-game-tag-options-2">Get Game Tag Options</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="tags.html#modio_tags_game_get">modio_tags_game_get</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#gametagoption">GameTagOption</a></td>
+<td>Array containing game tag structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getgames">GetGames</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-games-2">Get Games</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="games.html#modio_games_get_list">modio_games_get_list</a></li>
+<li><a href="games.html#modio_games_get">modio_games_get</a></li>
+<li><a href="me.html#modio_me_games">modio_me_games</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#game">Game</a></td>
+<td>Array containing game structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getguidecomments">GetGuideComments</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-guide-comments-2">Get Guide Comments</a></p>
+</blockquote>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#comment">Comment</a></td>
+<td>Array containing comment structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmodcomments">GetModComments</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mod-comments-2">Get Mod Comments</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="comments.html#modio_comments_get_list">modio_comments_get_list</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#comment">Comment</a></td>
+<td>Array containing comment structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmoddependencies">GetModDependencies</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mod-dependencies-2">Get Mod Dependencies</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="dependencies.html#modio_dependencies_get">modio_dependencies_get</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#moddependencies">ModDependencies</a></td>
+<td>Array containing mod dependencies structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmodevents">GetModEvents</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mod-events-2">Get Mod Events</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="events.html#modio_events_get_list">modio_events_get_list</a></li>
+<li><a href="events.html#modio_events_get">modio_events_get</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#modevent">ModEvent</a></td>
+<td>Array containing mod event structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmodkvpmetadata">GetModKVPMetadata</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mod-kvp-metadata-2">Get Mod KVP Metadata</a></p>
+</blockquote>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#metadatakvp">MetadataKVP</a></td>
+<td>Array containing metadata KVP structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmodstats">GetModStats</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mod-stats-2">Get Mod Stats</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="stats.html#modio_stats_mods_get_list">modio_stats_mods_get_list</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#modstats">ModStats</a></td>
+<td>Array containing stats structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmodtags">GetModTags</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mod-tags-2">Get Mod Tags</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="tags.html#modio_tags_mod_get">modio_tags_mod_get</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#modtag">ModTag</a></td>
+<td>Array containing mod tag structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmodfiles">GetModfiles</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-modfiles-2">Get Modfiles</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="me.html#modio_me_files">modio_me_files</a></li>
+<li><a href="modfiles.html#modio_modfiles_get_list">modio_modfiles_get_list</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#modfile">Modfile</a></td>
+<td>Array containing modfile structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmods">GetMods</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mods-2">Get Mods</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="me.html#modio_me_subscriptions">modio_me_subscriptions</a></li>
+<li><a href="me.html#modio_me_mods">modio_me_mods</a></li>
+<li><a href="mods.html#modio_mods_get_list">modio_mods_get_list</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#mod">Mod</a></td>
+<td>Array containing mod structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getmutedusers">GetMutedUsers</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-muted-users">Get Muted Users</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="me.html#modio_me_user_muted">modio_me_user_muted</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#user">User</a></td>
+<td>Array containing user structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getteammembers">GetTeamMembers</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-team-members">Get Team Members</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="teams.html#modio_teams_get_mod_members">modio_teams_get_mod_members</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#teammember">TeamMember</a></td>
+<td>Array containing team member structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getuserevents">GetUserEvents</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-user-events-2">Get User Events</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="me.html#modio_me_events">modio_me_events</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#userevent">UserEvent</a></td>
+<td>Array containing user event structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="getuserratings">GetUserRatings</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-user-ratings-2">Get User Ratings</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="me.html#modio_me_ratings">modio_me_ratings</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#rating">Rating</a></td>
+<td>Array containing rating structs.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <a href="pagination_filtering_sorting.html#offset">offset</a> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <a href="pagination_filtering_sorting.html#limit">limit</a> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="headerimage">HeaderImage</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#header-image-object">Header Image Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#game">Game</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Header image filename including extension.</td>
+</tr>
+<tr>
+<td>original</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the full-sized header image.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="icon">Icon</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#icon-object">Icon Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#game">Game</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Icon filename including extension.</td>
+</tr>
+<tr>
+<td>original</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the full-sized icon.</td>
+</tr>
+<tr>
+<td>thumb_64x64</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the small icon thumbnail.</td>
+</tr>
+<tr>
+<td>thumb_128x128</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the medium icon thumbnail.</td>
+</tr>
+<tr>
+<td>thumb_256x256</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the large icon thumbnail.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="image">Image</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#image-object">Image Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#modmedia">ModMedia</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Image filename including extension.</td>
+</tr>
+<tr>
+<td>original</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the full-sized image.</td>
+</tr>
+<tr>
+<td>thumb_320x180</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the image thumbnail.</td>
+</tr>
+<tr>
+<td>thumb_1280x720</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the image thumbnail.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="logo">Logo</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#logo-object">Logo Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#game">Game</a></li>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+<li><a href="response_schemas.html#moddependencies">ModDependencies</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Logo filename including extension.</td>
+</tr>
+<tr>
+<td>original</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the full-sized logo.</td>
+</tr>
+<tr>
+<td>thumb_320x180</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the small logo thumbnail.</td>
+</tr>
+<tr>
+<td>thumb_640x360</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the medium logo thumbnail.</td>
+</tr>
+<tr>
+<td>thumb_1280x720</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the large logo thumbnail.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="message">Message</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#message-object">Message Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="auth.html#modio_auth_email">modio_auth_email</a></li>
+<li><a href="dependencies.html#modio_dependencies_add">modio_dependencies_add</a></li>
+<li><a href="media.html#modio_media_game_add">modio_media_game_add</a></li>
+<li><a href="media.html#modio_media_mod_add">modio_media_mod_add</a></li>
+<li><a href="ratings.html#modio_ratings">modio_ratings</a></li>
+<li><a href="reports.html#modio_report">modio_report</a></li>
+<li><a href="tags.html#modio_tags_game_add">modio_tags_game_add</a></li>
+<li><a href="tags.html#modio_tags_mod_add">modio_tags_mod_add</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td><a href="https://docs.mod.io/#response-codes">HTTP status code</a> of response.</td>
+</tr>
+<tr>
+<td>message</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The server response to your request. Responses will vary depending on the endpoint, but the object structure will persist.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="metadatakvp">MetadataKVP</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#metadata-kvp-object">Metadata KVP Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getmodkvpmetadata">GetModKVPMetadata</a></li>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metakey</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The key of the key-value pair.</td>
+</tr>
+<tr>
+<td>metavalue</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The value of the key-value pair.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="mod">Mod</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#mod-object">Mod Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="mods.html#modio_mods_get">modio_mods_get</a></li>
+<li><a href="mods.html#modio_mods_add">modio_mods_add</a></li>
+<li><a href="mods.html#modio_mods_edit">modio_mods_edit</a></li>
+<li><a href="subscribe.html#modio_subscribe">modio_subscribe</a></li>
+</ul>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getmods">GetMods</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique mod id.</td>
+</tr>
+<tr>
+<td>game_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique game id.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Status of the mod (see <a href="https://docs.mod.io/#status-amp-visibility">status and visibility</a> for details):<br><br>0 = Not Accepted<br>1 = Accepted<br>3 = Deleted</td>
+</tr>
+<tr>
+<td>visible</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Visibility of the mod (see <a href="https://docs.mod.io/#status-amp-visibility">status and visibility</a> for details):<br><br>0 = Hidden<br>1 = Public</td>
+</tr>
+<tr>
+<td>submitted_by</td>
+<td><a href="response_schemas.html#user">User</a></td>
+<td>The user who published the mod.</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date mod was registered.</td>
+</tr>
+<tr>
+<td>date_updated</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date mod was updated.</td>
+</tr>
+<tr>
+<td>date_live</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date mod was set live.</td>
+</tr>
+<tr>
+<td>maturity_option</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maturity options flagged by the mod developer, this is only relevant if the parent game allows mods to be labelled as mature:<br><br>0 = None<br>1 = Alcohol<br>2 = Drugs<br>4 = Violence<br>8 = Explicit<br>? = Add the options you want together, to enable multiple filters (see <a href="https://docs.mod.io/#bitwise-and-bitwise-and">BITWISE fields</a>)</td>
+</tr>
+<tr>
+<td>community_options</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Community features enabled for this mod:<br><br>0 = All of the options below are disabled<br>1 = Enable comments<br>? = Add the options you want together, to enable multiple features (see <a href="https://docs.mod.io/#bitwise-and-bitwise-and">BITWISE fields</a>)</td>
+</tr>
+<tr>
+<td>monetisation_options</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Monetisation features enabled for this mod:<br><br>0 = All of the options below are disabled<br>1 = Enabled<br>2 = Recognition On<br>4 = Marketplace On<br>? = Add the options you want together, to enable multiple features (see <a href="https://docs.mod.io/#bitwise-and-bitwise-and">BITWISE fields</a>)</td>
+</tr>
+<tr>
+<td>price</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>The price of the mod.</td>
+</tr>
+<tr>
+<td>tax</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>The tax of the mod.</td>
+</tr>
+<tr>
+<td>logo</td>
+<td><a href="response_schemas.html#logo">Logo</a></td>
+<td>Contains media URL's to the logo for the mod.</td>
+</tr>
+<tr>
+<td>homepage_url</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Official homepage of the mod.</td>
+</tr>
+<tr>
+<td>name</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Name of the mod.</td>
+</tr>
+<tr>
+<td>name_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Path for the mod on mod.io. For example: https://mod.io/g/rogue-knight/m/<strong>rogue-knight-hd-pack</strong></td>
+</tr>
+<tr>
+<td>summary</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Summary of the mod.</td>
+</tr>
+<tr>
+<td>description</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Detailed description of the mod which allows HTML.</td>
+</tr>
+<tr>
+<td>description_plaintext</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td><code>description</code> field converted into plaintext.</td>
+</tr>
+<tr>
+<td>metadata_blob</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Metadata stored by the game developer. Metadata can also be stored as searchable <a href="https://docs.mod.io/#metadata">key value pairs</a>, and to individual <a href="https://docs.mod.io/#get-modfiles">mod files</a>.</td>
+</tr>
+<tr>
+<td>profile_url</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the mod.</td>
+</tr>
+<tr>
+<td>media</td>
+<td><a href="response_schemas.html#modmedia">ModMedia</a></td>
+<td>Contains YouTube &amp; Sketchfab links, aswell as media URL's of images for the mod.</td>
+</tr>
+<tr>
+<td>modfile</td>
+<td><a href="response_schemas.html#modfile">Modfile</a></td>
+<td>The primary modfile for the mod.</td>
+</tr>
+<tr>
+<td>stats</td>
+<td><a href="response_schemas.html#modstats">ModStats</a></td>
+<td>Numerous aggregate stats for the mod.</td>
+</tr>
+<tr>
+<td>platforms</td>
+<td><a href="response_schemas.html#modplatforms">ModPlatforms</a></td>
+<td>Contains mod platform data.</td>
+</tr>
+<tr>
+<td>metadata_kvp</td>
+<td><a href="response_schemas.html#metadatakvp">MetadataKVP</a></td>
+<td>Contains key-value metadata.</td>
+</tr>
+<tr>
+<td>tags</td>
+<td><a href="response_schemas.html#modtag">ModTag</a></td>
+<td>Contains mod tag data.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="moddependencies">ModDependencies</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#mod-dependencies-object">Mod Dependencies Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getmoddependencies">GetModDependencies</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mod_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique ID of the mod that serves as the dependency.</td>
+</tr>
+<tr>
+<td>name</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Name of the mod dependency.</td>
+</tr>
+<tr>
+<td>name_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Path for the mod on mod.io. For example: https://mod.io/g/rogue-knight/m/<strong>rogue-knight-hd-pack</strong></td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date the dependency was added.</td>
+</tr>
+<tr>
+<td>dependency_depth</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>When a dependency depth is greater than zero (0), it means that the dependencies themselves rely on additional dependencies. To ensure smooth installation, it is recommended dependencies be installed in <em>descending</em> order of depth, beginning with those with the highest depth. Please note only dependencies with a depth of up to 5 will be shown.</td>
+</tr>
+<tr>
+<td>logo</td>
+<td><a href="response_schemas.html#logo">Logo</a></td>
+<td>Contains media URL's to the logo for the mod.</td>
+</tr>
+<tr>
+<td>modfile</td>
+<td><a href="response_schemas.html#modfile">Modfile</a></td>
+<td>The primary modfile for the mod.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modevents">ModEvents</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mod-events-2">Get Mod Events</a></p>
+</blockquote>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td><a href="response_schemas.html#modevent">ModEvent</a></td>
+<td>Array containing mod event objects.</td>
+</tr>
+<tr>
+<td>result_count</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results returned in this request.</td>
+</tr>
+<tr>
+<td>result_offset</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of results skipped over. Defaults to 0 unless overridden by <code>_offset</code> filter.</td>
+</tr>
+<tr>
+<td>result_limit</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Maximum number of results returned in the request. Defaults to 100 (max) unless overridden by <code>_limit</code> filter.</td>
+</tr>
+<tr>
+<td>result_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Total number of results found.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modevent">ModEvent</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#get-mod-events-2">Get Mod Events</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getmodevents">GetModEvents</a></li>
+<li><a href="response_schemas.html#modevents">ModEvents</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the event object.</td>
+</tr>
+<tr>
+<td>mod_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the parent mod.</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the user who performed the action.</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date the event occurred.</td>
+</tr>
+<tr>
+<td>event_type</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Type of event that was triggered. List of possible events:<br><br>- MODFILE_CHANGED<br>- MOD_AVAILABLE<br>- MOD_UNAVAILABLE<br>- MOD_EDITED<br>- MOD_DELETED<br>- MOD_TEAM_CHANGED</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modfile">Modfile</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#modfile-object">Modfile Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="modfiles.html#modio_modfiles_get">modio_modfiles_get</a></li>
+<li><a href="modfiles.html#modio_modfiles_add">modio_modfiles_add</a></li>
+<li><a href="modfiles.html#modio_modfiles_edit">modio_modfiles_edit</a></li>
+<li><a href="modfiles.html#modio_modfiles_platforms">modio_modfiles_platforms</a></li>
+</ul>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getmodfiles">GetModfiles</a></li>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+<li><a href="response_schemas.html#moddependencies">ModDependencies</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique modfile id.</td>
+</tr>
+<tr>
+<td>mod_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique mod id.</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date file was added.</td>
+</tr>
+<tr>
+<td>date_scanned</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date file was virus scanned.</td>
+</tr>
+<tr>
+<td>virus_status</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Current virus scan status of the file. For newly added files that have yet to be scanned this field will change frequently until a scan is complete:<br><br>0 = Not scanned<br>1 = Scan complete<br>2 = In progress<br>3 = Too large to scan<br>4 = File not found<br>5 = Error Scanning</td>
+</tr>
+<tr>
+<td>virus_positive</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Was a virus detected:<br><br>0 = No threats detected<br>1 = Flagged as malicious</td>
+</tr>
+<tr>
+<td>virustotal_hash</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>&gt; DEPRECATED<br>&gt;<br>&gt;  No longer used and will be removed in subsequent API version.</td>
+</tr>
+<tr>
+<td>filesize</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Size of the file in bytes.</td>
+</tr>
+<tr>
+<td>filesize_uncompressed</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>The uncompressed filesize of the zip archive.</td>
+</tr>
+<tr>
+<td>filehash</td>
+<td><a href="response_schemas.html#filehash">Filehash</a></td>
+<td>Contains a dictionary of filehashes for the contents of the download.</td>
+</tr>
+<tr>
+<td>filename</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Filename including extension.</td>
+</tr>
+<tr>
+<td>version</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Release version this file represents.</td>
+</tr>
+<tr>
+<td>changelog</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Changelog for the file.</td>
+</tr>
+<tr>
+<td>metadata_blob</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Metadata stored by the game developer for this file.</td>
+</tr>
+<tr>
+<td>download</td>
+<td><a href="response_schemas.html#download">Download</a></td>
+<td>Contains download data for the modfile.</td>
+</tr>
+<tr>
+<td>platforms</td>
+<td><a href="response_schemas.html#modfileplatform">ModfilePlatform</a></td>
+<td>Contains modfile platform data.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modfileplatform">ModfilePlatform</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#modfile-platform-object">Modfile Platform Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#modfile">Modfile</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>platform</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>A <a href="https://docs.mod.io/#targeting-a-platform">target platform</a>.</td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>The status of the modfile for the corresponding <code>platform</code>. Possible values:<br><br>0 = Pending<br>1 = Approved<br>2 = Denied</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modmedia">ModMedia</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#mod-media-object">Mod Media Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>youtube</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Array of YouTube links.</td>
+</tr>
+<tr>
+<td>sketchfab</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Array of SketchFab links.</td>
+</tr>
+<tr>
+<td>images</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Arrays.htm">Array</a> of <a href="response_schemas.html#image">Image</a></td>
+<td>Array of image objects (a gallery).</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modplatforms">ModPlatforms</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#mod-platforms-object">Mod Platforms Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>platform</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>A <a href="https://docs.mod.io/#targeting-a-platform">target platform</a>.</td>
+</tr>
+<tr>
+<td>modfile_live</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>The unique id of the modfile that is currently live on the platform specified in the <code>platform</code> field.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modstats">ModStats</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#mod-stats-object">Mod Stats Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="stats.html#modio_stats_mods_get">modio_stats_mods_get</a></li>
+</ul>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getmodstats">GetModStats</a></li>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mod_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique mod id.</td>
+</tr>
+<tr>
+<td>popularity_rank_position</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Current rank of the mod.</td>
+</tr>
+<tr>
+<td>popularity_rank_total_mods</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of ranking spots the current rank is measured against.</td>
+</tr>
+<tr>
+<td>downloads_today</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of total mod downloads. Count resets around 11:00 UTC+11 daily.</td>
+</tr>
+<tr>
+<td>downloads_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of total mod downloads.</td>
+</tr>
+<tr>
+<td>subscribers_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of total users who have subscribed to the mod.</td>
+</tr>
+<tr>
+<td>ratings_total</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of times this mod has been rated.</td>
+</tr>
+<tr>
+<td>ratings_positive</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of positive ratings.</td>
+</tr>
+<tr>
+<td>ratings_negative</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of negative ratings.</td>
+</tr>
+<tr>
+<td>ratings_percentage_positive</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Number of positive ratings, divided by the total ratings to determine its percentage score.</td>
+</tr>
+<tr>
+<td>ratings_weighted_aggregate</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Overall rating of this item calculated using the <a href="https://www.evanmiller.org/how-not-to-sort-by-average-rating.html">Wilson score confidence interval</a>. This column is good to sort on, as it will order items based on number of ratings and will place items with many positive ratings above those with a higher score but fewer ratings.</td>
+</tr>
+<tr>
+<td>ratings_display_text</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Textual representation of the rating in format:<br><br>- Overwhelmingly Positive<br>- Very Positive<br>- Positive<br>- Mostly Positive<br>- Mixed<br>- Negative<br>- Mostly Negative<br>- Very Negative<br>- Overwhelmingly Negative<br>- Unrated</td>
+</tr>
+<tr>
+<td>date_expires</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp until this mods's statistics are considered stale.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="modtag">ModTag</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#mod-tag-object">Mod Tag Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getmodtags">GetModTags</a></li>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Tag name.</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date tag was applied.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="rating">Rating</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#rating-object">Rating Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getuserratings">GetUserRatings</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>game_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique game id.</td>
+</tr>
+<tr>
+<td>mod_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique mod id.</td>
+</tr>
+<tr>
+<td>rating</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Mod rating value:<br><br>- 1 = Positive Rating<br>- -1 = Negative Rating</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date rating was submitted.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="teammember">TeamMember</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#team-member-object">Team Member Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getteammembers">GetTeamMembers</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique team member id.</td>
+</tr>
+<tr>
+<td>user</td>
+<td><a href="response_schemas.html#user">User</a></td>
+<td>The user associated with this team access.</td>
+</tr>
+<tr>
+<td>level</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Level of permission the user has:<br><br>1 = Moderator (can moderate comments and content attached)<br>4 = Manager (moderator access, including uploading builds and editing settings except supply and team members)<br>8 = Administrator (full access, including editing the supply and team)</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of the date the user was added to the team.</td>
+</tr>
+<tr>
+<td>position</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Custom title given to the user in this team.</td>
+</tr>
+<tr>
+<td>invite_pending</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>If the team member invitation is still pending:<br><br>0 = Invitation Accepted<br>1 = Invitation Pending</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="terms">Terms</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#terms-object">Terms Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="auth.html#modio_auth_terms">modio_auth_terms</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plaintext</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The terms text in plaintext formatting.</td>
+</tr>
+<tr>
+<td>html</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The terms text in HTML formatting.</td>
+</tr>
+<tr>
+<td>buttons</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>The buttons to embed into the Terms.<br><br><em> agree: a struct containing the "agree" text<br></em> disagree: a struct containing the "disagree" text</td>
+</tr>
+<tr>
+<td>links</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a></td>
+<td>The links to embed into the Terms.<br><br><em> website (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a>) Website link.<br></em> terms (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a>) Terms of Use link.<br><em> privacy (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a>) Privacy Policy link.<br></em> manage (<a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Structs.htm">Struct</a>) Manage User Account link.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="theme">Theme</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#theme-object">Theme Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#game">Game</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>primary</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The primary hex color code.</td>
+</tr>
+<tr>
+<td>dark</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The dark hex color code.</td>
+</tr>
+<tr>
+<td>light</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The light hex color code.</td>
+</tr>
+<tr>
+<td>success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The success hex color code.</td>
+</tr>
+<tr>
+<td>warning</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The warning hex color code.</td>
+</tr>
+<tr>
+<td>danger</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The danger hex color code.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="user">User</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#user-object">User Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="general.html#modio_general_get_resource_owner">modio_general_get_resource_owner</a></li>
+<li><a href="me.html#modio_me">modio_me</a></li>
+</ul>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#agreementversion">AgreementVersion</a></li>
+<li><a href="response_schemas.html#comment">Comment</a></li>
+<li><a href="response_schemas.html#getmutedusers">GetMutedUsers</a></li>
+<li><a href="response_schemas.html#mod">Mod</a></li>
+<li><a href="response_schemas.html#teammember">TeamMember</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the user.</td>
+</tr>
+<tr>
+<td>name_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Path for the user on mod.io. For example: https://mod.io/u/**name-id-here **</td>
+</tr>
+<tr>
+<td>username</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Username of the user.</td>
+</tr>
+<tr>
+<td>display_name_portal</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>The users' display name for the targeted portal. Value will be <code>null</code> if no valid <code>X-Modio-Portal</code> portal header value is provided. For more information see <a href="https://docs.mod.io/#targeting-a-portal">Targeting a Portal</a>.</td>
+</tr>
+<tr>
+<td>date_online</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date the user was last online.</td>
+</tr>
+<tr>
+<td>date_joined</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date the user joined.</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td><a href="response_schemas.html#avatar">Avatar</a></td>
+<td>Contains media URL's to the users avatar.</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Deprecated: No longer used and will be removed in subsequent API version.</td>
+</tr>
+<tr>
+<td>language</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Deprecated: No longer used and will be removed in subsequent API version. To <a href="https://docs.mod.io/#localization">localize the API response</a> we recommend you set the <code>Accept-Language</code> header.</td>
+</tr>
+<tr>
+<td>profile_url</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>URL to the user's profile.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="userevent">UserEvent</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#user-event-object">User Event Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following structs:</p>
+<ul>
+<li><a href="response_schemas.html#getuserevents">GetUserEvents</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the event object.</td>
+</tr>
+<tr>
+<td>game_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the parent game.</td>
+</tr>
+<tr>
+<td>mod_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the parent mod.</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unique id of the user who performed the action.</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>Unix timestamp of date the event occurred.</td>
+</tr>
+<tr>
+<td>event_type</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Type of event that was triggered. List of possible events:<br><br>- USER_TEAM_JOIN<br>- USER_TEAM_LEAVE<br>- USER_SUBSCRIBE<br>- USER_UNSUBSCRIBE</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p align="right"><a href="#top">Back To Top</a></p>
+
+<h1 id="webmessage">WebMessage</h1>
+<blockquote>
+<p><strong>mod.io Response Schema:</strong> <a href="https://docs.mod.io/#schemaweb_message_object">Web Message Object</a></p>
+</blockquote>
+<p>This struct is referenced by the following functions:</p>
+<ul>
+<li><a href="auth.html#modio_auth_logout">modio_auth_logout</a></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></td>
+<td>HTTP response code.</td>
+</tr>
+<tr>
+<td>success</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></td>
+<td>Was the request completed successfully?</td>
+</tr>
+<tr>
+<td>message</td>
+<td><a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Strings/Strings.htm">String</a></td>
+<td>Optional message to display to the user.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="users.html" class="btn btn-neutral float-left" title="Users"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p align="center">GameMaker 2024</p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/YoYoGames/GMEXT-mod.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="users.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/gml.min.js"></script>
+      <script src="assets/js/gmext_script.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
