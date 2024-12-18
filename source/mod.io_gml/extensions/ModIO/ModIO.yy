@@ -14,7 +14,7 @@
   "copyToTargets":-1,
   "description":"",
   "exportToGame":true,
-  "extensionVersion":"1.0.1",
+  "extensionVersion":"1.0.2",
   "files":[
     {"$GMExtensionFile":"","%Name":"","constants":[],"copyToTargets":-1,"filename":"ModIO.gml","final":"","functions":[
         {"$GMExtensionFunction":"","%Name":"_modio_init","argCount":0,"args":[],"documentation":"","externalName":"_modio_init","help":"_modio_init()","hidden":true,"kind":2,"name":"_modio_init","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":1,},
