@@ -1,6 +1,6 @@
 name: Extension Bug
 description: Report a bug that only happens when the latest version of this extension is in your project
-labels: ["mod.io","extension"]
+labels: ["Mod.io","extension"]
 type: "Extension Bug"
 body:
   - type: markdown
