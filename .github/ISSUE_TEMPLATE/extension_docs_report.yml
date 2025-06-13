@@ -1,6 +1,6 @@
 name: Documentation Bug
 description: Report a typo, incorrect information, or an addition that you require to be made to this extension's documentation
-labels: ["mod.io","extension","documentation"]
+labels: ["Mod.io","extension","documentation"]
 type: "Docs Bug"
 body:
   - type: markdown
